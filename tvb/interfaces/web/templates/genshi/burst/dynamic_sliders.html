@@ -1,0 +1,80 @@
+<div xmlns:py="http://genshi.edgewall.org/" py:strip="True" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <xi:include href="../flow/generate_help_tooltip.html" />
+
+    <py:def function="drawSlider(par)">
+        <td class="paramName">${par.label}</td>
+        <td class="paramHelp"> ${generate_help_tooltip(par)}</td>
+        <td class="paramSlider"><div id="slider_${par.name}"></div></td>
+        <td class="paramValue">
+            <input type="number" id="value_${par.name}"
+                   value="${par.default}" min="${par.min}" max="${par.max}" step="${par.step}"/>
+        </td>
+    </py:def>
+
+    <py:def function="drawSliderGroup(parameters, btn_id, title)">
+        <div class="sliderGroup">
+            <button id="${btn_id}">Reset</button>
+            <h3>$title</h3>
+            <table class="paramSlidersTable" py:with="step=(1 + len(parameters))/2">
+                <tr py:for="i in xrange(step)">
+                    ${drawSlider(parameters[i])}
+                    <py:if test="i + step &lt; len(parameters)">
+                        ${drawSlider(parameters[i + step])}
+                    </py:if>
+                </tr>
+            </table>
+        </div>
+    </py:def>
+
+    <py:def function="drawAxis(name, state_variables, selected_sv, selectId, sliderId, spanId)">
+        <td class="paramName">$name</td>
+        <td class="paramValue">
+            <select id="${selectId}">
+                <option py:for="sv in state_variables" value="${sv.name}"
+                        selected="${'selected' if sv.name == selected_sv else None}">${sv.label}</option>
+            </select>
+        </td>
+        <td class="c3"><div id="${sliderId}"></div></td>
+        <td><span id="${spanId}"> </span></td>
+    </py:def>
+
+    ${drawSliderGroup(parameters, "reset_sliders", "Model parameters")}
+
+    <div class="sliderGroup">
+        <button id="reset_axes">Reset</button>
+        <h3>Axes</h3>
+        <table class="axisSlidersTable">
+            <tr>
+                <td class="paramName">mode</td>
+                <td class="paramValue">
+                    <select id="mode">
+                        <option py:for="idx in modes" value="${idx}"
+                                selected="${'selected' if idx == default_mode else None}">$idx</option>
+                    </select>
+                </td>
+                <td class="c3"></td>
+            </tr>
+            <tr>
+                ${drawAxis(":math:`x`", state_variables, default_sv[0], "svx", "slider_x_axis", "x_range_span")}
+            </tr>
+            <tr py:if="not one_dimensional">
+                ${drawAxis(":math:`y`", state_variables, default_sv[1], "svy", "slider_y_axis", "y_range_span")}
+            </tr>
+        </table>
+    </div>
+    <py:if test="not one_dimensional">
+        ${drawSliderGroup(state_variables, "reset_state_variables", "Off graph state variables")}
+
+        <div class="sliderGroup">
+            <h3>Trajectories</h3>
+            <button id="reset_trajectories">Delete all</button>
+            <table class="axisSlidersTable">
+                <tr>
+                    <td class="paramName">Integration steps</td>
+                    <td class="c3"><div id="slider_integration_steps"></div></td>
+                    <td><span id="span_integration_steps"> </span></td>
+                </tr>
+            </table>
+        </div>
+    </py:if>
+</div>

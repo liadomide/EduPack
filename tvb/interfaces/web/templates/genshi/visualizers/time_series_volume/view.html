@@ -1,0 +1,117 @@
+<div>
+    <script type="text/javascript" src="/static_view/time_series_volume/scripts/timeseriesVolume.js?$currentVersionJS"></script>
+    <script type="text/javascript" src="/static_view/time_series_volume/scripts/timeseriesFragment.js?$currentVersionJS"></script>
+    <script type="text/javascript" src="/static/js/webGL_Connectivity.js?$currentVersionJS"></script>
+    <script type="text/javascript" src="/static/js/d3.v3.js?$currentVersionJS"></script>
+    <script type="text/javascript" src="/static/coloring/colorSchemeComponent.js?$currentVersionJS"></script>
+
+    <link rel="stylesheet" type="text/css" href="/static/style/subsection_timeseries.css?$currentVersionJS"/>
+    <link rel="stylesheet" type="text/css" href="/static/style/sections_svg.css?$currentVersionJS"/>
+
+    <py:def function="drawSliderForAxis(axisName)" xmlns:py="http://genshi.edgewall.org/">
+        <div class="slider-div">
+            <label class="slider-axis-name">${axisName.upper()} Axis</label>
+            <br/>
+
+            <span id="sliderForAxis${axisName}"></span>
+            <br/>
+
+            <label class="min-slider-coord">0</label>
+            <label class="current-slider-coord" id="labelCurrentValueAxis${axisName}"></label>
+            <label class="max-slider-coord" id="labelMaxValueAxis${axisName}"></label>
+        </div>
+    </py:def>
+
+    <section class="view-column">
+
+        <ul class="toolbar-inline toolbar-with-sliders">
+            <li class="toolbar-li-with-slider">  ${drawSliderForAxis('X')} </li>
+            <li class="toolbar-li-with-slider">  ${drawSliderForAxis('Y')} </li>
+            <li class="toolbar-li-with-slider">  ${drawSliderForAxis('Z')} </li>
+            <li class="toolbar-small-li"> <label>(in $voxelUnit)</label></li>
+            <li class="toolbar-large-li">
+                <button class="action action-go-first" onclick="seekFirst()" title="Navigate to the begining of TS"></button>
+                <button class="action action-page-back" onclick="playPreviousTimePoint()" title="Go back one time step"></button>
+                <button class="action action-run" onclick="togglePlayback()" title="Start / Stop the Movie" id="btnPlay"></button>
+                <button class="action action-page-fwd" onclick="playNextTimePoint()" title="Go forward one time step"></button>
+                <button class="action action-go-last" onclick="seekEnd()" title="Navigate to the end of the TS movie"></button>
+            </li>
+        </ul>
+
+        <div class="canvas-parent">
+            <canvas id="canvasVolumes"></canvas>
+        </div>
+
+        <div class="movie-slider-parent">
+            <span id="movieSlider"></span>
+            <br/>
+
+            <label class="min-slider-coord">0</label>
+            <label class="current-slider-coord" id="labelCurrentTimeStep"></label>
+            <label class="max-slider-time" id="labelMaxTimeStep"></label>
+        </div>
+
+    </section>
+
+    <section class="view-column" id="tsMoveArea">
+
+        <div id="ts-trash-can" class="trash-hidden">
+            <h1>
+                Drop here selected time series here to be removed from selection.<br/>
+                Or drop over another line to change display order.
+            </h1>
+        </div>
+
+        <ul class="toolbar-inline toolbar-with-sliders sortable pin" id="sortable-delete">
+            <li>
+                <label for="relevantFeatureSelector">Relevant Sorting Feature:</label>
+
+                <select id="relevantFeatureSelector" name="relevantFeatureSelector">
+                    <option value="mean" selected="selected">Mean</option>
+                    <option value="median">Median</option>
+                    <option value="max">Maximun</option>
+                    <option value="min">Minimun</option>
+                    <option value="variance">Variance</option>
+                    <option value="deviation">Standard Deviation</option>
+                </select>
+            </li>
+
+            <li>
+                <label for="sortingSelector">Sorting Order:</label>
+
+                <select id="sortingSelector" name="sortingSelector">
+                    <option value="ascending">Ascending</option>
+                    <option value="descending" selected="selected">Descending</option>
+                    <option value="manhattan">Manhattan Distance</option>
+                    <option value="manual">Manual</option>
+                </select>
+            </li>
+
+            <li>
+                <label for="colorBySelector">Color Lines by:</label>
+
+                <select id="colorBySelector" name="colorBySelector">
+                    <option value="mean" selected="selected">Mean</option>
+                    <option value="median">Median</option>
+                    <option value="min">Minimun</option>
+                    <option value="max">Maximun</option>
+                </select>
+            </li>
+        </ul>
+        <div class="ts-graph-parent">
+            <div id="graph"></div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        $().ready(function() {
+            $("#main").addClass("colscheme-2-even brain-extended");
+            TSV_initVisualizer('${dataUrls}', ${minValue}, ${maxValue}, ${samplePeriod}, '${samplePeriodUnit}',
+                               '${volumeShape}', '${volumeOrigin}', '${voxelSize}');
+            $("#canvasVolumes").mousedown(customMouseDown)
+                                      .mouseup(customMouseUp)
+                                      .mousemove(customMouseMove);
+            TSV_startUserInterface();
+        })
+    </script>
+</div>
