@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<edupack_xml_detail_descriptions>
+  
+  <description section="s-burst" name="burstName" group="elementName" type="description">
+    <![CDATA[
+      Here is the content, images, whatever...<br>
+      <img src=/static/js/example_01.png>
+    ]]>    
+  </description>
+  
+  <description section="s-burst" name="coupling" group="elementId" type="description">
+    <![CDATA[
+      Here is the content, images, whatever...<br>
+      <img src=/static/js/example_01.png>
+    ]]>    
+  </description>
+  <description section="s-burst" name="connectivity" group="elementName" type="description">
+    <![CDATA[
+      Here is the content, images, whatever...<br>
+      <img src=/static/js/example_01.png>
+    ]]>    
+  </description>
+  
+  <description section="s-burst" name="coupling_parameters_option_Linear_a" group="elementName" type="description">
+    <![CDATA[
+      Here is the content, images, whatever...<br>
+      <img src=/static/js/example_01.png>
+    ]]>    
+  </description>
+  
+  <description section="s-burst" name="coupling_parameters_option_Linear_b" group="elementName" type="description">
+    <![CDATA[
+      Here is the content, images, whatever...<br>
+      <img src=/static/js/example_01.png>
+    ]]>    
+  </description>
+  
+  <description section="s-burst" name="button-launch-new-burst" group="elementId" type="description">
+    <![CDATA[
+      Here is the content, images, whatever...<br>
+      <img src=/static/js/example_01.png>
+    ]]>    
+  </description>
+  
+  <description section="s-burst" name="section-portlets" group="elementId" type="description">
+    <![CDATA[
+      The maximize button on the right of the visualizer
+    ]]>    
+  </description>
+  
+  <description section="s-burst" name="button-maximize-portlets" group="elementId" type="description">
+    <![CDATA[
+      The Visualize heading on the right side
+    ]]>    
+  </description>  
+
+  <description section="s-burst" name="configure-tabs-button" group="elementId" type="description">
+    <![CDATA[
+      The different view configuration possibilities
+    ]]>    
+  </description>    
+
+  <description section="s-burst" name="tab-burst-tree" group="elementId" type="description">
+    <![CDATA[
+      The buttons which will open the results of the simulation
+    ]]>    
+  </description>  
+
+  <description section="s-burst" name="burst-history" group="elementId" type="description">
+    <![CDATA[
+      The buttons which will open the results of the simulation
+    ]]>    
+  </description>
+  
+  <description section="s-burst" name="div-simulator-parameters" group="elementId" type="description">
+    <![CDATA[
+      This is only found, when a simulation is loaded and the parameters already set up.
+    ]]>    
+  </description>
+
+  <description section="s-burst" name="model_parameters_option_Generic2dOscillator_e" group="elementId" type="description">
+    <![CDATA[
+      Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>  
+
+  <description section="s-burst" name="model_parameters_option_Generic2dOscillator_f" group="elementId" type="description">
+    <![CDATA[
+      Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>  
+  
+    
+    
+  <!-- PROJECT INTERFACE -->
+  <description section="s-project" name="nav-project-operations" group="elementId" type="description">
+    <![CDATA[
+      Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>
+
+  <description section="s-project" name="nav-project-data" group="elementId" type="description">
+    <![CDATA[
+      Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>
+
+  <description section="s-project" name="nav-project-properties" group="elementId" type="description">
+    <![CDATA[
+      Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>
+
+  <description section="s-project" name="nav-project-list" group="elementId" type="description">
+    <![CDATA[
+      Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>
+
+  <description section="s-project" name="nav-project-figures" group="elementId" type="description">
+    <![CDATA[
+      Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>
+
+<!-- PROJECT - DATA Structure -->
+  <description section="s-project" name="label_levelTree_1" group="elementId" type="description">
+    <![CDATA[
+      label leveltree 1
+    ]]>    
+  </description>
+
+  <description section="s-project" name="label_levelTree_2" group="elementId" type="description">
+    <![CDATA[
+      label leveltree 2
+    ]]>    
+  </description>
+
+  <description section="s-project" name="graph-related-table" group="elementId" type="description">
+    <![CDATA[
+      graph-related-table
+    ]]>    
+  </description>
+  
+  <description section="s-project" name="workflowCanvasDiv" group="elementId" type="description">
+    <![CDATA[
+      workflowCanvasDiv
+    ]]>    
+  </description>
+  
+  <description section="s-project" name="tree4" group="elementId" type="description">
+    <![CDATA[
+      tree4
+    ]]>    
+  </description>
+
+  <description section="s-project" name="action action-upload" group="elementClass" type="description">
+    <![CDATA[
+      Uploader button
+    ]]>    
+  </description>  
+
+  
+  <!-- CONNECTIVITY -->
+  <description section="s-connectivity" name="nav-connectivity-connectivity" group="elementId" type="description">
+    <![CDATA[
+      Large Scale Connectivity, perform connectivity lesions
+    ]]>    
+  </description>  
+  <description section="s-connectivity" name="nav-connectivity-local" group="elementId" type="description">
+    <![CDATA[
+      Local Connectivity, create or view existent local connectivity entities
+    ]]>    
+  </description>  
+
+  <description section="s-connectivity" name="input_data" group="elementId" type="description">
+    <![CDATA[
+      Select one of the connectivity matrices from your project
+    ]]>    
+  </description>  
+  
+  <description section="s-connectivity" name="surface_data" group="elementId" type="description">
+    <![CDATA[
+      select a matching brain surface to get a better feeling of the connectivity matrix
+    ]]>    
+  </description>    
+  
+  <description section="s-connectivity" name="colors" group="elementId" type="description">
+    <![CDATA[
+    node colors
+    ]]>    
+  </description>  
+  
+  <description section="s-connectivity" name="step" group="elementId" type="description">
+    <![CDATA[
+      set a threshold value
+    ]]>    
+  </description>  
+  
+  <description section="s-connectivity" name="rays" group="elementId" type="description">
+    <![CDATA[
+      Shape dimensionss...
+    ]]>    
+  </description>  
+
+  <description section="s-connectivity" name="GLcanvas" group="elementId" type="description">
+    <![CDATA[
+      Visualizer
+    ]]>    
+  </description>  
+
+  <description section="s-connectivity" name="inline-menu monitor-legend" group="elementClass" type="description">
+    <![CDATA[
+      Legend Button
+    ]]>    
+  </description>  
+  
+  <description section="s-connectivity" name="tool-all-edges" group="elementClass" type="description">
+    <![CDATA[
+      infos about all edges
+    ]]>    
+  </description>  
+  
+  <description section="s-connectivity" name="tool-selected-edges" group="elementClass" type="description">
+    <![CDATA[
+      infos about selected edges
+    ]]>    
+  </description>  
+
+  <description section="s-connectivity" name="displayNodeDetails" group="elementId" type="description">
+    <![CDATA[
+      show metrics details
+    ]]>    
+  </description>  
+
+  <description section="s-connectivity" name="User_Tag_1_Perpetuated" group="elementName" type="description">
+    <![CDATA[
+      save changes in connectivity matrix
+    ]]>    
+  </description>   
+
+  <description section="s-connectivity" name="selection-ops" group="elementClass" type="description">
+    <![CDATA[
+      Selection ops
+    ]]>    
+  </description>  
+  <description section="s-connectivity" name="inline-menu" group="elementClass" type="description">
+    <![CDATA[
+      inline menu
+    ]]>    
+  </description>  
+  
+  <description section="s-connectivity" name="availableSelectionsList" group="elementId" type="description">
+    <![CDATA[
+      available selctions list
+    ]]>    
+  </description>  
+
+  <description section="s-connectivity" name="currentSelectionName" group="elementId" type="description">
+    <![CDATA[
+      current selection name
+    ]]>    
+  </description> 
+
+  <description section="s-connectivity" name="inline-menu quadrant-selector" group="elementClass" type="description">
+    <![CDATA[
+      Quadrant selector
+    ]]>    
+  </description>   
+  <description section="s-connectivity" name="left_change_13_leftHemisphere" group="elementId" type="description">
+    <![CDATA[
+      Example node in the connectivity matrix...
+    ]]>    
+  </description>   
+  
+  <description section="s-connectivity" name="td_w_9_9" group="elementId" type="description">
+    <![CDATA[
+      Example edge / weight in the connectivity matrix...
+    ]]>    
+  </description>    
+  
+  
+  
+  
+    
+  
+
+
+  <description section="s-connectivity" name="showConnectivityDetailsBtn" group="elementId" type="description">
+    <![CDATA[
+      Datatype Details Button
+    ]]>    
+  </description>    
+  
+  
+  
+</edupack_xml_detail_descriptions>

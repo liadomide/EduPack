@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<edupack_tutorial>
+  
+  <title>Sample Tutorial, TVB-EduPack v0.1.1</title>
+  
+  <!-- preconditions for whole tutorial -->
+  <preconditions> 
+    <state>simulator-interface</state>
+    <state>finish_constraintsed_tutorial_XX</state>
+  </preconditions> 
+  
+  <!-- <action type="project_xml" section="simulator" variable_name="none" value="none"></action> -->
+  <description>
+    <![CDATA[In this example tutorial, you'll get a first impression of TVB-EduPack. The tutorial is divided to several parts. These parts are the <b><i>Steps</i></b> which you can see in the menu below. The first part is already open and shows you the associated <b><i>Tasks</i></b>. Click on the first task to continue.]]>  
+  </description>
+  
+  
+  <step>
+    <label>Getting started with TVB-EduPack</label>
+    <step-id>01</step-id>
+    <!-- <description>bla bla bla</description> -->
+    
+    <sub-step>
+      <task>Information about the menu</task>
+      <value>01</value>
+      <detail>
+        <![CDATA[You can activate and view the details of the tasks by clicking on it. If you click on the task again, the details will vanish, but the task is usually not finished. Some tasks have to be finished <b><i>manually</i></b> by clicking a link and some are completed when you have fulfilled the constraints of the task. Complete this task via the link and continue with the next task.]]> 
+      </detail>
+      
+      <!-- either manual if appicable, otherwise with automated conditions -->
+      <finish_constraints> 
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+    
+    <sub-step>
+      <task>Steps and Tasks</task>
+      <value>02</value>
+      <detail>
+        <![CDATA[
+        Right to the green <b><i>steps</i></b> you'll see the number of open tasks in this block. And right to the <b><i>tasks</i></b> you'll see the information about open, activated and finished tasks. Please change to the TVB Simulator Interface if you aren't already there and complete this task.
+        ]]>
+      </detail>
+      
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step> 
+    
+    <sub-step>
+      <task>Overview of Actions: highlight</task>
+      <value>03</value>
+      <detail>
+        <![CDATA[
+        To guide you through some parameter settings, the relevant parameters will get highlighted. In this example you see the highlighted Conduction Speed parameter, because it shall have the value of <b><i>41.0</i></b>. As long it has not the correct value or you're closing the task, it'll stay highlighted. Please change it to the desired value and continue.
+        
+        ]]>
+      </detail>
+      
+      <action type="highlight" section="simulator" variable_name="conduction_speed" value="41.0"></action>
+      
+
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+
+    </sub-step> 
+    
+    <sub-step>
+      <task>Overview of Actions: Overlay</task>
+      <value>04</value>
+      <detail>
+        <![CDATA[
+        In some moments it'll be helpful to provide some background information for the task, the parameters or even the simulation. You can close the popup by clicking in the darkened background or the X in the upper right corner.
+        ]]>
+      </detail>
+      
+      <overlay>
+        <content><![CDATA[
+          <h2>Background information</h2>
+          <br>This window will improve you knowledge with beautyful animations, helpful images and preview some results.
+          <br><br>
+          <hr>
+          <br>
+          <h2>Images</h2>
+          <img src=/static/js/example_01.png>
+          <br><br>
+          <hr>
+          <br><br>
+          <h2>Videos</h2>
+          <iframe width=853 height=480  src=//www.youtube.com/embed/RZgULkLKqu8 frameborder=0 allowfullscreen></iframe>
+          <br><br>
+          <hr>
+          <br><br>
+          <h2>Conclusion</h2>
+          Now close this window by clicking in the darkened background and complete the task.
+          ]]>
+          
+          </content>
+      </overlay>   
+
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+
+    </sub-step> 
+    
+        <sub-step>
+      <task>Overview of Actions: Loading Simulation XML files</task>
+      <value>05</value>
+      <detail>
+        <![CDATA[
+        It is possible to generate an EduCase out of an already computed XML file. Therefore the XML will be loaded into TVB-EduPack and all Parameters will get compared. When the parameters differ, they will get highlighted and you can't run the simulation until you set them correctly. When you set everything correct, you can preview some of the results from the imported project in the overlay while the computation on your local takes place in the background.
+        <br><br>
+        That's all so far about the functionality, now continue with the next step and the example EduCase.
+        ]]>
+      </detail>
+      
+      <!-- <overlay>
+        <content><![CDATA[
+          <h2>Background information</h2>
+          <br>This window will improve you knowledge with beautyful animations, helpful images and preview some results.
+          <br><br>
+          <hr>
+          <br>
+          <h2>Images</h2>
+          <img src=/static/js/example_01.png>
+          <br><br>
+          <hr>
+          <br><br>
+          <h2>Videos</h2>
+          <iframe width=853 height=480  src=//www.youtube.com/embed/RZgULkLKqu8 frameborder=0 allowfullscreen></iframe>
+          <br><br>
+          <hr>
+          <br><br>
+          <h2>Conclusion</h2>
+          Now close this window by clicking in the darkened background and complete the task.
+          ]]>
+          
+          </content>
+      </overlay>   --> 
+
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+
+    </sub-step>
+  </step>
+  
+  <step>
+    <label>EduCase Part 1</label>
+    <step-id>02</step-id>
+    <!-- <description>bla bla bla</description> -->
+    
+    <sub-step>
+      <task>Import a new project</task>
+      <value>01</value>
+      <detail>
+        Please change to the project interface, select List of all projects and import the provided project.zip.
+        When you're done, make sure that this project is selected and have a glimpse at the project data.
+      </detail>
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+    
+    <sub-step>
+      <task>Import your own Structural Connectivity</task>
+      <value>02</value>
+      <detail>
+        Go to Project Interface -> Data Structure and check if the import worked well. There should be some TimeSeries and maybe two different Connectivity datasets. If you want to import your own Structural Connectivity, click on the Upload button to the right. Then select Connectivity.zip, select your file and import the file into your project. 
+      </detail>
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step> 
+    
+    <sub-step>
+      <task>Finish Preparation</task>
+      <value>03</value>
+      <detail>
+        To start right away, make sure that you're in the Simulator Interface of 
+        <i>The Virtual Brain</i> - if not, please switch to the Simulator 
+        Interface by clicking in the Footer Tab in the lower area of the TVB Interface.
+      </detail>
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+    
+    <sub-step>
+      <task>The Simulator Interface</task>
+      <value>04</value>
+      <detail>
+        The Simulator Interface is divided into three areas. 
+        On the left you can see a history list, with all your simulations 
+        from the past within your project - you can copy, reload 
+        and create new ones. In the middle is the Configuration area, 
+        here you set up your simulation, adapt paramets and so forth. 
+        And on the right side you find the visualization area, depending 
+        on your results, visualizer and analyzer monitors are provided.
+      </detail>
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+  </step>
+    
+  
+  <step>
+    <label>EduCase Part 2</label>
+    <step-id>03</step-id>
+    <!-- <description>bla bla bla</description> -->
+    
+    <sub-step>
+      <task>Create a new Simulation</task>
+      <value>01</value>
+      <detail>
+        Create a new simulation by clicking on the star right to the History tab. You're ready with a new simulation, when you can enter a simulation_name. So give your simulation a name and continue with the next task.
+      </detail>
+      
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+      <!-- <action type="highlight" section="simulator2" variable_name="simulation_name" value="none"></action> -->
+    </sub-step>
+    
+    <sub-step>
+      <task>Load the XML simulation file</task>
+      <value>02</value>
+      <detail>
+        In this section you can load the previos simulated xml into TVB-EduPack. Click the following link, it'll take a few seconds and then you will see the some highlighted parameters, that are relevant for this simulation.
+      </detail>
+      <read_project_xml></read_project_xml>
+      <!-- <action type="project_xml" section="simulator" variable_name="none" value="none"></action> -->
+      
+      <finish_constraints>
+        <!-- <manual>Click here to complete this task manually.</manual> -->
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+    
+    <sub-step>
+      <task>Change parameters</task>
+      <value>03</value>
+      <detail>
+        Now start adapting the parameters as provided in the highlighted fields. If you've changed the parameters correctly, the highlight boxes will disappear (after a clicking the mouse somewhere in the window).
+      </detail>
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+    
+    <sub-step>
+      <task>Run the simulation</task>
+      <value>04</value>
+      <detail>
+        <![CDATA[
+        When you've set all parameters, you can hit the Play button next to the simulation name. A popup window will show you precomputed results.<br>
+        The previews will give you an overview of the influence of single parameters. 
+        ]]>
+      </detail>
+      
+      <overlay>
+        <content><![CDATA[
+          <h2>Preview results</h2>
+          <br>While the computation on your local machine started in the background, have a look at the preview results.
+          <br><br>
+          <hr>
+          <br>
+          <h2>Noise D = 0.5</h2>
+          <img src=/static/js/example_02_d_05.png width=90%>
+          <br><br>
+          <hr>
+          <br>
+          <h2>Noise D = 0.75</h2>
+          <img src=/static/js/example_03_d_075.png width=90%>
+          <br><br>
+          ]]>
+          
+          </content>
+      </overlay>   
+
+      <finish_constraints>
+        <state>none</state>
+      </finish_constraints>
+
+    </sub-step> 
+    
+        <sub-step>
+      <task>Preview results</task>
+      <value>05</value>
+      <detail>
+        <![CDATA[
+        Open the overlay to have a look at the precomputed results. 
+        ]]>
+      </detail>
+      
+      <overlay>
+        <content><![CDATA[
+          <h2>Preview results</h2>
+          <br>Parameter exploration for two different noise levels.
+          <br><br>
+          <hr>
+          <br>
+          <h2>Noise D = 0.5</h2>
+          <img src=/static/js/example_02_d_05.png width=90%>
+          <br><br>
+          <hr>
+          <br>
+          <h2>Noise D = 0.75</h2>
+          <img src=/static/js/example_03_d_075.png width=90%>
+          <br><br>
+          ]]>
+          
+          </content>
+      </overlay>   
+
+      <finish_constraints>
+        <state>none</state>
+      </finish_constraints>
+
+    </sub-step> 
+  </step>
+  
+
+</edupack_tutorial>
+
+<!--<RecentTutorials>
+  <Tutorial author="The Reddest">
+    <Title>Silverlight and the Netflix API</Title>
+    <Categories>
+      <Category>Tutorials</Category>
+      <Category>Silverlight 2.0</Category>
+      <Category>Silverlight</Category>
+      <Category>C#</Category>
+      <Category>XAML</Category>
+    </Categories>
+    <Date>1/13/2009</Date>
+  </Tutorial>
+  <Tutorial author="The Hairiest">
+    <Title>Cake PHP 4 - Saving and Validating Data</Title>
+    <Categories>
+      <Category>Tutorials</Category>
+      <Category>CakePHP</Category>
+      <Category>PHP</Category>
+    </Categories>
+    <Date>1/12/2009</Date>
+  </Tutorial>
+  <Tutorial author="The Tallest">
+    <Title>Silverlight 2 - Using initParams</Title>
+    <Categories>
+      <Category>Tutorials</Category>
+      <Category>Silverlight 2.0</Category>
+      <Category>Silverlight</Category>
+      <Category>C#</Category>
+      <Category>HTML</Category>
+    </Categories>
+    <Date>1/6/2009</Date>
+</Tutorial>
+  <Tutorial author="The Fattest">
+    <Title>Controlling iTunes with AutoHotkey</Title>
+    <Categories>
+      <Category>Tutorials</Category>
+      <Category>AutoHotkey</Category>
+    </Categories>
+    <Date>12/12/2008</Date>
+  </Tutorial>
+</RecentTutorials>
+-->
+
+
+
+  <!-- 
+  <step>
+    <label>EduCase Part 1</label>
+    <step-id>04</step-id>
+    
+    <sub-step>
+      <task>Import a new project</task>
+      <type>misc</type>
+      <value>01</value>
+      <detail>
+        Please change to the project interface, select List of all projects and import the provided project.zip.
+        When you're done, make sure that this project is selected and have a glimpse at the project data.
+      </detail>
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+    
+    <sub-step>
+      <task>Import your own Structural Connectivity</task>
+      <type>misc</type>
+      <value>02</value>
+      <detail>
+        Go to Project Interface -> Data Structure and check if the import worked well. There should be some TimeSeries and maybe two different Connectivity datasets. If you want to import your own Structural Connectivity, click on the Upload button to the right. Then select Connectivity.zip, select your file and import the file into your project. 
+      </detail>
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step> 
+    
+    <sub-step>
+      <task>Finish Preparation</task>
+      <type>description</type>
+      <value>03</value>
+      <detail>
+        To start right away, make sure that you're in the Simulator Interface of 
+        <i>The Virtual Brain</i> - if not, please switch to the Simulator 
+        Interface by clicking in the Footer Tab in the lower area of the TVB Interface.
+      </detail>
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+    
+    <sub-step>
+      <task>The Simulator Interface</task>
+      <type>description</type>
+      <value>04</value>
+      <detail>
+        The Simulator Interface is divided into three areas. 
+        On the left you can see a history list, with all your simulations 
+        from the past within your project - you can copy, reload 
+        and create new ones. In the middle is the Configuration area, 
+        here you set up your simulation, adapt paramets and so forth. 
+        And on the right side you find the visualization area, depending 
+        on your results, visualizer and analyzer monitors are provided.
+      </detail>
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+  </step>
+    
+  
+  <step>
+    <label>EduCase Part 2</label>
+    <step-id>05</step-id>
+
+    <sub-step>
+      <task>Create a new Simulation</task>
+      <type>description</type>
+      <value>01</value>
+      <detail>
+        Ahaoi.<br/>
+        Create a new simulation by clicking on the star right to the History tab. You're ready with a new simulation, when you can enter a simulation_name. So give your simulation a name and continue with the next task.
+      </detail>
+      
+
+      
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+    
+    <sub-step>
+      <task>Load the XML simulation file</task>
+      <type>parameter</type>
+      <value>02</value>
+      <detail>
+        In this section you can load the previos simulated xml into TVB-EduPack. Click the following link, it'll take a few seconds and then you will see the some highlighted parameters, that are relevant for this simulation.
+      </detail>
+      <read_project_xml></read_project_xml>
+      
+      <finish_constraints>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+    
+    <sub-step>
+      <task>Change parameters</task>
+      <type>parameter</type>
+      <value>03</value>
+      <detail>
+        Now start adapting the parameters as provided in the highlighted fields. If you've changed the parameters correctly, the highlight boxes will disappear (after a clicking the mouse somewhere in the window).
+      </detail>
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+    
+    <sub-step>
+      <task>Run the simulation</task>
+      <type>description</type>
+      <value>04</value>
+      <detail>
+        <![CDATA[
+        When you've set all parameters, you can hit the Play button next to the simulation name. A popup window will show you precomputed results.<br>
+        The previews will give you an overview of the influence of single parameters. 
+        ]]>
+      </detail>
+      
+      <overlay>
+        <content><![CDATA[
+          <h2>Preview results</h2>
+          <br>While the computation on your local machine started in the background, have a look at the preview results.
+          <br><br>
+          <hr>
+          <br>
+          <h2>Noise D = 0.5</h2>
+          <img src=/static/style/img/edupack/sim_images/example_02_d_05.png width=90%>
+          <br><br>
+          <hr>
+          <br>
+          <h2>Noise D = 0.75</h2>
+          <img src=/static/style/img/edupack/sim_images/example_03_d_075.png width=90%>
+          <br><br>
+          ]]>
+          
+          </content>
+      </overlay>   
+
+      <finish_constraints>
+        <state>none</state>
+      </finish_constraints>
+
+    </sub-step> 
+    
+    <sub-step>
+      <task>Preview results</task>
+      <type>misc</type>
+      <value>05</value>
+      <detail>
+        <![CDATA[
+        Open the overlay to have a look at the precomputed results. 
+        ]]>
+      </detail>
+      
+      <overlay>
+        <content><![CDATA[
+          <h2>Preview results</h2>
+          <br>Parameter exploration for two different noise levels.
+          <br><br>
+          <hr>
+          <br>
+          <h2>Noise D = 0.5</h2>
+          <img src=/static/style/img/edupack/sim_images/example_02_d_05.png width=90%>
+          <br><br>
+          <hr>
+          <br>
+          <h2>Noise D = 0.75</h2>
+          <img src=/static/style/img/edupack/sim_images/example_03_d_075.png width=90%>
+          <br><br>
+          ]]>
+          
+          </content>
+      </overlay>   
+
+      <finish_constraints>
+        <state>none</state>
+      </finish_constraints>
+
+    </sub-step> 
+  </step> -->
+  

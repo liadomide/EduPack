@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<edupack_xml_detail_descriptions>
+  
+      
+  <description section="all" name="nav-user" group="elementId" type="misc" read="true">
+    <![CDATA[
+      <h3>User Menu</h3>
+      In the user menu you can set up your TVB-Configuration.
+    ]]>    
+  </description>
+<!-- 
+  <description section="all" name="nav-project" group="elementId" type="misc">
+    <![CDATA[
+      Project Menu.
+    ]]>    
+  </description>
+  
+  <description section="all" name="nav-burst" group="elementId" type="misc">
+    <![CDATA[
+      Simulator Menu.
+    ]]>    
+  </description>
+    
+  <description section="all" name="nav-analyze" group="elementId" type="misc">
+    <![CDATA[
+      Analysis Menu.
+    ]]>    
+  </description>
+  
+  <description section="all" name="nav-stimulus" group="elementId" type="misc">
+    <![CDATA[
+      Stimulus Menu.
+    ]]>    
+  </description>
+  
+  <description section="all" name="nav-connectivity" group="elementId" type="misc">
+    <![CDATA[
+      Connectivity Menu.
+    ]]>    
+  </description>
+   -->
+  
+    <description section="s-burst" name="simulation_length" group="elementId" type="parameter" read="true">
+    <![CDATA[
+    <h2>Simulation Length</h2>
+      Please specify here the computation length for your configured setup.<br>
+    ]]>    
+  </description>
+  
+      <description section="s-burst" name="monitors" group="elementId" type="parameter" read="true">
+    <![CDATA[
+    <h2>Select the monitors</h2>
+      Define here the datatypes and format you want to save. 
+    ]]>    
+  </description>
+  
+  <description section="s-burst" name="integrator_HeunDeterministic" group="elementId" type="parameter" read="true">
+    <![CDATA[
+    <h2>Integration scheme</h2>
+      Please select an integration scheme which fits your needs.
+    ]]>    
+  </description>
+  
+  <description section="s-burst" name="button-launch-new-burst" group="elementId" type="parameter" read="true">
+    <![CDATA[
+    <h2>Introduction TVB-EduPack Animations</h2>
+      In the future, all buttons and parameters will get more detailed information. <br>
+      Here is a first trailer of how that will look like: <br><br>
+      <video id=video width=800  controls preload=auto autoplay> 
+              <source src=/static/style/img/edupack/_renders/intro_v3_720.mov >
+      </video>
+    ]]>    
+  </description>
+  
+    <description section="s-burst" name="model" group="elementId" type="parameter" read="true">
+    <![CDATA[
+    <h2>Introduction to TVB Local Dynamic Models</h2>
+      We would like to discuss and present the different implemented Local Dynamic Models within TVB with you:
+      <video id=video width=800  controls preload=auto autoplay> 
+              <source src=/static/style/img/edupack/_renders/intro_v3_720.mov >
+      </video>
+    ]]>    
+  </description>
+  
+  <description section="s-burst" name="connectivity" group="elementId" type="parameter" read="true">
+    <![CDATA[
+    <h2>Long-range Connectivity Matrix Animation</h2>
+      <br>
+      <video id=video width=800 controls preload=auto autoplay> 
+          <source src=/static/style/img/edupack/_renders/capacity_matrix_720.mov >
+      </video>
+      
+    ]]>    
+  </description>
+  
+  <description section="s-burst" name="conduction_speed" group="elementId" type="parameter" read="true">
+    <![CDATA[
+    <h2>Conduction Speed Animation</h2>
+      <br>
+      <video id=video width=800  controls preload=auto autoplay> 
+              <source src=/static/style/img/edupack/_renders/conduction_speed_720.mov >
+      </video>
+    ]]>    
+  </description>  
+
+  <description section="s-burst" name="coupling" group="elementId" type="parameter" read="true">
+    <![CDATA[
+    <h2>Long-range coupling function Animation</h2>
+      <br>
+      <video id=video width=800  controls preload=auto autoplay> 
+              <source src=/static/style/img/edupack/_renders/global_coupling_720.mov >
+      </video>
+    ]]>    
+  </description>
+     
+  <!-- 
+  configure-simulator-button
+  input-burst-name-id -->  
+     <!-- 
+  <description section="s-burst" name="burstName" group="elementName" type="description">
+    <![CDATA[
+      If you can see and open this overlay, you haven't selected a simulation.
+      Therefore you have to close the EduPack and then <br>
+      please select <b>subsample_and_BOLD</b> on the left. <br>
+      After that, you can start the TVB-EduPack again.
+    ]]>    
+  </description>
+    -->
+  <!-- 
+  <description section="s-burst" name="coupling" group="elementId" type="parameter">
+    <![CDATA[
+      
+    ]]>    
+  </description>
+  <description section="s-burst" name="connectivity" group="elementName" type="parameter">
+    <![CDATA[
+      Here is the content, images, whatever...<br>
+      <img src=/static/js/example_01.png>
+    ]]>    
+  </description>
+  
+  <description section="s-burst" name="coupling_parameters_option_Linear_a" group="elementName" type="parameter">
+    <![CDATA[
+      Here is the content, images, whatever...<br>
+      <img src=/static/js/example_01.png>
+    ]]>    
+  </description>
+   -->
+  <!-- <description section="s-burst" name="coupling_parameters_option_Linear_b" group="elementName" type="parameter">
+    <![CDATA[
+      Here is the content, images, whatever...<br>
+      <img src=/static/js/example_01.png>
+    ]]>    
+  </description>
+  -->
+  
+  <!-- <description section="s-burst" name="model_parameters_option_Generic2dOscillator_a" group="elementId" type="parameter">
+    <![CDATA[
+      here? Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>  
+
+  <description section="s-burst" name="model_parameters_option_Generic2dOscillator_b" group="elementId" type="parameter">
+    <![CDATA[
+      this? Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>   
+
+  <description section="s-burst" name="model_parameters_option_Generic2dOscillator_tau" group="elementId" type="parameter">
+    <![CDATA[
+      this? Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>   
+  
+  
+  <description section="s-burst" name="conduction_speed" group="elementId" type="parameter">
+    <![CDATA[
+      this? Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>  
+
+  <description section="s-burst" name="surface" group="elementId" type="parameter">
+    <![CDATA[
+      this? Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>  
+   -->
+ 
+    
+  
+   <!-- 
+  <description section="s-burst" name="button-launch-new-burst" group="elementId" type="description">
+    <![CDATA[
+      This button starts a new simulation - please select the imported project simulation to simply watch precomputed results.
+    ]]>    
+  </description>
+   -->
+  
+  <description section="s-burst" name="section-portlets" group="elementId" type="description" read="true">
+    <![CDATA[
+    <h2>Visualization Tab</h2>
+      In this visualization tab, we can preview the computated <br>
+      results of the imported project simulation.<br><br>
+      <img src=/static/style/img/edupack/sim_images/result_example.png width=600>
+    ]]>    
+  </description>
+  
+   <!-- 
+  <description section="s-burst" name="button-maximize-portlets" group="elementId" type="description">
+    <![CDATA[
+      
+    ]]>    
+  </description>   -->
+  <!-- 
+  <description section="s-burst" name="configure-tabs-button" group="elementId" type="description">
+    <![CDATA[
+      The different view configuration possibilities
+    ]]>    
+  </description>    
+  -->
+  <description section="s-burst" name="tab-burst-tree" group="elementId" type="description" read="true">
+    <![CDATA[
+    <h2>Result Section</h2>
+    <br>
+      Click here to start visualizers<br>
+      for the computed data after a simulation finished.
+    ]]>    
+  </description>  
+
+  <description section="s-burst" name="burst-history" group="elementId" type="description" read="true">
+    <![CDATA[
+    <h2>Simulation History</h2>
+      The history panel shows you previously computed<br>
+      simulations. You can create new ones with the default<br>
+      datasets or you can copy an older simulation in order <br>
+      to adopt the configuration and parameter values.
+      <br><br>
+      <img src=/static/style/img/edupack/sim_images/history_example.png width=400>
+    ]]>    
+  </description>
+<!-- 
+  <description section="s-burst" name="title-simulation" group="elementId" type="description">
+    <![CDATA[
+      If you can see and open this overlay, you selected a project<br>
+      and we can continue to have a look at the precomputed results.
+    ]]>    
+  </description>  
+   -->
+
+  <description section="s-burst" name="node_739b8aee-ca3b-11e3-89ed-685b35be37f6" group="elementId_data1" type="description" read="true">
+    <![CDATA[
+      Regions Subsample Result Data
+    ]]>    
+  </description>    
+
+  <description section="s-burst" name="node_739ba1fa-ca3b-11e3-8a70-685b35be37f6" group="elementId_data2" type="description" read="true">
+    <![CDATA[
+      BOLD Result Data
+    ]]>    
+  </description>    
+  
+  <description section="s-burst" name="control-view" group="elementId" type="description" read="true">
+    <![CDATA[
+      By clicking on this icon, you can change the color scheme, <br>
+      toggle display options and select state_variable or mode. 
+    ]]>    
+  </description>  
+    
+ 
+  <description section="s-burst" name="overlayTab_2" group="elementId" inOverlay="true" type="description" read="true">
+    <![CDATA[
+      This is the option menu for your selected datagroup. <br>
+      Click on Visualizer and select the Brain Activity to view <br>
+      the results on a §d brain surface.
+    ]]>    
+  </description>  
+   
+   
+  <description section="s-burst" name="action action-view view-brainactivityvisualizer" group="elementClass" inOverlay="true" type="description" read="true">
+    <![CDATA[
+      Brain Activity Viewer
+    ]]>    
+  </description>   
+   
+   
+  <!-- 
+  <description section="s-burst" name="div-simulator-parameters" group="elementId" type="description">
+    <![CDATA[
+      This is only found, when a simulation is loaded and the parameters already set up.
+    ]]>    
+  </description>
+
+  <description section="s-burst" name="model_parameters_option_Generic2dOscillator_e" group="elementId" type="description">
+    <![CDATA[
+      Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>  
+
+  <description section="s-burst" name="model_parameters_option_Generic2dOscillator_f" group="elementId" type="description">
+    <![CDATA[
+      Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>
+   -->
+  
+    
+    
+  <!-- PROJECT INTERFACE -->
+
+ 
+  <description section="s-project" name="nav-project-operations" group="elementId" type="description">
+    <![CDATA[
+      Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>
+
+  <!-- 
+  <description section="s-project" name="nav-project-data" group="elementId" type="description">
+    <![CDATA[
+      Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>
+  -->
+  <description section="s-project" name="nav-project-properties" group="elementId" type="description" read="true">
+    <![CDATA[
+      In this menu entry you can adapt your current project description and export it for sharing.
+    ]]>    
+  </description>
+   
+   
+  <!-- <description section="s-project" name="nav-project-list" group="elementId" type="misc">
+    <![CDATA[
+      simulator menu
+    ]]>    
+  </description> -->
+  <!-- <description section="s-project" name="import" group="elementName" type="description">
+    <![CDATA[
+      If you can open this overlay, then you're going to start a new simulation.
+      Please select the imported simulation to watch the results.
+    ]]>    
+  </description> -->
+  
+  <description section="s-project" name="id" group="elementClass" type="description" read="true">
+    <![CDATA[
+      Close the EduPack window and you will find a button called<br>
+      <i><b>Import project structure</b></i>, click this and upload the<br>
+      <i><b>Journalist_Case project.</b></i><br>
+      When you are finished, make sure, that the Journalists_Case is your <br>
+      selected project by clicking the <i><b>star</b></i> left to the <i><b>project id</b></i>.
+    ]]>    
+  </description>
+
+
+
+<!-- 
+  <description section="s-project" name="nav-project-figures" group="elementId" type="description">
+    <![CDATA[
+      Lets see what happens, when an element is almost hidden...
+    ]]>    
+  </description>
+ -->
+<!-- PROJECT - DATA Structure -->
+
+  <description section="s-project" name="label_levelTree_1" group="elementId" type="description" read="true">
+    <![CDATA[
+      label leveltree 1
+    ]]>    
+  </description>
+
+  <description section="s-project" name="label_levelTree_2" group="elementId" type="description" read="true">
+    <![CDATA[
+      label leveltree 2
+    ]]>    
+  </description>
+
+  <description section="s-project" name="graph-related-table" group="elementId" type="description" read="true">
+    <![CDATA[
+      graph-related-table
+    ]]>    
+  </description>
+  
+  <description section="s-project" name="workflowCanvasDiv" group="elementId" type="description" read="true">
+    <![CDATA[
+      workflowCanvasDiv
+    ]]>    
+  </description>
+  
+  <description section="s-project" name="tree4" group="elementId" type="description" read="true">
+    <![CDATA[
+      tree4
+    ]]>    
+  </description>
+
+  <description section="s-project" name="action action-upload" group="elementClass" type="description" read="true">
+    <![CDATA[
+      Uploader button
+    ]]>    
+  </description>  
+
+  
+  <!-- CONNECTIVITY -->
+  <!-- <description section="s-connectivity" name="nav-connectivity-connectivity" group="elementId" type="description">
+    <![CDATA[
+      Large Scale Connectivity, perform connectivity lesions
+    ]]>    
+  </description>  
+  <description section="s-connectivity" name="nav-connectivity-local" group="elementId" type="description">
+    <![CDATA[
+      Local Connectivity, create or view existent local connectivity entities
+    ]]>    
+  </description>  
+
+  <description section="s-connectivity" name="input_data" group="elementId" type="description">
+    <![CDATA[
+      Select one of the connectivity matrices from your project
+    ]]>    
+  </description>  
+  
+  <description section="s-connectivity" name="surface_data" group="elementId" type="description">
+    <![CDATA[
+      select a matching brain surface to get a better feeling of the connectivity matrix
+    ]]>    
+  </description>    
+  
+  <description section="s-connectivity" name="colors" group="elementId" type="description">
+    <![CDATA[
+    node colors
+    ]]>    
+  </description>  
+  
+  <description section="s-connectivity" name="step" group="elementId" type="description">
+    <![CDATA[
+      set a threshold value
+    ]]>    
+  </description>  
+  
+  <description section="s-connectivity" name="rays" group="elementId" type="description">
+    <![CDATA[
+      Shape dimensionss...
+    ]]>    
+  </description>   -->
+  <description section="s-connectivity" name="GLcanvas" group="elementId" type="description" read="true">
+    <![CDATA[
+      Visualizer
+    ]]>    
+  </description>  
+
+  <description section="s-connectivity" name="inline-menu monitor-legend" group="elementClass" type="description" read="true">
+    <![CDATA[
+      Legend Button
+    ]]>    
+  </description>  
+  
+  <description section="s-connectivity" name="tool-all-edges" group="elementClass" type="description" read="true">
+    <![CDATA[
+      infos about all edges
+    ]]>    
+  </description>  
+  
+  <description section="s-connectivity" name="tool-selected-edges" group="elementClass" type="description" read="true">
+    <![CDATA[
+      infos about selected edges
+    ]]>    
+  </description>  
+
+  <description section="s-connectivity" name="displayNodeDetails" group="elementId" type="description" read="true">
+    <![CDATA[
+      show metrics details
+    ]]>    
+  </description>  
+
+  <description section="s-connectivity" name="User_Tag_1_Perpetuated" group="elementName" type="description" read="true">
+    <![CDATA[
+      save changes in connectivity matrix
+    ]]>    
+  </description>   
+
+  <description section="s-connectivity" name="selection-ops" group="elementClass" type="description" read="true">
+    <![CDATA[
+      Selection ops
+    ]]>    
+  </description>  
+  <description section="s-connectivity" name="inline-menu" group="elementClass" type="description" read="true">
+    <![CDATA[
+      inline menu
+    ]]>    
+  </description>  
+  
+  <description section="s-connectivity" name="availableSelectionsList" group="elementId" type="description" read="true">
+    <![CDATA[
+      available selctions list
+    ]]>    
+  </description>  
+
+  <description section="s-connectivity" name="currentSelectionName" group="elementId" type="description" read="true">
+    <![CDATA[
+      current selection name
+    ]]>    
+  </description> 
+
+  <description section="s-connectivity" name="inline-menu quadrant-selector" group="elementClass" type="description" read="true">
+    <![CDATA[
+      Quadrant selector
+    ]]>    
+  </description>   
+  <description section="s-connectivity" name="left_change_13_leftHemisphere" group="elementId" type="description" read="true">
+    <![CDATA[
+      Example node in the connectivity matrix...
+    ]]>    
+  </description>   
+  
+  <description section="s-connectivity" name="td_w_9_9" group="elementId" type="description" read="true">
+    <![CDATA[
+      Example edge  weight in the connectivity matrix...
+    ]]>    
+  </description>    
+  
+  
+  
+  
+    
+  
+
+
+  <description section="s-connectivity" name="showConnectivityDetailsBtn" group="elementId" type="description" read="true">
+    <![CDATA[
+      Datatype Details Button
+    ]]>    
+  </description>    
+  
+  <description section="s-project" name="uploadedfile" group="elementId" inOverlay="true" type="description" read="true">
+    <![CDATA[
+      Brain Activity Viewer
+    ]]>    
+  </description>   
+  
+</edupack_xml_detail_descriptions>

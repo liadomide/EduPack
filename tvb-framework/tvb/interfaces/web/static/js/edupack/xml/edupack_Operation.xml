@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<tvb_data Data_version="2">
+	<status>4-FINISHED</status>
+	<range_values>None</range_values>
+	<create_date>2014-03-10,11-42-20.630501</create_date>
+	<parameters>
+	  
+	  {
+	  &quot;&quot;: &quot;&quot;, 
+	  &quot;integrator&quot;: &quot;HeunDeterministic&quot;, 
+	  &quot;model_parameters_option_ReducedSetHindmarshRose_variables_of_interest&quot;: [&quot;xi&quot;, &quot;eta&quot;, &quot;tau&quot;],
+	  &quot;surface&quot;: &quot;&quot;, &quot;integrator_parameters_option_HeunDeterministic_dt&quot;: &quot;0.01220703125&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_sigma&quot;: &quot;[0.3]&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_state_variable_range_parameters_alpha&quot;: &quot;[-4.  4.]&quot;, &quot;monitors_parameters_option_TemporalAverage_period&quot;: &quot;0.9765625&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_noise_parameters_option_Noise_random_stream_parameters_option_RandomStream_init_seed&quot;: &quot;42&quot;, &quot;monitors&quot;: [&quot;TemporalAverage&quot;], &quot;model_parameters_option_ReducedSetHindmarshRose_xo&quot;: &quot;[-1.6]&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_noise_parameters_option_Noise_random_stream&quot;: &quot;RandomStream&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_state_variable_range_parameters_eta&quot;: &quot;[-25.  20.]&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_a&quot;: &quot;[1.0]&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_b&quot;: &quot;[3.0]&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_c&quot;: &quot;[1.0]&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_d&quot;: &quot;[5.0]&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_state_variable_range_parameters_tau&quot;: &quot;[  2.  10.]&quot;, &quot;conduction_speed&quot;: &quot;5.0&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_K12&quot;: &quot;[0.15]&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_K11&quot;: &quot;[0.5]&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_r&quot;: &quot;[0.006]&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_s&quot;: &quot;[4.0]&quot;, &quot;currentAlgoId&quot;: 30, &quot;model_parameters_option_ReducedSetHindmarshRose_noise_parameters_option_Noise_ntau&quot;: &quot;0.0&quot;, &quot;connectivity&quot;: &quot;434bafa3-a835-11e3-a726-1093e900d146&quot;, &quot;range_1&quot;: &quot;0&quot;, &quot;range_2&quot;: &quot;0&quot;, &quot;coupling_parameters_option_Linear_b&quot;: &quot;[0.0]&quot;, &quot;coupling_parameters_option_Linear_a&quot;: &quot;[0.00390625]&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_state_variable_range_parameters_gamma&quot;: &quot;[  2.  10.]&quot;, &quot;coupling&quot;: &quot;Linear&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_state_variable_range_parameters_xi&quot;: &quot;[-4.  4.]&quot;, &quot;stimulus&quot;: &quot;&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_state_variable_range_parameters_beta&quot;: &quot;[-20.  20.]&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_K21&quot;: &quot;[0.15]&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_noise&quot;: &quot;Noise&quot;, &quot;model&quot;: &quot;ReducedSetHindmarshRose&quot;, &quot;model_parameters_option_ReducedSetHindmarshRose_mu&quot;: &quot;[2.2]&quot;, &quot;simulation_length&quot;: &quot;20.0&quot;}</parameters>
+	<fk_launched_in>9f58d8e8-a834-11e3-a0fc-1093e900d146</fk_launched_in>
+	<fk_from_algo>{&quot;classname&quot;: &quot;SimulatorAdapter&quot;, &quot;identifier&quot;: null, &quot;init_parameter&quot;: null, &quot;module&quot;: &quot;tvb.adapters.simulator.simulator_adapter&quot;}</fk_from_algo>
+	<additional_info></additional_info>
+	<method_name>launch</method_name>
+	<visible>True</visible>
+	<completion_date>2014-03-10,11-43-36.007846</completion_date>
+	<meta_data>{&quot;Data_State&quot;: &quot;INTERMEDIATE&quot;, &quot;Burst_Reference&quot;: 2}</meta_data>
+	<user_group>2014-03-10,11-43-22</user_group>
+	<result_disk_size>220</result_disk_size>
+	<gid>a84e10b0-a840-11e3-bd30-1093e900d146</gid>
+	<start_date>2014-03-10,11-43-22.001304</start_date>
+</tvb_data>

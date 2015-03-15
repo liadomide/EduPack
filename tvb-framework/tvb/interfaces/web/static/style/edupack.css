@@ -1,0 +1,906 @@
+/* !-------------------------------------------- */
+/* !LAYOUT: Edupack */
+/* !-------------------------------------------- */
+
+
+#edupackOverlay_original {
+	display: none;
+	position: absolute; /* sorgt dafuer, dass ein anderer div container nicht angezeigt wird -_- */
+	z-index:1000; /* high value to be in front of all other layers */
+	bottom: 43px;
+	right: 0px;
+	height:50%;
+	width:25%;
+	padding-left:10px;
+  padding-top:10px;
+  padding-right:10px;
+  padding-bottom:10px;
+  background-color:#2c2f3b; /*2c2f3b;*/
+  text-align:left;
+  color:#cccccc; /* light gray or dark white :) */
+ 	overflow:auto;
+ 	opacity:0.975;
+ 	/*opacity: 1.0;*/
+}
+
+
+#container{
+  display: none;
+  position: absolute; /* sorgt dafuer, dass ein anderer div container nicht angezeigt wird -_- */
+  z-index:1000; /* high value to be in front of all other layers */
+  bottom: 45px;
+  right: 0px;
+  height:65%;
+  width:55%;
+  /*padding-left:10px;
+  padding-top:10px;
+  padding-right:10px;
+  padding-bottom:10px;*/
+  /*background-color:#00ff00; /*2c2f3b;*/*/
+  text-align:left;
+  color:#cccccc; /* light gray or dark white :) */
+  overflow:auto;
+  opacity:0.975;
+  /*opacity: 1.0;*/
+  pointer-events:none;
+}
+
+
+#edupackOverlay {
+  /*display: none;*/
+  position: absolute; /* sorgt dafuer, dass ein anderer div container nicht angezeigt wird -_- */
+  z-index:1001; /* high value to be in front of all other layers */
+  bottom: 0px;
+  right: 0px;
+  height:80%;
+  width:50%;
+  padding-left:1%;
+  padding-top:1%;
+  padding-right:1%;
+  padding-bottom:1%;
+  background-color:#2c2f3b; /*2c2f3b;*/
+  text-align:left;
+  color:#cccccc; /* light gray or dark white :) */
+  overflow:auto;
+  opacity:0.975;
+  /*opacity: 1.0;*/
+  pointer-events: visible;
+}
+
+#edupack_border_left {
+  /*display: none;
+  position: absolute;
+  z-index:1002;
+  bottom: 0px;
+  left: 0px;
+  height:80%;
+  width:70%;
+  background-image: url("./img/edupack/jessica/test_header_footer/TEST_side.png");
+  background-repeat: no-repeat;
+  background-position: 2px 8px; 
+  opacity:0.975;*/
+  position: absolute; /* sorgt dafuer, dass ein anderer div container nicht angezeigt wird -_- */
+  z-index:1001; /* high value to be in front of all other layers */
+  bottom: 0px;
+  right: 52%;
+  height:80%;
+  width:48%;
+
+  background-image: url("./img/edupack/jessica/test_header_footer/TEST_side.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /*background-color:#2c2f3b; /*2c2f3b;*/*/
+  text-align:left;
+  color:#cccccc; /* light gray or dark white :) */
+  overflow:auto;
+  opacity:0.975;
+  /*opacity: 1.0;*/
+
+}
+
+#edupack_border_top {
+  /*display: none;
+  position: absolute;
+  z-index:1002;
+  bottom: 0px;
+  left: 0px;
+  height:80%;
+  width:70%;
+  background-image: url("./img/edupack/jessica/test_header_footer/TEST_side.png");
+  background-repeat: no-repeat;
+  background-position: 2px 8px; 
+  opacity:0.975;*/
+  position: absolute; /* sorgt dafuer, dass ein anderer div container nicht angezeigt wird -_- */
+  z-index:1001; /* high value to be in front of all other layers */
+  bottom: 82%;
+  right: 0px;
+  height:18%;
+  width:52%;
+
+  background-image: url("./img/edupack/jessica/test_header_footer/TEST_top.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /*background-color:#2c2f3b; /*2c2f3b;*/*/
+  text-align:left;
+  color:#cccccc; /* light gray or dark white :) */
+  overflow:auto;
+  opacity:0.975;
+  /*opacity: 1.0;*/
+
+}
+
+
+.highlight_arrow {
+	display:none;
+	width:134px; /*width of your image*/
+	height:67px; /*height of your image*/
+	background-image:url('./img/edupack/highlight_arrow_left.png');
+	position:absolute;
+	z-index: 11000;
+}
+
+.animation_arrow {
+  display:none;
+  width:134px; /*width of your image*/
+  height:67px; /*height of your image*/
+  background-image:url('./img/edupack/highlight_arrow_left.png');
+  position:absolute;
+  z-index: 32000;
+}
+
+
+.highlight { 
+	background: yellow;
+	background: rgba(255, 0, 0, 0.2);
+    position: absolute;
+    border: 1px solid red;
+    margin: -1px;
+    z-index: 100;
+/*	background-color: yellow;
+	opacity: 0.2;*/
+	width: 200px;
+	height:35px;
+	margin-left:-5px;
+	margin-top:-5px;
+	/*text-align:right;*/
+}
+
+.highlight > p{
+	/*width: 200px;*/
+	height:35px;
+	display:table-cell;
+	vertical-align: bottom;
+	text-align: right;
+}
+
+
+.detail_description {
+	/*position: absolute;
+	background-image: url("./img/edupack/question.jpg");
+	z-index: 100;*/
+	/*background: red;*/
+	/*background: rgba(255, 0, 0, 0.2);
+    position: absolute;
+    border: 1px solid red;
+    margin: -1px;
+    z-index: 100;*/
+/*	background-color: yellow;
+	opacity: 0.2;*/
+	/*width: 200px;
+	height:35px;
+	margin-left:-5px;
+	margin-top:-5px;*/
+	/*text-align:right;*/
+}
+
+.help_links{
+	position: absolute;
+	/*height: 15px;
+	width: 45px;
+	background-image: url("./img/edupack/question.jpg");*/
+	background: rgba(255,255,255,0.7);
+}
+
+.detail_description > p{
+	/*width: 200px;*/
+	/*height:35px;
+	display:table-cell;
+	vertical-align: bottom;
+	text-align: right;*/
+}
+
+/*
+.highlightOverlay {
+	position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 10px;
+    width: 10px;
+    background-color: rgba(1,1,1,1);
+    z-index: 900;
+}*/
+
+/***
+ *  EDUPACK MENU 
+ *  Basic Menu Layout and Styles ***/
+
+/* Reset */
+
+.tutorial_area {
+	position:  relative; /* sorgt dafuer, dass ein anderer div container nicht angezeigt wird -_- */
+	z-index:120; /* high value to be in front of all other layers */
+	width: 100%;
+	max-height: 88%;
+	top: 40px;
+    padding-top:10px;
+    padding-bottom:10px;
+    overflow:auto;
+
+}
+
+.tutorial-step,
+.tutorial-step ul,
+.tutorial-step li,
+.tutorial-step a,
+.tutorial-step span {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+
+
+.tutorial-step li {
+	/*padding-left: 10px;*/
+	list-style: none;
+}
+
+/* Layout & Style */
+
+.tutorial-step li > a ,
+.tutorial-step li > a.visited{
+	display: block;
+	position: relative;
+	min-width: 110px;
+	padding: 0 10px 0 20px;
+	height: 32px;
+
+	color: #fdfdfd;
+	font: bold 12px/32px Arial, sans-serif;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px rgba(0,0,0, .35);
+
+	background: #45a23e;
+	
+	background-image: url("./img/edupack/right.png");
+	background-repeat: no-repeat;
+	background-position: 2px 10px; 
+
+	// leichter farbverlauf in der ersten ebene 
+	background-image: url("./img/edupack/right.png"), -moz-linear-gradient(top,  #45a23e 0%, #57b43b 100%);
+	background-image: url("./img/edupack/right.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45a23e), color-stop(100%,#57b43b));
+	background-image: url("./img/edupack/right.png"), -webkit-linear-gradient(top,  #45a23e 0%,#57b43b 100%);
+	background-image: url("./img/edupack/right.png"), -o-linear-gradient(top,  #45a23e 0%,#57b43b 100%);
+	background-image: url("./img/edupack/right.png"), -ms-linear-gradient(top,  #45a23e 0%,#57b43b 100%);
+	background-image: url("./img/edupack/right.png"), linear-gradient(top,  #45a23e 0%,#57b43b 100%);	
+}
+
+.tutorial-step > li:hover > a,
+.tutorial-step > li:target > a,
+.tutorial-step > li > a.active {
+	color: #3e5706;
+	text-shadow: 1px 1px 1px rgba(255,255,255, .2);
+	
+	background: #45a23e; 
+	background-image: url("./img/edupack/open.png");
+	background-repeat: no-repeat;
+	background-position: 2px 8px; 
+
+	background-image: url("./img/edupack/open.png"), -moz-linear-gradient(top,  #45a23e 0%, #57b43b 100%);
+	background-image: url("./img/edupack/open.png"), -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45a23e), color-stop(100%,#57b43b));
+	background-image: url("./img/edupack/open.png"), -webkit-linear-gradient(top,  #45a23e 0%,#57b43b 100%);
+	background-image: url("./img/edupack/open.png"), -o-linear-gradient(top,  #45a23e 0%,#57b43b 100%);
+	background-image: url("./img/edupack/open.png"), -ms-linear-gradient(top,  #45a23e 0%,#57b43b 100%);
+	background-image: url("./img/edupack/open.png"), linear-gradient(top,  #45a23e 0%,#57b43b 100%);		
+}
+
+.tutorial-step li > a span {
+	display: block;
+	position: absolute;
+	top: 7px;
+	right: 0;
+	padding: 0 10px;
+	margin-right: 10px;
+	
+	font: normal bold 12px/18px Arial, sans-serif;
+	background: #404247;
+	
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0, .2), 1px 1px 1px rgba(255,255,255, .1);
+	-moz-box-shadow: inset 1px 1px 1px rgba(0,0,0, .2), 1px 1px 1px rgba(255,255,255, .1);
+	box-shadow: inset 1px 1px 1px rgba(0,0,0, .2), 1px 1px 1px rgba(255,255,255, .1);
+}
+
+.tutorial-step > li:hover > a span,
+.tutorial-step > li:target > a span,
+.tutorial-step > li > a.active span {
+	color: #ffffff;
+	text-shadow: 0px 1px 0px rgba(0,0,0, .35);
+	background: #3e5706;
+	
+
+}
+
+/* Sub Menu */
+
+
+.sub-step li > a,
+.sub-step li > a.visited {
+	
+	
+	margin-left: 3px;
+
+	
+	color: #797979;
+	text-shadow: 1px 1px 0px rgba(255,255,255, .2);
+
+	background: #dedede;
+	border-bottom: 1px solid #c9c9c9;
+	
+	background-image: url("./img/edupack/right_black.png");
+	background-repeat: no-repeat;
+	background-position: 8px 10px; 
+
+}
+
+.sub-step > li:hover > a,
+.sub-step > li:target > a,
+.sub-step > li > a.active{
+	background: #cdcdcd; 
+	border-bottom: 1px solid #45a23e; 
+	border-top: 1px solid #45a23e;
+	
+	background-image: url("./img/edupack/open_black.png");
+	background-repeat: no-repeat;
+	background-position: 8px 8px; 
+}
+
+//.sub-step li:last-child a { border: none; }
+
+
+
+.sub-step li > a span {
+	color: #797979;
+	text-shadow: 1px 1px 0px rgba(255,255,255, .2);
+	background: transparent;
+	border: 1px solid #404247;
+
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.sub-step em {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 14px;
+	color: #a6a6a6;
+	font: normal 10px/32px Arial, sans-serif;
+}
+
+/* Functionality */
+
+.tutorial-step li > .sub-step {
+	display: none;
+}
+
+.tutorial-step li:target > .sub-step {
+	display: block;
+}
+
+
+
+
+
+/* Sub Menu */
+
+
+.detail-step {
+	color: #797979;
+	text-shadow: 1px 1px 0px rgba(255,255,255, .2);
+	border-bottom: 1px solid #c9c9c9;
+	
+	padding: 5px 10px 5px 10px;
+	/*margin: 0 0 0 5px;*/
+	margin-left: 6px;
+	min-height: 32px;
+	
+	font: 14px/20px Arial, sans-serif;
+	background-color: #ffffff;
+	
+	overflow:hidden;
+}
+
+.detail-step a{
+	color: #ff0000;
+}
+
+
+.detail-step em {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 14px;
+	color: #a6a6a6;
+	font: normal 10px/32px Arial, sans-serif;
+}
+
+/* Functionality */
+
+.sub-step  li > .detail-step {
+	display: none;
+}
+
+.sub-step li:target > .detail-step {
+	display: block;
+}
+
+.overlayBG {
+   background-color:#000;
+   -ms-filter: "Alpha(Opacity=75)"; /* IE 8 */
+   filter:alpha(opacity=75); /* IE5-7 */
+   -moz-opacity: 0.75; /* Mozilla */
+   opacity: 0.3;
+   z-index: 29999;
+}
+
+#lightBox {
+   position:fixed;
+   top:50%;
+   left:50%;
+   margin-left:-100px;
+   margin-top:-100px;
+   z-index:20000;
+   width:200px;
+   height:200px;
+   background-color:#fff;
+   text-align:center;
+}
+
+/***********************/
+
+
+
+
+.paulund_block_page {
+	position:absolute;
+	top: 0;
+	left:0;
+	background-color:rgba(0,0,0,0.6);
+ 
+	height:100%;
+	width:100%;
+	z-index:29000;
+}
+
+
+.paulund_modal_box { 
+	position:absolute;
+	display:none;
+	height: 80%;
+	width: 60%;
+	left: 20%;
+	top:10%;
+	/*margin:15px;/*margin:0px auto;*/*/
+	/*padding: 10px 10px 10px 10px;*/
+	overflow:auto;
+	border:1px solid #ffffff;
+	box-shadow: 0px 2px 7px #292929;
+	-moz-box-shadow: 0px 2px 7px #292929;
+	-webkit-box-shadow: 0px 2px 7px #292929;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	background: #f2f2f2; 
+	z-index:30000;
+}
+.paulund_modal_close {
+	position:relative;
+	/*top:-2px;*/
+	left:-10px;
+	float:right;
+	display:block;
+	height:0px;
+	width:5px;
+}
+.paulund_inner_modal_box {
+	background-color:#ffffff;
+	/*position: absolute;*/
+	width: 97.5%;
+	height: 95%;*/
+	padding:10px 10px 10px 10px ;
+	margin:15px 15px 15px 15px;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	overflow:auto;
+	text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+.helpOverlay_block_page {
+	position:absolute;
+	top: 0;
+	left:0;
+	background-color: rgba(0,0,0,0.6);
+	
+	/*background-image: url("./img/edupack/jessica/bg/grey_triangles.gif");
+	opacity: 0.6;
+	
+  background-repeat: repeat;
+  background-size:300px 300px;*/
+  /*background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("./img/edupack/jessica/bg/grey_triangles.gif") repeat 0 0, url("./img/edupack/jessica/bg/grey_triangles.gif") repeat 0 0;*/
+  
+  float:left;
+	height:100%;
+	width:100%;
+	z-index:29000;
+	
+	/*width:300px;
+	height:300px;
+	background-image: url("./img/edupack/jessica/bg/grey_triangles.gif") repeat;*/	
+}
+
+
+.helpOverlay_modal_box { 
+	position:absolute;
+	display:none;
+	/*height: 55%;
+	width: 60%;*/
+	left: 20%;
+	top:20%;
+	/*margin:15px;/*margin:0px auto;*/*/
+	/*padding: 10px 10px 10px 10px;*/
+	overflow:auto;
+	border:1px solid #ffffff;
+	box-shadow: 0px 2px 7px #292929;
+	-moz-box-shadow: 0px 2px 7px #292929;
+	-webkit-box-shadow: 0px 2px 7px #292929;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	background: #f2f2f2; 
+	z-index:30000;
+}
+.helpOverlay_modal_close {
+	position:relative;
+	/*top:-2px;*/
+	left:-10px;
+	float:right;
+	display:block;
+	height:0px;
+	width:5px;
+}
+.helpOverlay_inner_modal_box {
+	background-color:#ffffff;
+	position: relative;
+	/*width: 97.5%;
+	height: 95%;*/
+	padding:10px 10px 10px 10px ;
+	margin:15px 15px 15px 15px;
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	overflow:auto;
+	text-align:center;
+}
+
+
+
+
+
+.linkOverlay_block_page {
+	position:absolute;
+	top: 0;
+	left:0;
+	/*background-color:rgba(0,0,0,0.4);*/
+	height:100%;
+	width:100%;
+	pointer-events:none;
+	z-index:29000;
+}
+
+.linkOverlay_elements_description { 
+	pointer-events:auto;
+	position:absolute;
+	height: 34px;
+	width: 40px;
+	background-image: url("./img/edupack/jessica/bolder_icons/icons_sky12_BOLD_48.png");
+	background-repeat: no-repeat;
+	background-size:40px 34px;
+	z-index:20000;
+  
+}
+
+.linkOverlay_elements_description a{ 
+	display:block;
+	height:100%;
+}
+
+.linkOverlay_elements_parameter { 
+  pointer-events:auto;
+  position:absolute;
+  height: 34px;
+  width: 40px;
+  background-image: url("./img/edupack/jessica/bolder_icons/icons_orange12_BOLD_48.png");
+  background-repeat: no-repeat;
+  background-size:40px 34px;
+  z-index:20000;  
+}
+
+.linkOverlay_elements_parameter a{ 
+  display:block;
+  height:100%;
+}
+
+.linkOverlay_elements_misc { 
+  pointer-events:auto;
+  position:absolute;
+  height: 34px;
+  width: 40px;
+  background-image: url("./img/edupack/jessica/bolder_icons/icons_gold12_BOLD_48.png");
+  background-repeat: no-repeat;
+  background-size:40px 34px;
+  z-index:20000;
+}
+
+.linkOverlay_elements_misc a{ 
+  display:block;
+  height:100%;
+}
+
+.linkOverlay_elements_task { 
+  pointer-events:auto;
+  position:absolute;
+  height: 34px;
+  width: 40px;
+  background-image: url("./img/edupack/jessica/bolder_icons/icons_green12_BOLD_48.png");
+  background-repeat: no-repeat;
+  background-size:40px 34px;
+  z-index:20000;
+}
+
+.linkOverlay_elements_task a{ 
+  display:block;
+  height:100%;
+}
+
+.linkOverlay_elements_task a > b{ 
+  display:block;
+  padding: 8px 6px 8px 8px;
+  text-align: center;
+}
+
+.showEduPackHelp_description{ 
+
+}
+
+input[type='range']{
+    -webkit-appearance: none;
+   	opacity: 0.8;
+    width: 90%;
+    height:6px;
+    margin: 10px;
+}
+
+input[type='range']:disabled {
+   	opacity: 0.1;
+}
+
+input[type='range'].overlaySlide{
+    -webkit-appearance: none;
+    background-color: silver;
+   	opacity: 0.8;
+    width: 100%;
+    height:6px;
+    margin: 10px;
+}
+
+input[type='range'].overlaySlide:disabled{
+    -webkit-appearance: none;
+    background-color: silver;
+   	opacity: 0.3;
+    width: 100%;
+    height:6px;
+    margin: 10px;
+}
+
+.div_cropped_image{
+	position: relative;
+	width: 770px;
+	height: 735px;	
+}
+
+.cropped_image {
+  position: absolute;
+  left: -100%;
+}
+
+.submit_button {
+
+  background-image: url("./img/edupack/jessica/icons_rainbow/icons_orange05.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display:inline-block;
+  color:#DDDDDD;
+  font-family:arial;
+  font-size:15px;
+  font-weight:normal;
+  font-style:normal;
+  height:50px;
+  line-height:50px;
+  width:110px;
+  text-decoration:none;
+  text-align:center;
+
+}
+.submit_button:hover {
+  background-image: url("./img/edupack/jessica/icons_rainbow/icons_orange05.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color:#FFFFFF;
+}
+.submit_button:active {
+  position:relative;
+  top:1px;
+}
+
+.overlay_button {
+  background-image: url("./img/edupack/jessica/icons_rainbow/icons_cobalt05.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display:inline-block;
+  color:#DDDDDD;
+  font-family:arial;
+  font-size:15px;
+  font-weight:normal;
+  font-style:normal;
+  height:30px;
+  line-height:30px;
+  width:70px;
+  text-decoration:none;
+  text-align:center;
+
+}
+.overlay_button:hover {
+  background-image: url("./img/edupack/jessica/icons_rainbow/icons_cobalt05.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color:#FFFFFF;
+}
+.overlay_button:active {
+  position:relative;
+  top:1px;
+}
+
+.animation_button:before {
+  border:1px;
+  border-color: #648EBA;
+}
+
+.animation_button:hover {
+  border:3px;
+  border-color: #648EBA;
+}
+.animation_button:active {
+}
+
+a.pic-link {
+  display:block; /* allow height and width to be specified - not needed if floated */
+  height:200px; /* match img */
+  width:350px; /* match img */
+  position:relative; /* so children of .pic-link can be positioned absolutely in relation it */ 
+  color:blue;
+  }
+ 
+a.pic-link:hover {
+  color:green; /* IE6 requires a change of some kind to occur on a:hover for hover to work on a.pic-link:hover span, otherwise this could be applied to that selector */
+  }
+ 
+a.pic-link img {
+  border:none;
+  vertical-align:bottom; /* removes the space reserved for text descenders */
+  }
+ 
+a.pic-link span {
+  position:absolute;
+  bottom:40%;
+  text-align: center;
+  font: bold 12px;
+  color: #0000FF;
+  left:3%;
+  width:96%;
+  background:rgba(100, 100, 100, 0.5);
+  }
+ 
+a.pic-link:hover span {
+  background:rgba(100, 100, 100, 0.4);
+  color: #4DA83F;
+  }
+  
+
+/*tabelle overlay */
+.rightborder {
+border-right: 1px solid #000000;
+}
+
+
+.image_map_table td 
+{
+  table-layout:fixed;
+  width:100px;
+  border:1px;
+  overflow:hidden;
+  word-wrap:break-word;
+}
+
+.map_image { 
+  display: block; width: 1200px; height: 901px; position: relative; background-position: 0 0; background-repeat: no-repeat; 
+  /*background-image: url('/static/style/img/edupack/sim_images/param_exploration_5_subjects/AA_20120815_MAP.png');*/
+  background-image: url('/static/style/img/edupack/sim_images/param_exploration_5_subjects/AA_20120815_MAP.png');
+  zoom:.4;-o-transform: scale(.4);-moz-transform: scale(.4);
+}
+
+.map_image .map_link { /* the links are generated automatically in generateStylesForOverlay()*/ 
+  display: block; position: absolute; text-indent: -999em; overflow: hidden;
+}
+
+.map_simulated_image { 
+  display: block; width: 1200px; height: 901px; position: relative; background-position: 0 0; background-repeat: no-repeat; 
+  /*background-image: url('/static/style/img/edupack/sim_images/param_exploration_5_subjects/AA_20120815_CS_100_CSF_0.05.jpeg');*/
+  zoom:.4;-o-transform: scale(.4);-moz-transform: scale(.4);
+}
+
+
+
+.batchscript_button {
+  background-image: url("./img/edupack/jessica/icons_rainbow/icons_slate05.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display:inline-block;
+  color:#DDDDDD;
+  font-family:arial;
+  font-size:15px;
+  font-weight:normal;
+  font-style:normal;
+  height:30px;
+  line-height:30px;
+  width:190px;
+  text-decoration:none;
+  text-align:center;
+
+}
+.batchscript_button:hover {
+  background-image: url("./img/edupack/jessica/icons_rainbow/icons_slate05.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color:#FFFFFF;
+}
+.batchscript_button:active {
+  position:relative;
+  top:1px;
+}
+
+

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<edupack_tutorial>
+  
+  <title>Menu-Structure Tutorial, TVB-EduPack v0.1.2</title>
+  
+  <!-- preconditions for whole tutorial -->
+  <preconditions> 
+    <state>simulator-interface</state>
+    <state>finish_constraints_tutorial_XX</state>
+  </preconditions> 
+  
+  <!-- <action type="project_xml" section="simulator" variable_name="none" value="none"></action> -->
+  <description>
+    <![CDATA[Use this text area to describe your TVB-EduCase / tutorial.]]>  
+  </description>
+  
+  
+  <step>
+    <label>Heading of Menu Strucutre Level 1</label>
+    <step-id>00</step-id>
+    
+    <sub-step>
+      <task>Example Sub-Heading: Your first task</task>
+      <type>description</type>
+      <value>01</value>
+      
+      <detail>
+        <![CDATA[
+          Welcome to 
+          <b>The Virtual Brain - EduPack. :)</b>
+          <br/>
+          Describe your task here... <br/><br/>
+        ]]>
+      </detail>
+      
+      <finish_constraints>
+        <manual>clicking here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+    
+    <sub-step>
+      <task>Heading of Sub-Menu Structure Level 2</task>
+      <type>description</type>
+      <value>02</value>
+      
+      <detail>
+        <![CDATA[
+          <b>Structure Level 3</b> - a description of your task.</br>
+          Here is enough place to describe a task for the user, you can make use of images, sound, animations etc.
+        ]]>
+      </detail>
+      <finish_constraints>
+        <manual>Click here to continue with the next task.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step> 
+    
+    <sub-step>
+      <task>Example Sub-Heading: EduCases and Tasks</task>
+      <type>description</type>
+      <value>03</value>
+      
+      <detail>
+        <![CDATA[
+        TVB-EduPack provides EduCases, like in <b>Step 01: Pipeline Data</b> which will guide you through the TVB-interface.
+        Whenever you see the following highlighted <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <b>elements</b>
+        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom> in a task, you will also 
+        find a corresponding element on the screen.
+        Marked with the current task number, indicating an important element or position where to continue.<br/>
+        <img src=/static/style/img/edupack/task_element.png><br/>
+        ]]>
+      </detail>
+      <finish_constraints>
+        <manual>Click here to continue with the next task.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step> 
+
+
+    
+  </step>
+  
+  
+  <step>
+    <label>New Heading: Getting started</label>
+    <step-id>01</step-id>
+    
+    <sub-step>
+      <task>Switch to project interface</task>
+      <type>description</type>
+      <value>01</value>
+      
+      <detail>
+        <![CDATA[
+          To start right away we want to import some data.<br/>
+          Therefore, please change to the 
+          <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+          <b>Project Interface.</b>
+          <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom><br/>
+          You can find the link in the footer menu. 
+        ]]>
+      </detail>
+      
+      <action type="task_overlay" section="s-project" helper_type="task" group="elementId" variable_name="nav-project" value="none">
+        <![CDATA[
+        This is the first task you have to solve, <br>click this <b>Project</b> button to switch to the Project Interface.
+        ]]>
+      </action>
+      
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+  
+  </step>
+
+
+</edupack_tutorial>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<edupack_tutorial>
+  
+  <title>Sample Tutorial, TVB-EduPack v0.1.1</title>
+  
+  <!-- preconditions for whole tutorial -->
+  <preconditions> 
+    <state>simulator-interface</state>
+    <state>finish_constraintsed_tutorial_XX</state>
+  </preconditions> 
+  
+  <!-- <action type="project_xml" section="simulator" variable_name="none" value="none"></action> -->
+  <description>
+    <![CDATA[In this example tutorial, you'll get a first impression of TVB-EduPack. The tutorial is divided to several parts. These parts are the <b><i>Steps</i></b> which you can see in the menu below. The first part is already open and shows you the associated <b><i>Tasks</i></b>. Click on the first task to continue.]]>  
+  </description>
+    <step>
+    <label>Create your first simulation</label>
+    <step-id>04</step-id>
+    
+    <sub-step>
+      <task>Create a new Simulation</task>
+      <value>01</value>
+      <detail>
+        On the right side of the history tab on the left hand side of the 
+        Simulator Interface, there is grey button marked with a star. 
+        Click it in order to create a new and clean simulation.
+      </detail>
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+    
+    <sub-step>
+      <task>Configure your simulation</task>
+      <value>02</value>
+      <detail>
+        Now let's concentrate on the frame in the middle - the Configuration 
+        area. First type in the name of the simulation. Below that name field 
+        are three buttons - not so important yet, but the first one 
+        "Configure Interface" allows you to add / hide specific fields 
+        in the parameter setup, and the other two permit the user to adapt 
+        and specify parameters for specific nodes of the connectivity matrix.
+      </detail>
+      <finish_constraints>
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step> 
+  </step>
+  
+  
+  <step>
+    <label>Using functionality</label>
+    <step-id>05</step-id>
+    <!-- <description>bla bla bla</description> -->
+    
+    <sub-step>
+      <task>Switch to Simulator Interface</task>
+      <value>01</value>
+      <detail>
+        Welcome to the Tutorial "Set up ypur first simulation". 
+        To start right away, make sure that you're in the Simulator Interface of 
+        <i>The Virtual Brain</i> - if not, please switch to the Simulator 
+        Interface by clicking in the Footer Tab in the lower area of the TVB Interface.
+      </detail>
+      
+      <!-- either manual if appicable, otherwise with automated conditions -->
+      <finish_constraints> 
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+        <state>none</state>
+      </finish_constraints>
+      <action type="highlight" section="simulator" variable_name="coupling" value="5.0"></action>
+      <action type="highlight" section="simulator" variable_name="conduction_speed" value="5.0"></action>
+      <action type="highlight" section="simulator" variable_name="coupling_parameters_option_Linear_a" value="5.0"></action>
+    </sub-step>
+    
+    <sub-step>
+      <task>Information about Simulator Interface</task>
+      <value>02</value>
+      <detail>
+        The Simulator Interface is divided into three areas. 
+        On the left you can see a history list, with all your simulations 
+        from the past within your project - you can copy, reload 
+        and create new ones........
+        .......
+      </detail>
+      <finish_constraints>
+        <!--<manual>Click here to complete this task manually.</manual>-->
+        <state>none</state>
+      </finish_constraints>
+      <action type="project_xml" section="simulator" variable_name="none" value="none"></action>
+    </sub-step> 
+    
+    <sub-step>
+      <task>Start an overlay</task>
+      <value>03</value>
+      <detail>
+        The Simulator Interface is divided into three areas. 
+        On the left you can see a history list, with all your simulations 
+        from the past within your project - you can copy, reload 
+        and create new ones........
+        
+
+        .......
+      </detail>
+      <overlay>
+        <content><![CDATA[<h2>huhuuu</h2>]]></content>
+      </overlay>
+      <finish_constraints>
+        <!--<manual>Click here to complete this task manually.</manual>-->
+        <state>none</state>
+      </finish_constraints>
+      <!-- <action type="overlay" section="simulator" variable_name="none" value="none"></action> -->
+    </sub-step> 
+  </step>
+</edupack_tutorial>

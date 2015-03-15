@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edupack_tutorial>
+  <!-- title for this tutorial and tutorial_name for internal reasons e.g. preconditions -->
+  <title>SfN 2014 Tutorial Example, TVB-EduPack v0.3</title>
+  <tutorial_name>tutorial_thesis</tutorial_name>
+  
+  <!-- preconditions for whole tutorial, here deactivated -->
+  <preconditions> 
+    <!-- <state>finished tutorial_import</state> -->
+  </preconditions> 
+  
+  <!-- description text above menu -->
+  <description>
+    <![CDATA[
+      Welcome to this short demonstration tutorial of TVB-EduPack.<br>
+      The exercise is to <b>create a new project</b> and then <b>start a simple simulation</b> with 
+      specified parameters and the use of the provided default datasets. Therefore the tutorial is divided in 
+      two parts parts. <br>
+      It will not focus on details but present some of the containing action primitives. 
+    ]]>  
+  </description>
+  
+  <!-- here starts the first step with all its sublevel structure elements -->
+  <step>
+    <label>Create a new project</label>
+    <step-id>00</step-id>
+    
+    <!-- here starts the first sub-step, no preconditions but using task_overlay primitive
+      to emphasize the task - here to switch into the Project page of TVB -->
+    <sub-step>
+      <task>Switch to project interface</task>
+      
+      <!-- type is "description", later in the tutorial it will change to "parameter" -->
+      <type>description</type>
+      
+      <!-- sub-step id -->
+      <value>01</value>
+      
+      <!-- description of the task --> 
+      <detail>
+        <![CDATA[
+          To create a new project and not only a new simulation, we need to
+          change to the project page of TVB.<br/>
+          Therefore, please click the 
+          <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+          <b>Project button</b>  
+          <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom>
+          in the footer menu. 
+        ]]>
+      </detail>
+      
+      <!-- action primitive "task_overlay", showing a numbered Helper element 
+        (number of the current sub-step) and an additional message presented in an overlay.-->
+      <action type="task_overlay" section="s-project" helper_type="task" 
+              group="elementId" variable_name="nav-project" read="true">
+              
+        <![CDATA[
+          This is the first task you have to solve, <br>
+          click the <b>Project</b> button to switch to the Project page.<br><br>
+          <img src=/static/js/tutorial_preview_project.png width=400>
+        ]]>
+      </action>
+      
+      <!-- no auto completion within this tutorial, if the user clicks the link, the next substep
+        will be opened and the previous task will be marked as finished -->
+      <finish_constraints>
+        <manual>Click here, when you completed the task.</manual>
+        <!-- <state>none</state> -->
+      </finish_constraints>  
+    </sub-step>
+    
+    
+    <sub-step>
+      <task>Go to List of All Projects</task>
+      <type>description</type>
+      <value>02</value>
+      
+      <!-- related to the previous task, the user should now be on the project page, 
+        otherwise he / she will get a warning message and is not able to open the sub-step -->
+      <precondition section="s-project">
+        <![CDATA[
+        <font color=red>Warning</font>, you are not on the project page. <br>
+        Please switch to the Project page in order to continue.
+        ]]>
+      </precondition>
+      
+      <action type="task_overlay" section="s-project" helper_type="task"
+              group="elementId" variable_name="nav-project-list" value="none">
+        <![CDATA[
+        The menu entry <b>List of all projects</b> will bring you to the project manager, <br>where we can generate a new and clean project.
+        ]]>
+      </action>
+      
+      <detail>
+        <![CDATA[
+        Now you see all submenu options of TVB's project page. <br/>
+        We want to create a new project, so please click the button <br/>
+        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <b>List of all projects</b>
+        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom> to continue.<br/>
+        ]]>
+      </detail>
+
+      <finish_constraints>
+        <manual>Click here, when you completed the task.</manual>
+        <!-- <state>none</state> -->
+      </finish_constraints>  
+    </sub-step> 
+    
+    
+    <sub-step>
+      <task>Create a new Project</task>
+      <type>description</type>
+      <value>03</value>
+        
+      <precondition section="s-project">
+        <![CDATA[
+        <font color=red>Warning</font>, you are not on the correct page (Project -> List of all Projects)!
+        ]]>
+      </precondition>
+      
+      <detail>
+        <![CDATA[
+        Now you are in the project manager of TVB,it shows all of your 
+        created projects including open, finished or aborted operations.<br>
+        As probably recognized, the TVB-EduPack moved a little bit to the left.<br/>
+        Right to this window is the button 
+        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <b>Create new Project</b>
+        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom>
+        , click this and continue.
+        ]]>
+      </detail>
+      
+      <action type="task_overlay" section="s-project" helper_type="task" group="elementName" variable_name="create" value="none">
+        <![CDATA[
+        Click <b>Create new project</b> and then we will create a new project.
+        ]]>
+      </action>
+
+      <!-- action primitive to move TVB-EduPack some pixels to the left in order to uncover hidden elements -->
+      <action type="move_edupack" section="s-project">
+      </action>
+      
+      <finish_constraints>
+        <manual>Click here, when you completed the task.</manual>
+        <!-- <state>none</state> -->
+      </finish_constraints>  
+    </sub-step>
+    
+    <sub-step>
+      <task>Save new project</task>
+      <type>description</type>
+      <value>04</value>
+      
+      <precondition section="s-project">
+        <![CDATA[
+        <font color=red>Warning</font>, you are not in the correct interface (Project -> Create New Project)!
+        ]]>
+      </precondition>
+      
+      <detail>
+        <![CDATA[
+        Give your project<br/>  
+        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <b>a name and a description</b>
+        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom>
+        and then continue by clicking<br/> 
+        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <b>Save Changes</b>
+        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom><br/>
+        right next to the TVB-EduPack window.
+        ]]>
+      </detail>
+      
+      <!-- three task_overlay elements to relate several fields and buttons to this task -->
+      <action type="task_overlay" section="s-project" helper_type="task" group="elementId" variable_name="name" value="none">
+        <![CDATA[ Please give your project a significant <b> Name</b>.]]>
+      </action>
+      
+      <action type="task_overlay" section="s-project" helper_type="task" group="elementId" variable_name="description" value="none">
+        <![CDATA[ Please give your project a meaningful <b> Description</b>. ]]>
+      </action>
+
+      <action type="task_overlay" section="s-project" helper_type="task" group="elementName" variable_name="save" value="none" read="true">
+        <![CDATA[ When the project is named, you can continue and <b>Save Changes</b>. ]]>
+      </action>
+
+      <action type="move_edupack" section="s-project">
+      </action>   
+      
+      <finish_constraints>
+        <manual>Click here, when you completed the task.</manual>
+        <!-- <state>none</state> -->
+      </finish_constraints>  
+    </sub-step>
+    
+  
+  
+    <sub-step>
+      <task>Congratulations</task>
+      <type>description</type>
+      <value>05</value>
+      
+      <detail>
+        <![CDATA[
+        <b>Congratulation</b>, you created a clean project and are now ready to start
+        a simple simulation. Make sure your project is selected, indicated with a 
+        dark star in the upper left area.  <br>
+        Now switch to 
+        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <b>TVB simulator page</b>
+        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom> on the left.<br/>
+        , where we will set up your first simulation.
+        ]]>
+      </detail>
+      
+      <action type="task_overlay" section="s-project" helper_type="task" 
+              group="elementId" variable_name="nav-burst" value="none" read="true">
+              
+        <![CDATA[
+          To continue with the next task and create your first simulation, <br>
+          click the <b>Simulator</b> button to switch to the Simulator page.<br><br>
+          <img src=/static/js/tutorial_preview_simulator.png width=400>
+        ]]>
+      </action>
+      
+      <finish_constraints>
+        <manual>Click here, when you completed the task.</manual>
+        <!-- <state>none</state> -->
+      </finish_constraints> 
+    </sub-step>  
+    
+  </step>
+  
+  <step>
+    <label>Start your first simulation</label>
+    <step-id>01</step-id>
+      
+    <sub-step>
+      <task>Create a new simulation</task>
+      <type>parameter</type>
+      <value>01</value>
+      
+      <precondition section="s-burst">
+        <![CDATA[
+        <font color=red>Warning</font>, you are not on TVB Simulator page, please change in order to continue.
+        ]]>
+      </precondition>
+      
+      <detail>
+        <![CDATA[
+        There are two ways how you can start a simulation - either you start a new
+        one and adapt the default parameter values or you copy one of your old 
+        simulations from history. Your simulation history is empty, so we will 
+        start to create a simulation.<br>
+        Click on  
+        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <b>the star in the history panel</b>
+        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom><br/>
+        to create a new simulation.
+        ]]>
+      </detail>
+      
+      <!-- burst-history link -->
+      <action type="task_overlay" section="s-burst" helper_type="task" 
+              group="elementClass" variable_name="view-history view-column col-1" read="true">
+              
+        <![CDATA[
+          Clicking this button creates a new and clean simulation.<br>
+          You can skip this task, if you see an empty form field next to
+          the <b>New simulation core</b>. <br>This means that you are already 
+          ready for the next task. :)<br><br>
+          <img src=/static/js/tutorial_preview_simulator_name.png width=400>
+        ]]>
+      </action>
+      
+      <finish_constraints>
+        <manual>Click here, when you completed the task.</manual>
+        <!-- <state>none</state> -->
+      </finish_constraints> 
+    </sub-step>       
+    
+    
+    <sub-step>
+      <task>Start to configure your simulation</task>
+      <type>parameter</type>
+      <value>02</value>
+      
+      <precondition section="s-burst">
+        <![CDATA[
+        <font color=red>Warning</font>, you are not on TVB Simulator page, please change in order to continue.
+        ]]>
+      </precondition>
+      
+      <detail>
+        <![CDATA[
+        At first, give your simulation a   
+        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <b>name</b>
+        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom> and then continue 
+        by having a first look at the parameters below.<br/>
+        Please enable the TVB-Parameter Helper elements from the EduPack GUI and use the 
+        slider to decrease the visibility if they are distracting you.<br>
+        Open the Help content and watch the animations to get an idea of the 
+        first three parameters.
+        ]]>
+      </detail>
+      
+      <action type="task_overlay" section="s-burst" helper_type="task" 
+              group="elementId" variable_name="input-burst-name-id" read="true">
+              
+        <![CDATA[
+          Give your simulation a significant name and learn about 
+          TVB-EduPack Helper elements by activating the help for the parameters.<br><br>
+          <img src=/static/js/tutorial_preview_helper.png width=400>
+        ]]>
+      </action>
+      
+      <!-- example for highlight primitive, with defined and undefined value-to-be -->
+      <action type="highlight" section="simulator" variable_name="conduction_speed" value="40.0"></action>
+      <action type="highlight" section="simulator" variable_name="coupling_parameters_option_Linear_b"></action>
+      
+      <finish_constraints>
+        <manual>Click here, when you completed the task.</manual>
+        <!-- <state>none</state> -->
+      </finish_constraints> 
+    </sub-step>    
+    
+    
+    <sub-step>
+      <task>Preview results and adapt parameters</task>
+      <type>parameter</type>
+      <value>03</value>
+      
+      <precondition section="s-burst">
+        <![CDATA[
+        <font color=red>Warning</font>, you are not on TVB Simulator page, please change in order to continue.
+        ]]>
+      </precondition>
+      
+      <detail>
+        <![CDATA[
+        Now that you have the first impression of a small set of parameters,
+        start this overlay here which will show you some results of 
+        previously computed simulations. <br>
+        Use the slider elements to compare the results and select one 
+        configuration that you want to submit directly to TVB-Simulator page.<br>
+        Clicke here to open the overlay: 
+        ]]>
+      </detail>
+      
+      
+      <overlay>
+        <content>
+        <![CDATA[
+          <h2>Compare Neuronal activity with Power Spectrum and FC Matrices</h2>
+          <br>
+          Showing FC and PSD of Parameter Exploration of the parameters linear coupling value a and the conduction speed in order to get a good neural activity.<br>
+          User the two different result frames to compare the data of different parameter ranges and submit the one you like most to the TVB Simulator Interface.
+          <br><br><hr>
+            <table align=center width=100%>
+              <tr width=100%>
+                <td width=50% align=left class=rightborder>
+                    <img width=100% id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3 src=/static/style/img/edupack/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_2_5/c_40/timeline_plotter_15.jpg>
+                </td>
+                <td width=50% align=left>
+                    <img width=100%  id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4 src=/static/style/img/edupack/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_2_5/c_40/timeline_plotter_15.jpg>
+                </td>
+              </tr>
+              <tr>
+                <td class=rightborder>
+                  <table align=center width = 80% >
+
+                  <tr width=80%>
+                    
+                    <td width=90% align=left>
+                      Long-range coupling factor<br/>
+                      <input 
+                        name=coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3
+                        type=range 
+                        value=15
+                        max=31
+                        min=01 
+                        id=coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3
+                        class=overlaySlide
+                        oninput=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3()
+                        onchange=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3() >
+                    </td>
+                    <td align=right>  
+                      <output 
+                          name=val_coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3
+                          id=val_coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3
+                          for=coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3>0.110</output>
+                      
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td align=left>
+                      Conduction Speed<br/>
+                      <input 
+                        name=speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3
+                        type=range 
+                        value=2
+                        max=3
+                        min=1
+                        id=speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3
+                        class=overlaySlide
+                        oninput=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3()
+                        onchange=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3()
+                        >
+                    </td>
+                    <td align=right>
+                      <output 
+                          name=val_speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3
+                          id=val_speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3
+                          for=speed_5s_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3>40</output>
+                    </td>
+                  </tr>
+                  
+                  
+                  <tr>
+                    <td align=left><br><br>
+                      <b>Standard TVB Parameters, except:</b><br>
+                      Local Dynamic Model: Stefanescu Jirsa 3D<br>
+                      Integrator: HeunStochastic, 
+                      Noise D: 2.5<br>
+                      monitors: subsample (5ms)<br>
+                      simulation length: 5 seconds
+                    </td>
+                    <td>
+                      <p align=right><a href=# class=submit_button onclick=fwdSimLengthToSimulator(5000);fwdModelToSimulator();fwdIntegratorToSimulator();fwdMonitorsToSimulator();fwdSubSampleTimeToSimulator(5);fwdNoiseToSimulator(2.5);fwdCouplingToSimulator(val_coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3);fwdSpeedToSimulator(val_speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3);closeThisOverlay()>Submit Data</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    </td>
+                  </tr>
+                </table> 
+                
+
+                </td>
+                
+                <td>
+                  <table align=center width = 80% >
+
+                  <tr width=80%>
+                    
+                    <td width=90% align=left>
+                      Long-range coupling factor<br/>
+                      <input 
+                        name=coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4
+                        type=range 
+                        value=15
+                        max=31
+                        min=01 
+                        id=coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4
+                        class=overlaySlide
+                        oninput=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4()
+                        onchange=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4() >
+                    </td>
+                    <td align=right>  
+                      <output 
+                          name=val_coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4
+                          id=val_coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4
+                          for=coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4>0.110</output>
+                      
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td align=left>
+                      Conduction Speed<br/>
+                      <input 
+                        name=speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4
+                        type=range 
+                        value=2
+                        max=3
+                        min=1
+                        id=speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4
+                        class=overlaySlide
+                        oninput=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4()
+                        onchange=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4()
+                        >
+                    </td>
+                    <td align=right>
+                      <output 
+                          name=val_speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4
+                          id=val_speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4
+                          for=speed_5s_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4>40</output>
+                    </td>
+                  </tr>
+                  
+                  
+                  <tr>
+                    <td align=left><br><br>
+                      <b>Standard TVB Parameters, except:</b><br>
+                      Local Dynamic Model: Stefanescu Jirsa 3D<br>
+                      Integrator: HeunStochastic, 
+                      Noise D: 2.5<br>
+                      monitors: subsample (5ms)<br>
+                      simulation length: 5 seconds
+                    </td>
+                    <td>
+                      <p align=right><a href=# class=submit_button onclick=fwdSimLengthToSimulator(5000);fwdModelToSimulator();fwdIntegratorToSimulator();fwdMonitorsToSimulator();fwdSubSampleTimeToSimulator(5);fwdNoiseToSimulator(2.5);fwdCouplingToSimulator(val_coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4);fwdSpeedToSimulator(val_speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4);closeThisOverlay()>Submit Data</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    </td>
+                  </tr>
+                </table> 
+              </td>
+                
+              </tr>
+              
+            </table>            
+
+                
+        ]]>       
+        </content>
+      </overlay>
+      
+      <finish_constraints>
+        <manual>Click here, when you completed the task.</manual>
+        <!-- <state>none</state> -->
+      </finish_constraints> 
+    </sub-step>    
+    
+        <sub-step>
+      <task>Launch your simulation</task>
+      <type>parameter</type>
+      <value>04</value>
+      
+      <precondition section="s-burst">
+        <![CDATA[
+        <font color=red>Warning</font>, you are not on TVB Simulator page, please change in order to continue.
+        ]]>
+      </precondition>
+      
+      <detail>
+        <![CDATA[
+        You can see now, that your selected parameters were directly transferred into
+        the TVB Simulator configuration panel. Other parameters that were used during
+        the previous simulation were also set (e.g. local dynamic model, noise and simulation length).<br>
+        If you want to achieve the same computational results, click the 
+        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <b>Launch Simulation</b>
+        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom> button.
+        And that's it for your first simulation. :)
+        ]]>
+      </detail>
+      
+      <action type="task_overlay" section="s-burst" helper_type="task" 
+              group="elementId" variable_name="button-launch-new-burst" read="true">
+              
+        <![CDATA[
+          Hit the launch button if you're interested to analyze the data.<br>
+          Approximated computational time: not available<br>
+          <img src=/static/js/tutorial_preview_run.png width=400>
+        ]]>
+      </action>
+      
+      <finish_constraints>
+        <manual>Click here, when you completed the task.</manual>
+        <!-- <state>none</state> -->
+      </finish_constraints> 
+    </sub-step>    
+    
+  </step>
+
+  <step>
+    <label>Parameter Exploration</label>
+    <step-id>02</step-id>
+        <!-- Compare pics_5s_subs_d075_10_25_a004_001_02_cs20_20_60 -->
+    <sub-step>
+      <task>Compare with Sliders (FC and PSD)</task>
+      <type>parameter</type>
+      <value>01</value>
+      <detail>
+        <![CDATA[Showing FC and PSD of Parameter Exploration of the parameters D (HeunStochastic Integrator), linear coupling value a and the conduction speed in order to get a good neural activity and with the possibility to compare values in two frames.]]> 
+      </detail>
+      
+      <precondition section="s-burst">
+        <![CDATA[
+        <font color=red>Warning</font>, please switch to the simulator interface, otherwise you can not submit the selected data.
+        ]]>
+      </precondition>
+      
+        <overlay>
+        <content>
+        <![CDATA[
+          <h2>pics_5s_subs_d075_10_25_a004_001_02_cs20_20_60 - Neuronal activity, Power Spectrum and FC Matrices</h2>
+          <br><br>
+          Showing FC and PSD of Parameter Exploration of the parameters D (HeunStochastic Integrator), linear coupling value a and the conduction speed in order to get a good neural activity.<br>
+          User the two different result frames to compare the data of different parameter ranges and submit the one you like most to the TVB Simulator Interface.
+          <br><br>
+
+            <table align=center width=100%>
+              <tr width=100%>
+                <td width=50% align=left>
+                  <div class=map_image id=map_param_exploration_5_subjects></div>
+                </td>
+                <td width=50% align=left>
+                  <div class=map_simulated_image id=map_simulated_param_exploration_5_subjects></div>
+                </td>
+              </tr>
+            </table>
+            <table align=center width=100%>
+              <tr width=100%>
+                <td width=50% align=left>
+                    <img width=100% id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1 src=/static/style/img/edupack/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_1_0/c_40/timeline_plotter_15.jpg>
+                </td>
+                <td width=50% align=left>
+                    <img width=100%  id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2 src=/static/style/img/edupack/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_1_0/c_40/timeline_plotter_15.jpg>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table align=center width = 80% >
+                <tr width=80%>                 
+                    <td width=90% align=left>
+                      Noise level D<br/>
+                      <input 
+                        name=noise_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1
+                        type=range 
+                        value=02
+                        max=3
+                        min=1 
+                        id=noise_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1
+                        class=overlaySlide
+                        oninput=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1()
+                        onchange=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1() >
+                    </td>
+                    <td align=right>  
+                      <output 
+                          name=val_noise_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1
+                          id=val_noise_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1
+                          for=noise_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1>1.0</output>
+                      
+                    </td>
+                  </tr>
+
+                  <tr width=80%>
+                    
+                    <td width=90% align=left>
+                      Long-range coupling factor<br/>
+                      <input 
+                        name=coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1
+                        type=range 
+                        value=01
+                        max=31
+                        min=01 
+                        id=coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1
+                        class=overlaySlide
+                        oninput=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1()
+                        onchange=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1() >
+                    </td>
+                    <td align=right>  
+                      <output 
+                          name=val_coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1
+                          id=val_coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1
+                          for=coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1>0.110</output>
+                      
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td align=left>
+                      Conduction Speed<br/>
+                      <input 
+                        name=speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1
+                        type=range 
+                        value=2
+                        max=3
+                        min=1
+                        id=speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1
+                        class=overlaySlide
+                        oninput=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1()
+                        onchange=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1()
+                        >
+                    </td>
+                    <td align=right>
+                      <output 
+                          name=val_speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1
+                          id=val_speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1
+                          for=speed_5s_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1>40</output>
+                    </td>
+                  </tr>
+                  
+                  
+                  <tr>
+                    <td align=left><br><br>
+                      <b>Standard TVB Parameters, except:</b><br>
+                      Conduction Speed: varying<br>
+                      Local Dynamic Model: Stefanescu Jirsa 3D (TVB standard configuration)<br>
+                      Integrator: HeunStochastic<br>
+                      D: varying<br>
+                      monitors: subsample (5ms)<br>
+                      simulation length: 5 seconds
+                    </td>
+                    <td>
+                      <p align=right><a href=# class=submit_button onclick=fwdSimLengthToSimulator(5000);fwdModelToSimulator();fwdIntegratorToSimulator();fwdMonitorsToSimulator();fwdSubSampleTimeToSimulator(5);fwdNoiseToSimulator(val_noise_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1);fwdCouplingToSimulator(val_coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1);fwdSpeedToSimulator(val_speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1);closeThisOverlay()>Submit Data</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    </td>
+                  </tr>
+                </table> 
+                
+
+                </td>
+                
+                <td>
+                  <table align=center width = 80% >
+                <tr width=80%>                 
+                    <td width=90% align=left>
+                      Noise level D<br/>
+                      <input 
+                        name=noise_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2
+                        type=range 
+                        value=02
+                        max=3
+                        min=1 
+                        id=noise_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2
+                        class=overlaySlide
+                        oninput=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2()
+                        onchange=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2() >
+                    </td>
+                    <td align=right>  
+                      <output 
+                          name=val_noise_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2
+                          id=val_noise_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2
+                          for=noise_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2>1.0</output>
+                      
+                    </td>
+                  </tr>
+
+                  <tr width=80%>
+                    
+                    <td width=90% align=left>
+                      Long-range coupling factor<br/>
+                      <input 
+                        name=coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2
+                        type=range 
+                        value=01
+                        max=31
+                        min=01 
+                        id=coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2
+                        class=overlaySlide
+                        oninput=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2()
+                        onchange=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2() >
+                    </td>
+                    <td align=right>  
+                      <output 
+                          name=val_coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2
+                          id=val_coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2
+                          for=coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2>0.110</output>
+                      
+                    </td>
+                  </tr>
+                  
+                  <tr>
+                    <td align=left>
+                      Conduction Speed<br/>
+                      <input 
+                        name=speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2
+                        type=range 
+                        value=2
+                        max=3
+                        min=1
+                        id=speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2
+                        class=overlaySlide
+                        oninput=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2()
+                        onchange=slider_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2()
+                        >
+                    </td>
+                    <td align=right>
+                      <output 
+                          name=val_speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2
+                          id=val_speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2
+                          for=speed_5s_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2>40</output>
+                    </td>
+                  </tr>
+                  
+                  
+                  <tr>
+                    <td align=left><br><br>
+                      <b>Standard TVB Parameters, except:</b><br>
+                      Conduction Speed: varying<br>
+                      Local Dynamic Model: Stefanescu Jirsa 3D (TVB standard configuration)<br>
+                      Integrator: HeunStochastic<br>
+                      D: varying<br>
+                      monitors: subsample (5ms)<br>
+                      simulation length: 5 seconds
+                    </td>
+                    <td>
+                      <p align=right><a href=# class=submit_button onclick=fwdSimLengthToSimulator(5000);fwdModelToSimulator();fwdIntegratorToSimulator();fwdMonitorsToSimulator();fwdSubSampleTimeToSimulator(5);fwdNoiseToSimulator(val_noise_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1);fwdCouplingToSimulator(val_coupling_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1);fwdSpeedToSimulator(val_speed_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1);closeThisOverlay()>Submit Data</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                    </td>
+                  </tr>
+                </table> 
+              </td>
+                
+              </tr>
+              
+            </table>            
+
+                
+        ]]>       
+        </content>
+      </overlay>
+      
+      
+      <finish_constraints> 
+        <manual>Click here to complete this task manually.</manual>
+        <state>none</state>
+        <state>none</state>
+      </finish_constraints>
+    </sub-step>
+  </step>
+
+</edupack_tutorial>
