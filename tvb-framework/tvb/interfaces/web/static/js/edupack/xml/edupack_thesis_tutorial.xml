@@ -65,9 +65,9 @@
       <detail>
         <![CDATA[
         TVB-EduPack provides EduCases, like in <b>Step 01: Pipeline Data</b> which will guide you through the TVB-interface.
-        Whenever you see the following highlighted <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        Whenever you see the following highlighted <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>elements</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom> in a task, you will also 
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom> in a task, you will also 
         find a corresponding element on the screen.
         Marked with the current task number, indicating an important element or position where to continue.<br/>
         <img src=/static/style/img/edupack/task_element.png><br/>
@@ -97,9 +97,9 @@
         <![CDATA[
           To start right away we want to import some data.<br/>
           Therefore, please change to the 
-          <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+          <img src=/static/js/icons_green11.png width=5% valign=bottom>
           <b>Project Interface.</b>
-          <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom><br/>
+          <img src=/static/js/icons_green11_2.png width=5% valign=bottom><br/>
           You can find the link in the footer menu. 
         ]]>
       </detail>

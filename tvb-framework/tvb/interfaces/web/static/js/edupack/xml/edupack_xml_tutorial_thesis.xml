@@ -42,9 +42,9 @@
           To create a new project and not only a new simulation, we need to
           change to the project page of TVB.<br/>
           Therefore, please click the 
-          <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+          <img src=/static/js/icons_green11.png width=5% valign=bottom>
           <b>Project button</b>  
-          <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom>
+          <img src=/static/js/icons_green11_2.png width=5% valign=bottom>
           in the footer menu. 
         ]]>
       </detail>
@@ -95,9 +95,9 @@
         <![CDATA[
         Now you see all submenu options of TVB's project page. <br/>
         We want to create a new project, so please click the button <br/>
-        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>List of all projects</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom> to continue.<br/>
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom> to continue.<br/>
         ]]>
       </detail>
 
@@ -125,9 +125,9 @@
         created projects including open, finished or aborted operations.<br>
         As probably recognized, the TVB-EduPack moved a little bit to the left.<br/>
         Right to this window is the button 
-        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>Create new Project</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom>
         , click this and continue.
         ]]>
       </detail>
@@ -162,13 +162,13 @@
       <detail>
         <![CDATA[
         Give your project<br/>  
-        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>a name and a description</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom>
         and then continue by clicking<br/> 
-        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>Save Changes</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom><br/>
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom><br/>
         right next to the TVB-EduPack window.
         ]]>
       </detail>
@@ -208,9 +208,9 @@
         a simple simulation. Make sure your project is selected, indicated with a 
         dark star in the upper left area.  <br>
         Now switch to 
-        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>TVB simulator page</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom> on the left.<br/>
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom> on the left.<br/>
         , where we will set up your first simulation.
         ]]>
       </detail>
@@ -255,9 +255,9 @@
         simulations from history. Your simulation history is empty, so we will 
         start to create a simulation.<br>
         Click on  
-        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>the star in the history panel</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom><br/>
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom><br/>
         to create a new simulation.
         ]]>
       </detail>
@@ -296,9 +296,9 @@
       <detail>
         <![CDATA[
         At first, give your simulation a   
-        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>name</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom> and then continue 
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom> and then continue 
         by having a first look at the parameters below.<br/>
         Please enable the TVB-Parameter Helper elements from the EduPack GUI and use the 
         slider to decrease the visibility if they are distracting you.<br>
@@ -362,10 +362,10 @@
             <table align=center width=100%>
               <tr width=100%>
                 <td width=50% align=left class=rightborder>
-                    <img width=100% id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3 src=/static/style/img/edupack/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_2_5/c_40/timeline_plotter_15.jpg>
+                    <img width=100% id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_3 src=/static/js/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_2_5/c_40/timeline_plotter_15.jpg>
                 </td>
                 <td width=50% align=left>
-                    <img width=100%  id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4 src=/static/style/img/edupack/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_2_5/c_40/timeline_plotter_15.jpg>
+                    <img width=100%  id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_4 src=/static/js/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_2_5/c_40/timeline_plotter_15.jpg>
                 </td>
               </tr>
               <tr>
@@ -537,9 +537,9 @@
         the TVB Simulator configuration panel. Other parameters that were used during
         the previous simulation were also set (e.g. local dynamic model, noise and simulation length).<br>
         If you want to achieve the same computational results, click the 
-        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>Launch Simulation</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom> button.
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom> button.
         And that's it for your first simulation. :)
         ]]>
       </detail>
@@ -602,10 +602,10 @@
             <table align=center width=100%>
               <tr width=100%>
                 <td width=50% align=left>
-                    <img width=100% id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1 src=/static/style/img/edupack/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_1_0/c_40/timeline_plotter_15.jpg>
+                    <img width=100% id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1 src=/static/js/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_1_0/c_40/timeline_plotter_15.jpg>
                 </td>
                 <td width=50% align=left>
-                    <img width=100%  id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2 src=/static/style/img/edupack/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_1_0/c_40/timeline_plotter_15.jpg>
+                    <img width=100%  id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2 src=/static/js/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_1_0/c_40/timeline_plotter_15.jpg>
                 </td>
               </tr>
               <tr>

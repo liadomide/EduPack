@@ -69,9 +69,9 @@
       <detail>
         <![CDATA[
         TVB-EduPack provides EduCases, like in <b>Step 01: Pipeline Data</b> which will guide you through the TVB-interface.
-        Whenever you see the following highlighted <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        Whenever you see the following highlighted <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>elements</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom> in a task, you will also 
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom> in a task, you will also 
         find a corresponding element on the screen.
         Marked with the current task number, indicating an important element or position where to continue.<br/>
         <img src=/static/style/img/edupack/task_element.png><br/>
@@ -104,12 +104,12 @@
           <hr>
           <br>
           <h2>Noise D = 0.5</h2>
-          <img src=/static/style/img/edupack/sim_images/example_02_d_05.png width=90%>
+          <img src=/static/js/sim_images/example_02_d_05.png width=90%>
           <br><br>
           <hr>
           <br>
           <h2>Noise D = 0.75</h2>
-          <img src=/static/style/img/edupack/sim_images/example_03_d_075.png width=90%>
+          <img src=/static/js/sim_images/example_03_d_075.png width=90%>
           <br><br>
           <hr>
           <br><br>
@@ -153,7 +153,7 @@
           <br><br>
           Showing FC and PSD of Parameter Exploration of the parameters D (HeunStochastic Integrator), linear coupling value a and the conduction speed in order to get a good neural activity.<br>
           <br><br>
-            <img id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60 src=/static/style/img/edupack/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60/d_1_0/c_40/timeline_plotter_15.png width=80%>
+            <img id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60 src=/static/js/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60/d_1_0/c_40/timeline_plotter_15.png width=80%>
             <table align=center width = 80% >
                 <tr width=80%>                 
                     <td width=90% align=left>
@@ -381,9 +381,9 @@
         <![CDATA[
           To start right away we want to import some data.<br/>
           Therefore, please change to the 
-          <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+          <img src=/static/js/icons_green11.png width=5% valign=bottom>
           <b>Project Interface.</b>
-          <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom><br/>
+          <img src=/static/js/icons_green11_2.png width=5% valign=bottom><br/>
           You can find the link in the footer menu. 
         ]]>
       </detail>
@@ -421,9 +421,9 @@
         <![CDATA[
         Now you see all submenu options of the project interface. <br/>
         We want to create a new project, so please change to <br/>
-        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>List of all projects.</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom><br/>
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom><br/>
         ]]>
       </detail>
       <finish_constraints>
@@ -448,9 +448,9 @@
         <![CDATA[
         As probably recognized, the TVB-EduPack moved a little bit to the left.<br/>
         Right to this window is the button 
-        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>Create new Project</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom>
         , click this and continue.
         ]]>
       </detail>
@@ -484,13 +484,13 @@
       <detail>
         <![CDATA[
         Give your project<br/>  
-        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>a name and a description</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom>
         and then continue by clicking<br/> 
-        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>Save Changes</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom><br/>
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom><br/>
         right next to the TVB-EduPack window.
         ]]>
       </detail>
@@ -541,13 +541,13 @@
       <detail>
         <![CDATA[
         Your created project should be automatically selected, indicated with <br/>  
-        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>a dark star</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom> on the left.<br/>
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom> on the left.<br/>
         Click on  
-        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>Project Data</b>
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom><br/>
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom><br/>
         in order to start importing new data structures.
         ]]>
       </detail>
@@ -587,9 +587,9 @@
       <detail>
         <![CDATA[
         Now you are in the Data structure menu, where you can handle all imported, adapted or simulated data. We want to create a new subject and <br/>  
-        <img src=/static/style/img/edupack/icons/icons_green11.png width=5% valign=bottom>
+        <img src=/static/js/icons_green11.png width=5% valign=bottom>
         <b>Upload</b> 
-        <img src=/static/style/img/edupack/icons/icons_green11_2.png width=5% valign=bottom> on the left.
+        <img src=/static/js/icons_green11_2.png width=5% valign=bottom> on the left.
         data, so click the button right to the menu and continue.
         ]]>
       </detail>
@@ -696,7 +696,7 @@
           <table>
             <tr>
               <td width=65%>
-                <img id=img_fc_results src=/static/style/img/edupack/sim_images/only_FC_for_BOLD/only_FC_for_BOLD_05.png width=100%>
+                <img id=img_fc_results src=/static/js/sim_images/only_FC_for_BOLD/only_FC_for_BOLD_05.png width=100%>
               </td>
               <td width=35%>
                 <table width = 95% >
@@ -802,7 +802,7 @@
         <![CDATA[
           <h2>Functional Connectivity and BOLD signal 150s</h2>
           <br>
-            <img id=img_fc_results_src2 src=/static/style/img/edupack/sim_images/FC_for_BOLD/FC_for_BOLD_05.png width=90%>
+            <img id=img_fc_results_src2 src=/static/js/sim_images/FC_for_BOLD/FC_for_BOLD_05.png width=90%>
             <table align=center width = 80% >
                   <tr width=80%>
                     
@@ -901,7 +901,7 @@
         <![CDATA[
           <h2>Neuronal activity, Power Spectrum and FC Matrices</h2>
           <br>
-            <img id=img_fc_results_src3 src=/static/style/img/edupack/sim_images/timeline_plotter/timeline_plotter_09.png width=90%>
+            <img id=img_fc_results_src3 src=/static/js/sim_images/timeline_plotter/timeline_plotter_09.png width=90%>
             <table align=center width = 80% >
                   <tr width=80%>
                     
@@ -1008,7 +1008,7 @@
           <br><br>
             SJ3D Parameter Exploration for linear coupling factor a and conduction speed, in order to simulate neural activity.
           <br><br>
-            <img id=img_5s_subs_d075_a004_02_cs20_40_60 src=/static/style/img/edupack/sim_images/pics_5s_subs_d0.75_a0.04_0.2_cs20_40_60/c_40/timeline_plotter_09.png width=90%>
+            <img id=img_5s_subs_d075_a004_02_cs20_40_60 src=/static/js/sim_images/pics_5s_subs_d0.75_a0.04_0.2_cs20_40_60/c_40/timeline_plotter_09.png width=90%>
             <table align=center width = 80% >
                   <tr width=80%>
                     
@@ -1112,7 +1112,7 @@
           <br><br>
             Parameter Exploration for BOLD activity and with different values for linear coupling factor a and conduction speed in SJ3D.
           <br><br>
-            <img id=img_150s_Bold_cs_20_40_60_a01_003_016 src=/static/style/img/edupack/sim_images/pics_150s_Bold_cs_20_40_60_a0.1_0.03_0.16/a_0.13/FC_for_BOLD_02.png width=90%>
+            <img id=img_150s_Bold_cs_20_40_60_a01_003_016 src=/static/js/sim_images/pics_150s_Bold_cs_20_40_60_a0.1_0.03_0.16/a_0.13/FC_for_BOLD_02.png width=90%>
             <table align=center width = 80% >
                   <tr width=80%>
                     
@@ -1217,7 +1217,7 @@
           <br><br>
           Showing FC and PSD of Parameter Exploration of the parameters D (HeunStochastic Integrator), linear coupling value a and the conduction speed in order to get a good neural activity.<br>
           <br><br>
-            <img id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60 src=/static/style/img/edupack/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60/d_1_0/c_40/timeline_plotter_15.png width=80%>
+            <img id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60 src=/static/js/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60/d_1_0/c_40/timeline_plotter_15.png width=80%>
             <table align=center width = 80% >
                 <tr width=80%>                 
                     <td width=90% align=left>
@@ -1348,10 +1348,10 @@
             <table align=center width=100%>
               <tr width=100%>
                 <td width=50% align=left>
-                    <img width=100% id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1 src=/static/style/img/edupack/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_1_0/c_40/timeline_plotter_15.jpg>
+                    <img width=100% id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_1 src=/static/js/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_1_0/c_40/timeline_plotter_15.jpg>
                 </td>
                 <td width=50% align=left>
-                    <img width=100%  id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2 src=/static/style/img/edupack/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_1_0/c_40/timeline_plotter_15.jpg>
+                    <img width=100%  id=img_5s_subs_d075_10_25_a004_001_02_cs20_20_60_2 src=/static/js/sim_images/pics_5s_subs_d0.75_1.0_2.5_a0.04_0.01_0.2_cs20_20_60_fc/d_1_0/c_40/timeline_plotter_15.jpg>
                 </td>
               </tr>
               <tr>
@@ -1584,7 +1584,7 @@
             <table width=100% align=center>
               <tr>
                 <td width=60% align=left>
-                  <img id=img_15s_D075_a012_cs100_K11_0_5_K12_0_25 src=/static/style/img/edupack/sim_images/timelineplotter_15s_D0.75_a0.12_cs100_K11_5_K12_2.5/K12_1.25_K11_2.5.png width=100%>
+                  <img id=img_15s_D075_a012_cs100_K11_0_5_K12_0_25 src=/static/js/sim_images/timelineplotter_15s_D0.75_a0.12_cs100_K11_5_K12_2.5/K12_1.25_K11_2.5.png width=100%>
                 </td>
                 <td width=40%>
                   <table>
@@ -1604,7 +1604,7 @@
                     </tr>
                     <tr valign=bottom>
                       <td>
-                        <img id=img_15s_D075_a012_cs100_K11_0_5_K12_0_25 src=/static/style/img/edupack/sim_images/timelineplotter_15s_D0.75_a0.12_cs100_K11_5_K12_2.5/highestfreq_K11_K12.jpg width=100%>
+                        <img id=img_15s_D075_a012_cs100_K11_0_5_K12_0_25 src=/static/js/sim_images/timelineplotter_15s_D0.75_a0.12_cs100_K11_5_K12_2.5/highestfreq_K11_K12.jpg width=100%>
                       </td>
                     </tr>
                   </table>   
