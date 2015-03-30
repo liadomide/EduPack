@@ -36,4 +36,4 @@ EduPack will be visible under e.g. "Simulator" tab down to the right. For issues
 
 ## Help us make it better
 
-Please tell us how we can improve EduPack. If you have a specific comments or found a bug, please use GitHub Issues or fork this repo and send a pull request with your improvements.
+Please tell us how we can improve EduPack. If you have specific comments or found a bug, please use GitHub Issues or fork this repo and send a pull request with your improvements.
