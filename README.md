@@ -22,13 +22,13 @@ To your TVB installation base path:
 For instance,
 
 ```
-rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/static/js/edupack TVB_Distribution/tvb_data/tvb/interfaces/web/static/js/
-rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/static/style/{base.css,edupack.css} TVB_Distribution/tvb_data/tvb/interfaces/web/static/style/
-rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/static/style/img/edupack TVB_Distribution/tvb_data/tvb/interfaces/web/static/style/img/
-rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/templates/genshi/{base_template.html,edupack_template.html,footer.html} EduPack.git/tvb-framework/tvb/interfaces/web/templates/genshi/
+EDU_BASE=./EduPack.git/tvb-framework/tvb/interfaces/web
+TVB_BASE=./TVB_Distribution/tvb_data/tvb/interfaces/web
+rsync -av $EDU_BASE/static/js/edupack $TVB_BASE/static/js/
+rsync -av $EDU_BASE/static/style/{base.css,edupack.css} $TVB_BASE/static/style/
+rsync -av $EDU_BASE/static/style/img/edupack $TVB_BASE/static/style/img/
+rsync -av $EDU_BASE/templates/genshi/{base_template.html,edupack_template.html,footer.html} $TVB_BASE/templates/genshi/
 ```
-
-or with `--include-from` and the above list...
 
 ## Then start TVB
 
