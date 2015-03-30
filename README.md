@@ -21,9 +21,11 @@ To your TVB installation base path:
 
 For instance,
 
-`rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/static/js/edupack TVB_Distribution/tvb_data/tvb/interfaces/web/static/js/`
-`rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/static/style TVB_Distribution/tvb_data/tvb/interfaces/web/static/`
-`rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/templates/genshi EduPack.git/tvb-framework/tvb/interfaces/web/templates/`
+```
+rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/static/js/edupack TVB_Distribution/tvb_data/tvb/interfaces/web/static/js/
+rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/static/style TVB_Distribution/tvb_data/tvb/interfaces/web/static/
+rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/templates/genshi EduPack.git/tvb-framework/tvb/interfaces/web/templates/
+```
 
 or with `--include-from` and the above list...
 
