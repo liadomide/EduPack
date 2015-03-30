@@ -23,8 +23,9 @@ For instance,
 
 ```
 rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/static/js/edupack TVB_Distribution/tvb_data/tvb/interfaces/web/static/js/
-rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/static/style TVB_Distribution/tvb_data/tvb/interfaces/web/static/
-rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/templates/genshi EduPack.git/tvb-framework/tvb/interfaces/web/templates/
+rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/static/style/{base.css,edupack.css} TVB_Distribution/tvb_data/tvb/interfaces/web/static/style/
+rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/static/style/img/edupack TVB_Distribution/tvb_data/tvb/interfaces/web/static/style/img/
+rsync -av EduPack.git/tvb-framework/tvb/interfaces/web/templates/genshi/{base_template.html,edupack_template.html,footer.html} EduPack.git/tvb-framework/tvb/interfaces/web/templates/genshi/
 ```
 
 or with `--include-from` and the above list...
