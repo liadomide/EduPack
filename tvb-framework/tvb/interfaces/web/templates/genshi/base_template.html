@@ -48,10 +48,12 @@
         <script type="text/javascript" src="/static/jquery/jquery.js"></script>
         <script type="text/javascript" src="/static/jquery/jquery.json.js"></script>
         <script type="text/javascript" src="/static/js/genericTVB.js?$currentVersionJS"></script>
-        <script type="text/javascript" src="/static/js/edupack/edupack_xml_randy.js"></script>
         <script type="text/javascript" src="/static/js/edupack/edupack_batch_generator.js"></script>
         <script type="text/javascript" src="/static/js/edupack/edupack_hashtable.js"></script>
         <script type="text/javascript" src="/static/js/edupack/edupack_precomputedDataManager.js"></script>
+        <script type="text/javascript" src="/static/js/edupack/edupack_xml.js"></script>
+        <script type="text/javascript" src="/static/js/edupack/edupack_xml_parser.js"></script>
+        
 
         <!--! include specific resources per section-->
         <xi:include href="${includedResources}.html" py:if="defined('includedResources')"/>
@@ -74,8 +76,12 @@
             <xi:include href="flow/call_out_control.html" py:if="defined('displayControl') and displayControl"/>
             <xi:include href="${mainContent}.html" py:if="'header_menu' not in mainContent"/>
         </div>
-        
+
+        <!-- this is the import for the edupack overlay, which can be activated in tabs that are using this base_template -->
+        <!-- <xi:include href="edu_highlighting.html"/> -->
+        <!-- <xi:include href="edu_dialogs.html"/> -->
         <xi:include href="edupack_template.html"/>
+
         <script type="text/javascript">
           if(localStorage.getItem("tvb_active") != null){
             loadEdupack();

@@ -202,7 +202,7 @@
     <h2>Visualization Tab</h2>
       In this visualization tab, we can preview the computated <br>
       results of the imported project simulation.<br><br>
-      <img src=/static/style/img/edupack/sim_images/result_example.png width=600>
+      <img src=/static/js/sim_images/result_example.png width=600>
     ]]>    
   </description>
   
@@ -236,7 +236,7 @@
       datasets or you can copy an older simulation in order <br>
       to adopt the configuration and parameter values.
       <br><br>
-      <img src=/static/style/img/edupack/sim_images/history_example.png width=400>
+      <img src=/static/js/sim_images/history_example.png width=400>
     ]]>    
   </description>
 <!-- 
