@@ -2,7 +2,7 @@
 
 You need a functioning installation of TVB either from git (https://github.com/the-virtual-brain/tvb-pack) or the official release (http://thevirtualbrain.org/tvb/zwei/app). We recommend to use the release version so far. EduPack has been tested with TVB 1.3.
 
-## To install EduPack, copy the following files from EduPack.git:
+## To install EduPack, copy the following files from EduPack.git. The easiest way is to either get a TVB release or do a `git clone` of tvb-framework and then clone Edupack into it. The needed files are:
 
 * EduPack.git/tvb-framework/tvb/interfaces/web/ (EduPack base path)
  * static/js/edupack
@@ -14,13 +14,13 @@ You need a functioning installation of TVB either from git (https://github.com/t
  * templates/genshi/base_template.html
  * templates/genshi/footer.html
 
-To your TVB installation base path:
+and have to be copied to your TVB installation base path:
 
 * Linux: TVB_Distribution/tvb_data/tvb/interfaces/web
 * OS X: /Applications/TVB_Distribution/tvb.app/Contents/Resources/lib/python2.7/tvb/interfaces/web
 * Windows: accordingly
 
-For instance,
+Manual copy:
 
 ```
 EDU_BASE=./EduPack.git/tvb-framework/tvb/interfaces/web
@@ -28,7 +28,7 @@ TVB_BASE=./TVB_Distribution/tvb_data/tvb/interfaces/web
 rsync -av $EDU_BASE/static/js/edupack $TVB_BASE/static/js/
 rsync -av $EDU_BASE/static/style/{base.css,edupack.css} $TVB_BASE/static/style/
 rsync -av $EDU_BASE/static/style/img/edupack $TVB_BASE/static/style/img/
-rsync -av $EDU_BASE/static/style/img/nav/*edu* $TVB_BASE/static/style/img/nav/
+rsync -av $EDU_BASE/static/style/img/nav/icon_nav_edu* $TVB_BASE/static/style/img/nav/
 rsync -av $EDU_BASE/templates/genshi/{base_template.html,edupack_template.html,footer.html} $TVB_BASE/templates/genshi/
 ```
 
