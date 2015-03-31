@@ -2,7 +2,11 @@
 
 You need a functioning installation of TVB either from git (https://github.com/the-virtual-brain/tvb-pack) or the official release (http://thevirtualbrain.org/tvb/zwei/app). We recommend to use the release version so far. EduPack has been tested with TVB 1.3.
 
-## To install EduPack, copy the following files from EduPack.git. The easiest way is to either get a TVB release or do a `git clone` of tvb-framework and then clone Edupack into it. The needed files are:
+## To install EduPack
+
+Copy the following files from EduPack.git. The easiest way is to either get a TVB release or do a `git clone` of tvb-framework and then clone Edupack into it.
+
+The needed files are:
 
 * EduPack.git/tvb-framework/tvb/interfaces/web/ (EduPack base path)
  * static/js/edupack
