@@ -9,6 +9,7 @@ You need a functioning installation of TVB either from git (https://github.com/t
  * static/style/base.css
  * static/style/edupack.css
  * static/style/img/edupack
+ * static/style/img/nav/icon_nav_edu*
  * templates/genshi/edupack_template.html
  * templates/genshi/base_template.html
  * templates/genshi/footer.html
@@ -27,6 +28,7 @@ TVB_BASE=./TVB_Distribution/tvb_data/tvb/interfaces/web
 rsync -av $EDU_BASE/static/js/edupack $TVB_BASE/static/js/
 rsync -av $EDU_BASE/static/style/{base.css,edupack.css} $TVB_BASE/static/style/
 rsync -av $EDU_BASE/static/style/img/edupack $TVB_BASE/static/style/img/
+rsync -av $EDU_BASE/static/style/img/nav/*edu* $TVB_BASE/static/style/img/nav/
 rsync -av $EDU_BASE/templates/genshi/{base_template.html,edupack_template.html,footer.html} $TVB_BASE/templates/genshi/
 ```
 
