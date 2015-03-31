@@ -103,8 +103,87 @@ function addModelToScript(dataHash){
   var modelType = dataHash.getItem('model');
   var modelParam = "model_parameters_option_" + modelType + "_";
   var content = "";
+
+  // models
+  if(modelType == "WilsonCowan"){
     
-  if(modelType == "ReducedSetHindmarshRose"){
+    var str_varOfInterest = "" + dataHash.getItem(modelParam + "variables_of_interest");
+    var variables_of_interest_array = str_varOfInterest.split(',');
+    var variables_of_interest_string = "[";
+    
+    for(var i = 0; i< variables_of_interest_array.length; i++){
+      variables_of_interest_string += "\"" + variables_of_interest_array[i] + "\","; 
+    }
+    // delete last comma sign
+    variables_of_interest_string = variables_of_interest_string.substring(0, variables_of_interest_string.length - 1);
+    variables_of_interest_string += "]";
+    
+    content = "oscilator = models." + modelType + "(" +
+              "c_ee=" + dataHash.getItem(modelParam + "c_ee") + ", " + 
+              "c_ei=" + dataHash.getItem(modelParam + "c_ei") + ", " +
+              "c_ie=" + dataHash.getItem(modelParam + "c_ie") + ", " +
+              "c_ii=" + dataHash.getItem(modelParam + "c_ii") + ", " +
+              "tau_e=" + dataHash.getItem(modelParam + "tau_e") + ", " +
+              "tau_i=" + dataHash.getItem(modelParam + "tau_i") + ", " +
+              "a_e=" + dataHash.getItem(modelParam + "a_e") + ", " +
+              "b_e=" + dataHash.getItem(modelParam + "b_e") + ", " +
+              "c_e=" + dataHash.getItem(modelParam + "c_e") + ", " +
+              "theta_e=" + dataHash.getItem(modelParam + "theta_e") + ", " +
+              "a_i=" + dataHash.getItem(modelParam + "a_i") + ", " +
+              "b_i=" + dataHash.getItem(modelParam + "b_i") + ", " +
+              "c_i=" + dataHash.getItem(modelParam + "c_i") + ", " +
+              "r_e=" + dataHash.getItem(modelParam + "r_e") + ", " +
+              "r_i=" + dataHash.getItem(modelParam + "r_i") + ", " +
+              "k_e=" + dataHash.getItem(modelParam + "k_e") + ", " +
+              "k_i=" + dataHash.getItem(modelParam + "k_i") + ", " +
+              "P=" + dataHash.getItem(modelParam + "P") + ", " +
+              "Q=" + dataHash.getItem(modelParam + "Q") + ", " +              
+              "alpha_e=" + dataHash.getItem(modelParam + "alpha_e") + ", " +              
+              "alpha_i=" + dataHash.getItem(modelParam + "alpha_i") + ", " +
+              "I=" + dataHash.getItem(modelParam + "I") + ", " +              
+              "E=" + dataHash.getItem(modelParam + "E") + ", " +
+              "variables_of_interest=" + variables_of_interest_string + ", " +
+              "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
+              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
+              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
+              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              ")\n";
+  }
+
+  else if(modelType == "ReducedSetFitzHughNagumo"){
+    
+    var str_varOfInterest = "" + dataHash.getItem(modelParam + "variables_of_interest");
+    var variables_of_interest_array = str_varOfInterest.split(',');
+    var variables_of_interest_string = "[";
+    
+    for(var i = 0; i< variables_of_interest_array.length; i++){
+      variables_of_interest_string += "\"" + variables_of_interest_array[i] + "\","; 
+    }
+    // delete last comma sign
+    variables_of_interest_string = variables_of_interest_string.substring(0, variables_of_interest_string.length - 1);
+    variables_of_interest_string += "]";
+    
+    content = "oscilator = models." + modelType + "(" +
+              "tau=" + dataHash.getItem(modelParam + "r") + ", " + 
+              "a=" + dataHash.getItem(modelParam + "a") + ", " +
+              "b=" + dataHash.getItem(modelParam + "b") + ", " +
+              "K11=" + dataHash.getItem(modelParam + "K11") + ", " +
+              "K12=" + dataHash.getItem(modelParam + "K12") + ", " +
+              "K21=" + dataHash.getItem(modelParam + "K21") + ", " +
+              "sigma=" + dataHash.getItem(modelParam + "sigma") + ", " +
+              "alpha=" + dataHash.getItem(modelParam + "alpha") + ", " +
+              "beta=" + dataHash.getItem(modelParam + "beta") + ", " +
+              "xi=" + dataHash.getItem(modelParam + "xi") + ", " +
+              "eta=" + dataHash.getItem(modelParam + "eta") + ", " +
+              "variables_of_interest=" + variables_of_interest_string + ", " +
+              "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
+              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
+              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
+              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              ")\n";
+  }
+
+  else if(modelType == "ReducedSetHindmarshRose"){
     
     var str_varOfInterest = "" + dataHash.getItem(modelParam + "variables_of_interest");
     var variables_of_interest_array = str_varOfInterest.split(',');
@@ -130,9 +209,315 @@ function addModelToScript(dataHash){
               "K21=" + dataHash.getItem(modelParam + "K21") + ", " +
               "sigma=" + dataHash.getItem(modelParam + "sigma") + ", " +
               "mu=" + dataHash.getItem(modelParam + "mu") + ", " +
-              "variables_of_interest=" + variables_of_interest_string +
+              "tau=" + dataHash.getItem(modelParam + "tau") + ", " +
+              "xi=" + dataHash.getItem(modelParam + "xi") + ", " +
+              "beta=" + dataHash.getItem(modelParam + "beta") + ", " +
+              "eta=" + dataHash.getItem(modelParam + "eta") + ", " +
+              "alpha=" + dataHash.getItem(modelParam + "alpha") + ", " +
+              "gamma=" + dataHash.getItem(modelParam + "gamma") + ", " +
+              "variables_of_interest=" + variables_of_interest_string + ", " +
+              "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
+              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
+              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
+              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
               ")\n";
   }
+
+  else if(modelType == "JansenRit"){
+    
+    var str_varOfInterest = "" + dataHash.getItem(modelParam + "variables_of_interest");
+    var variables_of_interest_array = str_varOfInterest.split(',');
+    var variables_of_interest_string = "[";
+    
+    for(var i = 0; i< variables_of_interest_array.length; i++){
+      variables_of_interest_string += "\"" + variables_of_interest_array[i] + "\","; 
+    }
+    // delete last comma sign
+    variables_of_interest_string = variables_of_interest_string.substring(0, variables_of_interest_string.length - 1);
+    variables_of_interest_string += "]";
+    
+    content = "oscilator = models." + modelType + "(" +
+              "A=" + dataHash.getItem(modelParam + "A") + ", " + 
+              "B=" + dataHash.getItem(modelParam + "B") + ", " +
+              "a=" + dataHash.getItem(modelParam + "a") + ", " +
+              "b=" + dataHash.getItem(modelParam + "b") + ", " +
+              "v0=" + dataHash.getItem(modelParam + "v0") + ", " +
+              "nu_max=" + dataHash.getItem(modelParam + "nu_max") + ", " +
+              "r=" + dataHash.getItem(modelParam + "r") + ", " +
+              "J=" + dataHash.getItem(modelParam + "J") + ", " +
+              "a_1=" + dataHash.getItem(modelParam + "a_1") + ", " +
+              "a_2=" + dataHash.getItem(modelParam + "a_2") + ", " +
+              "a_3=" + dataHash.getItem(modelParam + "a_3") + ", " +
+              "a_4=" + dataHash.getItem(modelParam + "a_4") + ", " +
+              "p_min=" + dataHash.getItem(modelParam + "p_min") + ", " +
+              "p_max=" + dataHash.getItem(modelParam + "p_max") + ", " +
+              "mu=" + dataHash.getItem(modelParam + "mu") + ", " +
+              "y1=" + dataHash.getItem(modelParam + "y1") + ", " +
+              "y0=" + dataHash.getItem(modelParam + "y0") + ", " +
+              "y3=" + dataHash.getItem(modelParam + "y3") + ", " +
+              "y2=" + dataHash.getItem(modelParam + "y2") + ", " +
+              "y5=" + dataHash.getItem(modelParam + "y5") + ", " +
+              "y4=" + dataHash.getItem(modelParam + "y4") + ", " +
+              "variables_of_interest=" + variables_of_interest_string + ", " +
+              "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
+              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
+              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
+              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              ")\n";
+  }
+
+  else if(modelType == "ZetterbergJansen"){
+    
+    var str_varOfInterest = "" + dataHash.getItem(modelParam + "variables_of_interest");
+    var variables_of_interest_array = str_varOfInterest.split(',');
+    var variables_of_interest_string = "[";
+    
+    for(var i = 0; i< variables_of_interest_array.length; i++){
+      variables_of_interest_string += "\"" + variables_of_interest_array[i] + "\","; 
+    }
+    // delete last comma sign
+    variables_of_interest_string = variables_of_interest_string.substring(0, variables_of_interest_string.length - 1);
+    variables_of_interest_string += "]";
+    
+    content = "oscilator = models." + modelType + "(" +
+              "He=" + dataHash.getItem(modelParam + "He") + ", " + 
+              "Hi=" + dataHash.getItem(modelParam + "Hi") + ", " +
+              "ke=" + dataHash.getItem(modelParam + "ke") + ", " +
+              "ki=" + dataHash.getItem(modelParam + "ki") + ", " +
+              "rho_2=" + dataHash.getItem(modelParam + "rho_2") + ", " +
+              "e0=" + dataHash.getItem(modelParam + "e0") + ", " +
+              "rho_1=" + dataHash.getItem(modelParam + "rho_1") + ", " +
+              "gamma_1=" + dataHash.getItem(modelParam + "gamma_1") + ", " +
+              "gamma_2=" + dataHash.getItem(modelParam + "gamma_2") + ", " +
+              "gamma_3=" + dataHash.getItem(modelParam + "gamma_3") + ", " +
+              "gamma_4=" + dataHash.getItem(modelParam + "gamma_4") + ", " +
+              "gamma_5=" + dataHash.getItem(modelParam + "gamma_5") + ", " +
+              "v1=" + dataHash.getItem(modelParam + "v1") + ", " +
+              "v2=" + dataHash.getItem(modelParam + "v2") + ", " +
+              "v3=" + dataHash.getItem(modelParam + "v3") + ", " +
+              "v4=" + dataHash.getItem(modelParam + "v4") + ", " +
+              "v5=" + dataHash.getItem(modelParam + "v5") + ", " +
+              "v6=" + dataHash.getItem(modelParam + "v6") + ", " +
+              "v7=" + dataHash.getItem(modelParam + "v7") + ", " +
+              "y1=" + dataHash.getItem(modelParam + "y1") + ", " +
+              "y3=" + dataHash.getItem(modelParam + "y3") + ", " +
+              "y2=" + dataHash.getItem(modelParam + "y2") + ", " +
+              "y5=" + dataHash.getItem(modelParam + "y5") + ", " +
+              "y4=" + dataHash.getItem(modelParam + "y4") + ", " +
+              "gamma_1T=" + dataHash.getItem(modelParam + "gamma_1T") + ", " +
+              "gamma_3T=" + dataHash.getItem(modelParam + "gamma_3T") + ", " +
+              "gamma_2T=" + dataHash.getItem(modelParam + "gamma_2T") + ", " +
+              "variables_of_interest=" + variables_of_interest_string + ", " +
+              "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
+              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
+              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
+              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              ")\n";
+  }
+
+  else if(modelType == "Generic2dOscillator"){
+    
+    var str_varOfInterest = "" + dataHash.getItem(modelParam + "variables_of_interest");
+    var variables_of_interest_array = str_varOfInterest.split(',');
+    var variables_of_interest_string = "[";
+    
+    for(var i = 0; i< variables_of_interest_array.length; i++){
+      variables_of_interest_string += "\"" + variables_of_interest_array[i] + "\","; 
+    }
+    // delete last comma sign
+    variables_of_interest_string = variables_of_interest_string.substring(0, variables_of_interest_string.length - 1);
+    variables_of_interest_string += "]";
+    
+    content = "oscilator = models." + modelType + "(" +
+              "r=" + dataHash.getItem(modelParam + "r") + ", " + 
+              "Iext=" + dataHash.getItem(modelParam + "Iext") + ", " +
+              "a=" + dataHash.getItem(modelParam + "a") + ", " +
+              "b=" + dataHash.getItem(modelParam + "b") + ", " +
+              "c=" + dataHash.getItem(modelParam + "c") + ", " +
+              "e=" + dataHash.getItem(modelParam + "e") + ", " +
+              "f=" + dataHash.getItem(modelParam + "f") + ", " +
+              "g=" + dataHash.getItem(modelParam + "g") + ", " +
+              "alpha=" + dataHash.getItem(modelParam + "alpha") + ", " +
+              "beta=" + dataHash.getItem(modelParam + "beta") + ", " +
+              "W=" + dataHash.getItem(modelParam + "W") + ", " +
+              "V=" + dataHash.getItem(modelParam + "V") + ", " +
+              "variables_of_interest=" + variables_of_interest_string + ", " +
+              "d=" + dataHash.getItem(modelParam + "d") + ", " +
+              "gamma=" + dataHash.getItem(modelParam + "gamma") + ", " +
+              "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
+              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
+              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
+              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              ")\n";
+  }
+
+  else if(modelType == "LarterBreakspear"){
+    
+    var str_varOfInterest = "" + dataHash.getItem(modelParam + "variables_of_interest");
+    var variables_of_interest_array = str_varOfInterest.split(',');
+    var variables_of_interest_string = "[";
+    
+    for(var i = 0; i< variables_of_interest_array.length; i++){
+      variables_of_interest_string += "\"" + variables_of_interest_array[i] + "\","; 
+    }
+    // delete last comma sign
+    variables_of_interest_string = variables_of_interest_string.substring(0, variables_of_interest_string.length - 1);
+    variables_of_interest_string += "]";
+    
+    content = "oscilator = models." + modelType + "(" +
+              "a_ne=" + dataHash.getItem(modelParam + "a_ne") + ", " + 
+              "tau_K=" + dataHash.getItem(modelParam + "tau_K") + ", " +
+              "VNa=" + dataHash.getItem(modelParam + "VNa") + ", " +
+              "ani=" + dataHash.getItem(modelParam + "ani") + ", " +
+              "gNa=" + dataHash.getItem(modelParam + "gNa") + ", " +
+              "QZ_max=" + dataHash.getItem(modelParam + "QZ_max") + ", " +
+              "TCa=" + dataHash.getItem(modelParam + "TCa") + ", " +
+              "d_Na=" + dataHash.getItem(modelParam + "d_Na") + ", " +
+              "rNMDA=" + dataHash.getItem(modelParam + "rNMDA") + ", " +
+//TODO
+              "variables_of_interest=" + variables_of_interest_string + ", " +
+              "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
+              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
+              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
+              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              ")\n";
+  }
+
+  else if(modelType == "ReducedWongWang"){
+    
+    var str_varOfInterest = "" + dataHash.getItem(modelParam + "variables_of_interest");
+    var variables_of_interest_array = str_varOfInterest.split(',');
+    var variables_of_interest_string = "[";
+    
+    for(var i = 0; i< variables_of_interest_array.length; i++){
+      variables_of_interest_string += "\"" + variables_of_interest_array[i] + "\","; 
+    }
+    // delete last comma sign
+    variables_of_interest_string = variables_of_interest_string.substring(0, variables_of_interest_string.length - 1);
+    variables_of_interest_string += "]";
+    
+    content = "oscilator = models." + modelType + "(" +
+              "a=" + dataHash.getItem(modelParam + "a") + ", " + 
+              "b=" + dataHash.getItem(modelParam + "b") + ", " +
+              "d=" + dataHash.getItem(modelParam + "d") + ", " +
+              "gamma=" + dataHash.getItem(modelParam + "gamma") + ", " +
+              "tau_s=" + dataHash.getItem(modelParam + "tau_s") + ", " +
+              "w=" + dataHash.getItem(modelParam + "w") + ", " +
+              "J_N=" + dataHash.getItem(modelParam + "J_N") + ", " +
+              "I_o=" + dataHash.getItem(modelParam + "I_o") + ", " +
+              "S=" + dataHash.getItem(modelParam + "S") + ", " +
+              "variables_of_interest=" + variables_of_interest_string + ", " +
+              "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
+              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
+              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
+              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              ")\n";
+  }
+
+  else if(modelType == "Kuramoto"){
+    
+    var str_varOfInterest = "" + dataHash.getItem(modelParam + "variables_of_interest");
+    var variables_of_interest_array = str_varOfInterest.split(',');
+    var variables_of_interest_string = "[";
+    
+    for(var i = 0; i< variables_of_interest_array.length; i++){
+      variables_of_interest_string += "\"" + variables_of_interest_array[i] + "\","; 
+    }
+    // delete last comma sign
+    variables_of_interest_string = variables_of_interest_string.substring(0, variables_of_interest_string.length - 1);
+    variables_of_interest_string += "]";
+    
+    content = "oscilator = models." + modelType + "(" +
+              "omega=" + dataHash.getItem(modelParam + "omega") + ", " +
+              "theta=" + dataHash.getItem(modelParam + "theta") + ", " +
+              "variables_of_interest=" + variables_of_interest_string + ", " +
+              "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
+              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
+              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
+              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              ")\n";
+  }
+
+  else if(modelType == "Hopfield"){
+    
+    var str_varOfInterest = "" + dataHash.getItem(modelParam + "variables_of_interest");
+    var variables_of_interest_array = str_varOfInterest.split(',');
+    var variables_of_interest_string = "[";
+    
+    for(var i = 0; i< variables_of_interest_array.length; i++){
+      variables_of_interest_string += "\"" + variables_of_interest_array[i] + "\","; 
+    }
+    // delete last comma sign
+    variables_of_interest_string = variables_of_interest_string.substring(0, variables_of_interest_string.length - 1);
+    variables_of_interest_string += "]";
+    
+    content = "oscilator = models." + modelType + "(" +
+              "taux=" + dataHash.getItem(modelParam + "taux") + ", " + 
+              "tauT=" + dataHash.getItem(modelParam + "tauT") + ", " +
+              "dynamic=" + dataHash.getItem(modelParam + "dynamic") + ", " +
+              "x=" + dataHash.getItem(modelParam + "x") + ", " +
+              "theta=" + dataHash.getItem(modelParam + "theta") + ", " +
+              "variables_of_interest=" + variables_of_interest_string + ", " +
+              "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
+              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
+              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
+              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              ")\n";
+  }
+
+  else if(modelType == "Epileptor"){
+    
+    var str_varOfInterest = "" + dataHash.getItem(modelParam + "variables_of_interest");
+    var variables_of_interest_array = str_varOfInterest.split(',');
+    var variables_of_interest_string = "[";
+    
+    for(var i = 0; i< variables_of_interest_array.length; i++){
+      variables_of_interest_string += "\"" + variables_of_interest_array[i] + "\","; 
+    }
+    // delete last comma sign
+    variables_of_interest_string = variables_of_interest_string.substring(0, variables_of_interest_string.length - 1);
+    variables_of_interest_string += "]";
+    
+    content = "oscilator = models." + modelType + "(" +
+              "Iext=" + dataHash.getItem(modelParam + "Iext") + ", " + 
+              "Iext2=" + dataHash.getItem(modelParam + "Iext2") + ", " +
+              "x0=" + dataHash.getItem(modelParam + "x0") + ", " +
+              "r=" + dataHash.getItem(modelParam + "r") + ", " +
+              "slope=" + dataHash.getItem(modelParam + "slope") + ", " +
+              "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
+              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
+              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
+              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              ")\n";
+  }
+
+  else if(modelType == "EpileptorPermittivityCoupling"){
+    
+    var str_varOfInterest = "" + dataHash.getItem(modelParam + "variables_of_interest");
+    var variables_of_interest_array = str_varOfInterest.split(',');
+    var variables_of_interest_string = "[";
+    
+    for(var i = 0; i< variables_of_interest_array.length; i++){
+      variables_of_interest_string += "\"" + variables_of_interest_array[i] + "\","; 
+    }
+    // delete last comma sign
+    variables_of_interest_string = variables_of_interest_string.substring(0, variables_of_interest_string.length - 1);
+    variables_of_interest_string += "]";
+    
+    content = "oscilator = models." + modelType + "(" +
+              "Iext=" + dataHash.getItem(modelParam + "Iext") + ", " + 
+              "Iext2=" + dataHash.getItem(modelParam + "Iext2") + ", " +
+              "x0=" + dataHash.getItem(modelParam + "x0") + ", " +
+              "r=" + dataHash.getItem(modelParam + "r") + ", " +
+              "slope=" + dataHash.getItem(modelParam + "slope") + ", " +
+              "Tt=" + dataHash.getItem(modelParam + "Tt") + ", " +
+              "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
+              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
+              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
+              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              ")\n";
+  }
+
   content += "oscilator.configure()\n";
   
   return content;
