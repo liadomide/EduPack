@@ -57,7 +57,7 @@
         <![CDATA[
           This is the first task you have to solve, <br>
           click the <b>Project</b> button to switch to the Project page.<br><br>
-          <img src=/static/js/tutorial_preview_project.png width=400>
+          <img src=/static/style/img/edupack/tutorial_preview_project.png width=400>
         ]]>
       </action>
       
@@ -221,7 +221,7 @@
         <![CDATA[
           To continue with the next task and create your first simulation, <br>
           click the <b>Simulator</b> button to switch to the Simulator page.<br><br>
-          <img src=/static/js/tutorial_preview_simulator.png width=400>
+          <img src=/static/style/img/edupack/tutorial_preview_simulator.png width=400>
         ]]>
       </action>
       
@@ -271,7 +271,7 @@
           You can skip this task, if you see an empty form field next to
           the <b>New simulation core</b>. <br>This means that you are already 
           ready for the next task. :)<br><br>
-          <img src=/static/js/tutorial_preview_simulator_name.png width=400>
+          <img src=/static/style/img/edupack/tutorial_preview_simulator_name.png width=400>
         ]]>
       </action>
       
@@ -313,7 +313,7 @@
         <![CDATA[
           Give your simulation a significant name and learn about 
           TVB-EduPack Helper elements by activating the help for the parameters.<br><br>
-          <img src=/static/js/tutorial_preview_helper.png width=400>
+          <img src=/static/style/img/edupack/tutorial_preview_helper.png width=400>
         ]]>
       </action>
       
@@ -550,7 +550,7 @@
         <![CDATA[
           Hit the launch button if you're interested to analyze the data.<br>
           Approximated computational time: not available<br>
-          <img src=/static/js/tutorial_preview_run.png width=400>
+          <img src=/static/style/img/edupack/tutorial_preview_run.png width=400>
         ]]>
       </action>
       

@@ -202,7 +202,7 @@
     <h2>Visualization Tab</h2>
       In this visualization tab, we can preview the computated <br>
       results of the imported project simulation.<br><br>
-      <img src=/static/js/sim_images/result_example.png width=600>
+      <img src=/static/style/img/edupack/sim_images/result_example.png width=600>
     ]]>    
   </description>
   
