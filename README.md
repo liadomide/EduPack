@@ -5,7 +5,7 @@ You need a functioning installation of TVB either from git (https://github.com/t
 
 ## Quick installation
 
-The easiest way is to get the TVB release and then move the cloned Edupack into TVB's directory structure:
+The easiest way is to get the TVB release and then move the cloned EduPack into TVB's directory structure:
 
 ```
 unzip TVB_MacOS_1.3_x64_web.zip
