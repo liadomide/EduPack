@@ -49,7 +49,7 @@ rsync -av $EDU_BASE/templates/genshi/{base_template.html,edupack_template.html,f
 
 ## Then start TVB
 
-EduPack set up a new icon down to the right in the TVB menu. Click it and it will interactively guide you through the use of TVB.
+EduPack resides under a new icon down to the right in the TVB menu. First click "Project" or "Simulator" and then the EduPack icon and it will interactively guide you through the use of TVB.
 
 
 ## Help us make it better
