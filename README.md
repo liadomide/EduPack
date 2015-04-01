@@ -19,7 +19,7 @@ rsync -av EduPack/tvb-framework/tvb/interfaces TVB_Distribution/tvb_data/tvb
 
 ## Manual
 
-Copy the following files from EduPack:
+Copy the relevant files from EduPack:
 
 * EduPack.git/tvb-framework/tvb/interfaces/web/ (EduPack base path)
  * static/js/edupack
@@ -31,7 +31,7 @@ Copy the following files from EduPack:
  * templates/genshi/base_template.html
  * templates/genshi/footer.html
 
-and have to be copied to your TVB installation base path:
+to the base path of your TVB installation:
 
 * Linux: TVB_Distribution/tvb_data/tvb/interfaces/web
 * OS X: /Applications/TVB_Distribution/tvb.app/Contents/Resources/lib/python2.7/tvb/interfaces/web
