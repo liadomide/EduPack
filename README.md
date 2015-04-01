@@ -1,12 +1,25 @@
-# EduPack rough installation HowTo
+# EduPack rough HowTo
 
 You need a functioning installation of TVB either from git (https://github.com/the-virtual-brain/tvb-pack) or the official release (http://thevirtualbrain.org/tvb/zwei/app). We recommend to use the release version so far. EduPack has been tested with TVB 1.3.
 
-## To install EduPack
 
-Copy the following files from EduPack.git. The easiest way is to either get a TVB release or do a `git clone` of tvb-framework and then clone Edupack into it.
+## Quick installation
 
-The needed files are:
+The easiest way is to get the TVB release and then move the cloned Edupack into TVB's directory structure:
+
+```
+unzip TVB_MacOS_1.3_x64_web.zip
+git clone git@github.com:BrainModes/EduPack EduPack
+rsync -av EduPack/tvb-framework/tvb/interfaces /Applications/TVB_Distribution/tvb.app/Contents/Resources/lib/python2.7/tvb
+
+unzip TVB_Linux_1.3_x64_web.zip
+git clone git@github.com:BrainModes/EduPack EduPack
+rsync -av EduPack/tvb-framework/tvb/interfaces TVB_Distribution/tvb_data/tvb
+```
+
+## Manual
+
+Copy the following files from EduPack:
 
 * EduPack.git/tvb-framework/tvb/interfaces/web/ (EduPack base path)
  * static/js/edupack
@@ -24,8 +37,6 @@ and have to be copied to your TVB installation base path:
 * OS X: /Applications/TVB_Distribution/tvb.app/Contents/Resources/lib/python2.7/tvb/interfaces/web
 * Windows: accordingly
 
-Manual copy:
-
 ```
 EDU_BASE=./EduPack.git/tvb-framework/tvb/interfaces/web
 TVB_BASE=./TVB_Distribution/tvb_data/tvb/interfaces/web
@@ -38,7 +49,8 @@ rsync -av $EDU_BASE/templates/genshi/{base_template.html,edupack_template.html,f
 
 ## Then start TVB
 
-EduPack will be visible under e.g. "Simulator" tab down to the right. It will interactively guide you through the use of TVB.
+EduPack set up a new icon down to the right in the TVB menu. Click it and it will interactively guide you through the use of TVB.
+
 
 ## Help us make it better
 
