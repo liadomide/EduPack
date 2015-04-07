@@ -140,13 +140,13 @@ function addModelToScript(dataHash){
               "Q=" + dataHash.getItem(modelParam + "Q") + ", " +              
               "alpha_e=" + dataHash.getItem(modelParam + "alpha_e") + ", " +              
               "alpha_i=" + dataHash.getItem(modelParam + "alpha_i") + ", " +
-              "I=" + dataHash.getItem(modelParam + "I") + ", " +              
-              "E=" + dataHash.getItem(modelParam + "E") + ", " +
+              "state_variable_range_parameters_I=" + dataHash.getItem(modelParam + "state_variable_range_parameters_I") + ", " +              
+              "state_variable_range_parameters_E=" + dataHash.getItem(modelParam + "state_variable_range_parameters_E") + ", " +
               "variables_of_interest=" + variables_of_interest_string + ", " +
               "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
-              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
-              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
-              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              "noise_parameters_option_Noise_ntau=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_ntau") + ", " +
+              "noise_parameters_option_Noise_random_stream=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_random_stream") + ", " +
+              "noise_parameters_option_RandomStream_init_seed=" + dataHash.getItem(modelParam + "noise_parameters_option_RandomStream_init_seed") + // TODO
               ")\n";
   }
 
@@ -164,22 +164,22 @@ function addModelToScript(dataHash){
     variables_of_interest_string += "]";
     
     content = "oscilator = models." + modelType + "(" +
-              "tau=" + dataHash.getItem(modelParam + "r") + ", " + 
+              "tau=" + dataHash.getItem(modelParam + "tau") + ", " + 
               "a=" + dataHash.getItem(modelParam + "a") + ", " +
               "b=" + dataHash.getItem(modelParam + "b") + ", " +
               "K11=" + dataHash.getItem(modelParam + "K11") + ", " +
               "K12=" + dataHash.getItem(modelParam + "K12") + ", " +
               "K21=" + dataHash.getItem(modelParam + "K21") + ", " +
               "sigma=" + dataHash.getItem(modelParam + "sigma") + ", " +
-              "alpha=" + dataHash.getItem(modelParam + "alpha") + ", " +
-              "beta=" + dataHash.getItem(modelParam + "beta") + ", " +
-              "xi=" + dataHash.getItem(modelParam + "xi") + ", " +
-              "eta=" + dataHash.getItem(modelParam + "eta") + ", " +
+              "state_variable_range_parameters_alpha=" + dataHash.getItem(modelParam + "state_variable_range_parameters_alpha") + ", " +
+              "state_variable_range_parameters_beta=" + dataHash.getItem(modelParam + "state_variable_range_parameters_beta") + ", " +
+              "state_variable_range_parameters_xi=" + dataHash.getItem(modelParam + "state_variable_range_parameters_xi") + ", " +
+              "state_variable_range_parameters_eta=" + dataHash.getItem(modelParam + "state_variable_range_parameters_eta") + ", " +
               "variables_of_interest=" + variables_of_interest_string + ", " +
               "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
-              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
-              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
-              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              "noise_parameters_option_Noise_ntau=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_ntau") + ", " +
+              "noise_parameters_option_Noise_random_stream=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_random_stream") + ", " +
+              "noise_parameters_option_RandomStream_init_seed=" + dataHash.getItem(modelParam + "noise_parameters_option_RandomStream_init_seed") +
               ")\n";
   }
 
@@ -209,17 +209,17 @@ function addModelToScript(dataHash){
               "K21=" + dataHash.getItem(modelParam + "K21") + ", " +
               "sigma=" + dataHash.getItem(modelParam + "sigma") + ", " +
               "mu=" + dataHash.getItem(modelParam + "mu") + ", " +
-              "tau=" + dataHash.getItem(modelParam + "tau") + ", " +
-              "xi=" + dataHash.getItem(modelParam + "xi") + ", " +
-              "beta=" + dataHash.getItem(modelParam + "beta") + ", " +
-              "eta=" + dataHash.getItem(modelParam + "eta") + ", " +
-              "alpha=" + dataHash.getItem(modelParam + "alpha") + ", " +
-              "gamma=" + dataHash.getItem(modelParam + "gamma") + ", " +
+              "state_variable_range_parameters_tau=" + dataHash.getItem(modelParam + "state_variable_range_parameters_tau") + ", " +
+              "state_variable_range_parameters_xi=" + dataHash.getItem(modelParam + "state_variable_range_parameters_xi") + ", " +
+              "state_variable_range_parameters_beta=" + dataHash.getItem(modelParam + "state_variable_range_parameters_beta") + ", " +
+              "state_variable_range_parameters_eta=" + dataHash.getItem(modelParam + "state_variable_range_parameters_eta") + ", " +
+              "state_variable_range_parameters_alpha=" + dataHash.getItem(modelParam + "state_variable_range_parameters_alpha") + ", " +
+              "state_variable_range_parameters_gamma=" + dataHash.getItem(modelParam + "state_variable_range_parameters_gamma") + ", " +
               "variables_of_interest=" + variables_of_interest_string + ", " +
               "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
-              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
-              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
-              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              "noise_parameters_option_Noise_ntau=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_ntau") + ", " +
+              "noise_parameters_option_Noise_random_stream=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_random_stream") + ", " +
+              "noise_parameters_option_RandomStream_init_seed=" + dataHash.getItem(modelParam + "noise_parameters_option_RandomStream_init_seed") +
               ")\n";
   }
 
@@ -252,17 +252,17 @@ function addModelToScript(dataHash){
               "p_min=" + dataHash.getItem(modelParam + "p_min") + ", " +
               "p_max=" + dataHash.getItem(modelParam + "p_max") + ", " +
               "mu=" + dataHash.getItem(modelParam + "mu") + ", " +
-              "y1=" + dataHash.getItem(modelParam + "y1") + ", " +
-              "y0=" + dataHash.getItem(modelParam + "y0") + ", " +
-              "y3=" + dataHash.getItem(modelParam + "y3") + ", " +
-              "y2=" + dataHash.getItem(modelParam + "y2") + ", " +
-              "y5=" + dataHash.getItem(modelParam + "y5") + ", " +
-              "y4=" + dataHash.getItem(modelParam + "y4") + ", " +
+              "state_variable_range_parameters_y1=" + dataHash.getItem(modelParam + "state_variable_range_parameters_y1") + ", " +
+              "state_variable_range_parameters_y0=" + dataHash.getItem(modelParam + "state_variable_range_parameters_y0") + ", " +
+              "state_variable_range_parameters_y3=" + dataHash.getItem(modelParam + "state_variable_range_parameters_y3") + ", " +
+              "state_variable_range_parameters_y2=" + dataHash.getItem(modelParam + "state_variable_range_parameters_y2") + ", " +
+              "state_variable_range_parameters_y5=" + dataHash.getItem(modelParam + "state_variable_range_parameters_y5") + ", " +
+              "state_variable_range_parameters_y4=" + dataHash.getItem(modelParam + "state_variable_range_parameters_y4") + ", " +
               "variables_of_interest=" + variables_of_interest_string + ", " +
               "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
-              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
-              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
-              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              "noise_parameters_option_Noise_ntau=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_ntau") + ", " +
+              "noise_parameters_option_Noise_random_stream=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_random_stream") + ", " +
+              "noise_parameters_option_RandomStream_init_seed=" + dataHash.getItem(modelParam + "noise_parameters_option_RandomStream_init_seed") +
               ")\n";
   }
 
@@ -292,26 +292,26 @@ function addModelToScript(dataHash){
               "gamma_3=" + dataHash.getItem(modelParam + "gamma_3") + ", " +
               "gamma_4=" + dataHash.getItem(modelParam + "gamma_4") + ", " +
               "gamma_5=" + dataHash.getItem(modelParam + "gamma_5") + ", " +
-              "v1=" + dataHash.getItem(modelParam + "v1") + ", " +
-              "v2=" + dataHash.getItem(modelParam + "v2") + ", " +
-              "v3=" + dataHash.getItem(modelParam + "v3") + ", " +
-              "v4=" + dataHash.getItem(modelParam + "v4") + ", " +
-              "v5=" + dataHash.getItem(modelParam + "v5") + ", " +
-              "v6=" + dataHash.getItem(modelParam + "v6") + ", " +
-              "v7=" + dataHash.getItem(modelParam + "v7") + ", " +
-              "y1=" + dataHash.getItem(modelParam + "y1") + ", " +
-              "y3=" + dataHash.getItem(modelParam + "y3") + ", " +
-              "y2=" + dataHash.getItem(modelParam + "y2") + ", " +
-              "y5=" + dataHash.getItem(modelParam + "y5") + ", " +
-              "y4=" + dataHash.getItem(modelParam + "y4") + ", " +
+              "state_variable_range_parameters_v1=" + dataHash.getItem(modelParam + "state_variable_range_parameters_v1") + ", " +
+              "state_variable_range_parameters_v2=" + dataHash.getItem(modelParam + "state_variable_range_parameters_v2") + ", " +
+              "state_variable_range_parameters_v3=" + dataHash.getItem(modelParam + "state_variable_range_parameters_v3") + ", " +
+              "state_variable_range_parameters_v4=" + dataHash.getItem(modelParam + "state_variable_range_parameters_v4") + ", " +
+              "state_variable_range_parameters_v5=" + dataHash.getItem(modelParam + "state_variable_range_parameters_v5") + ", " +
+              "state_variable_range_parameters_v6=" + dataHash.getItem(modelParam + "state_variable_range_parameters_v6") + ", " +
+              "state_variable_range_parameters_v7=" + dataHash.getItem(modelParam + "state_variable_range_parameters_v7") + ", " +
+              "state_variable_range_parameters_y1=" + dataHash.getItem(modelParam + "state_variable_range_parameters_y1") + ", " +
+              "state_variable_range_parameters_y3=" + dataHash.getItem(modelParam + "state_variable_range_parameters_y3") + ", " +
+              "state_variable_range_parameters_y2=" + dataHash.getItem(modelParam + "state_variable_range_parameters_y2") + ", " +
+              "state_variable_range_parameters_y5=" + dataHash.getItem(modelParam + "state_variable_range_parameters_y5") + ", " +
+              "state_variable_range_parameters_y4=" + dataHash.getItem(modelParam + "state_variable_range_parameters_y4") + ", " +
               "gamma_1T=" + dataHash.getItem(modelParam + "gamma_1T") + ", " +
               "gamma_3T=" + dataHash.getItem(modelParam + "gamma_3T") + ", " +
               "gamma_2T=" + dataHash.getItem(modelParam + "gamma_2T") + ", " +
               "variables_of_interest=" + variables_of_interest_string + ", " +
               "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
-              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
-              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
-              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              "noise_parameters_option_Noise_ntau=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_ntau") + ", " +
+              "noise_parameters_option_Noise_random_stream=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_random_stream") + ", " +
+              "noise_parameters_option_RandomStream_init_seed=" + dataHash.getItem(modelParam + "noise_parameters_option_RandomStream_init_seed") +
               ")\n";
   }
 
@@ -339,15 +339,15 @@ function addModelToScript(dataHash){
               "g=" + dataHash.getItem(modelParam + "g") + ", " +
               "alpha=" + dataHash.getItem(modelParam + "alpha") + ", " +
               "beta=" + dataHash.getItem(modelParam + "beta") + ", " +
-              "W=" + dataHash.getItem(modelParam + "W") + ", " +
-              "V=" + dataHash.getItem(modelParam + "V") + ", " +
+              "state_variable_range_parameters_W=" + dataHash.getItem(modelParam + "state_variable_range_parameters_W") + ", " +
+              "state_variable_range_parameters_V=" + dataHash.getItem(modelParam + "state_variable_range_parameters_V") + ", " +
               "variables_of_interest=" + variables_of_interest_string + ", " +
               "d=" + dataHash.getItem(modelParam + "d") + ", " +
               "gamma=" + dataHash.getItem(modelParam + "gamma") + ", " +
               "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
-              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
-              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
-              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              "noise_parameters_option_Noise_ntau=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_ntau") + ", " +
+              "noise_parameters_option_Noise_random_stream=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_random_stream") + ", " +
+              "noise_parameters_option_RandomStream_init_seed=" + dataHash.getItem(modelParam + "noise_parameters_option_RandomStream_init_seed") +
               ")\n";
   }
 
@@ -400,9 +400,9 @@ function addModelToScript(dataHash){
               "QV_max=" + dataHash.getItem(modelParam + "QV_max") + ", " +
               "variables_of_interest=" + variables_of_interest_string + ", " +
               "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
-              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
-              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
-              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              "noise_parameters_option_Noise_ntau=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_ntau") + ", " +
+              "noise_parameters_option_Noise_random_stream=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_random_stream") + ", " +
+              "noise_parameters_option_RandomStream_init_seed=" + dataHash.getItem(modelParam + "noise_parameters_option_RandomStream_init_seed") +
               ")\n";
   }
 
@@ -428,12 +428,12 @@ function addModelToScript(dataHash){
               "w=" + dataHash.getItem(modelParam + "w") + ", " +
               "J_N=" + dataHash.getItem(modelParam + "J_N") + ", " +
               "I_o=" + dataHash.getItem(modelParam + "I_o") + ", " +
-              "S=" + dataHash.getItem(modelParam + "S") + ", " +
+              "state_variable_range_parameters_S=" + dataHash.getItem(modelParam + "state_variable_range_parameters_S") + ", " +
               "variables_of_interest=" + variables_of_interest_string + ", " +
               "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
-              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
-              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
-              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              "noise_parameters_option_Noise_ntau=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_ntau") + ", " +
+              "noise_parameters_option_Noise_random_stream=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_random_stream") + ", " +
+              "noise_parameters_option_RandomStream_init_seed=" + dataHash.getItem(modelParam + "noise_parameters_option_RandomStream_init_seed") +
               ")\n";
   }
 
@@ -455,9 +455,9 @@ function addModelToScript(dataHash){
               "theta=" + dataHash.getItem(modelParam + "theta") + ", " +
               "variables_of_interest=" + variables_of_interest_string + ", " +
               "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
-              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
-              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
-              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              "noise_parameters_option_Noise_ntau=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_ntau") + ", " +
+              "noise_parameters_option_Noise_random_stream=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_random_stream") + ", " +
+              "noise_parameters_option_RandomStream_init_seed=" + dataHash.getItem(modelParam + "noise_parameters_option_RandomStream_init_seed") +
               ")\n";
   }
 
@@ -478,13 +478,13 @@ function addModelToScript(dataHash){
               "taux=" + dataHash.getItem(modelParam + "taux") + ", " + 
               "tauT=" + dataHash.getItem(modelParam + "tauT") + ", " +
               "dynamic=" + dataHash.getItem(modelParam + "dynamic") + ", " +
-              "x=" + dataHash.getItem(modelParam + "x") + ", " +
-              "theta=" + dataHash.getItem(modelParam + "theta") + ", " +
+              "state_variable_range_parameters_x=" + dataHash.getItem(modelParam + "state_variable_range_parameters_x") + ", " +
+              "state_variable_range_parameters_theta=" + dataHash.getItem(modelParam + "state_variable_range_parameters_theta") + ", " +
               "variables_of_interest=" + variables_of_interest_string + ", " +
               "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
-              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
-              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
-              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              "noise_parameters_option_Noise_ntau=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_ntau") + ", " +
+              "noise_parameters_option_Noise_random_stream=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_random_stream") + ", " +
+              "noise_parameters_option_RandomStream_init_seed=" + dataHash.getItem(modelParam + "noise_parameters_option_RandomStream_init_seed") +
               ")\n";
   }
 
@@ -508,9 +508,9 @@ function addModelToScript(dataHash){
               "r=" + dataHash.getItem(modelParam + "r") + ", " +
               "slope=" + dataHash.getItem(modelParam + "slope") + ", " +
               "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
-              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
-              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
-              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              "noise_parameters_option_Noise_ntau=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_ntau") + ", " +
+              "noise_parameters_option_Noise_random_stream=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_random_stream") + ", " +
+              "noise_parameters_option_RandomStream_init_seed=" + dataHash.getItem(modelParam + "noise_parameters_option_RandomStream_init_seed") +
               ")\n";
   }
 
@@ -533,16 +533,144 @@ function addModelToScript(dataHash){
               "x0=" + dataHash.getItem(modelParam + "x0") + ", " +
               "r=" + dataHash.getItem(modelParam + "r") + ", " +
               "slope=" + dataHash.getItem(modelParam + "slope") + ", " +
-              "Tt=" + dataHash.getItem(modelParam + "Tt") + ", " +
+              "tt=" + dataHash.getItem(modelParam + "tt") + ", " +
               "noise=" + dataHash.getItem(modelParam + "noise") + ", " +
-              "Noise_ntau=" + dataHash.getItem(modelParam + "Noise_ntau") + ", " +
-              "Noise_random_stream=" + dataHash.getItem(modelParam + "Noise_random_stream") + ", " +
-              "RandomStream_init_seed=" + dataHash.getItem(modelParam + "RandomStream_init_seed") +
+              "noise_parameters_option_Noise_ntau=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_ntau") + ", " +
+              "noise_parameters_option_Noise_random_stream=" + dataHash.getItem(modelParam + "noise_parameters_option_Noise_random_stream") + ", " +
+              "noise_parameters_option_RandomStream_init_seed=" + dataHash.getItem(modelParam + "noise_parameters_option_RandomStream_init_seed") + // TOOD
               ")\n";
   }
 
   content += "oscilator.configure()\n";
+
+// TODO INTEGRATORS
+//data_integratorHeunDeterministic
+//integrator_parameters_option_HeunDeterministic_dt
+
+//data_integratorHeunStochastic
+//integrator_parameters_option_HeunStochastic_noise
+//integrator_parameters_option_HeunStochastic_noise_parameters_option_Additive_ntau
+//integrator_parameters_option_HeunStochastic_noise_parameters_option_Additive_random_stream_RandomStream
+//integrator_parameters_option_HeunStochastic_noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed
+//integrator_parameters_option_HeunStochastic_noise_parameters_option_Additive_nsig
+
+
+//data_integratorEulerDeterministic
+//data_integratorEulerStochastic
+
+// TODO MONITORS
+//monitors_parameters_option_SubSample_period
+//monitors_parameters_option_SpatialAverage_spatial_mask
+//monitors_parameters_option_SpatialAverage_period
+//monitors_parameters_option_GlobalAverage_period
+//monitors_parameters_option_TemporalAverage_period
+//monitors_parameters_option_EEG_projection_matrix_data
+//monitors_parameters_option_EEG_period
+//monitors_parameters_option_SphericalEEG_sensors
+//monitors_parameters_option_SphericalEEG_sigma
+//monitors_parameters_option_SphericalEEG_period
+//data_monitorsSphericalMEG
+//monitors_parameters_option_SphericalMEG_sensors
+//monitors_parameters_option_SphericalMEG_period
+//monitors_parameters_option_Bold_hrf_kernel
+//several kernels...
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_equation
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_parameters
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_parameters_parameters_factorial
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_parameters_parameters_tau
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_parameters_parameters_a
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_parameters_parameters_n
+//data_monitors_parameters_option_Bold_hrf_kernelDoubleExponential
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_equation
+//dict_monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_a
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_amp_2
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_amp_1
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_f_1
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_f_1
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_f_2
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_pi
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_tau_2
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_tau_1
+//data_monitors_parameters_option_Bold_hrf_kernelFirstOrderVolterra
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_equation
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_parameters
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_tau_f
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_k_1
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_V_0
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_tau_s
+//data_monitors_parameters_option_Bold_hrf_kernelMixtureOfGammas
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_equation
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_gamma_a_2
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_gamma_a_1
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_a_2
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_a_1
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_c
+//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_l
+//monitors_parameters_option_Bold_period
+//data_monitorsBoldRegionROI
+//monitors_parameters_option_BoldRegionROI_hrf_kernel
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_DoubleExponential
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_FirstOrderVolterra
+//monitors_parameters_option_BoldRegionROI_hrf_kernel
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_MixtureOfGammas
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_equation
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_parameters
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_parameters_parameters_factorial
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_parameters_parameters_tau
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_parameters_parameters_a
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_parameters_parameters_n
+//data_monitors_parameters_option_BoldRegionROI_hrf_kernelDoubleExponential
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_equation
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_a
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_amp_2
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_amp_1
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_f_1
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_f_2
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_pi
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_tau_2
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_tau_1
+//data_monitors_parameters_option_BoldRegionROI_hrf_kernelFirstOrderVolterra
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_equation
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters
+//dict_monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_tau_f
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_k_1
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_V_0
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_tau_s
+//data_monitors_parameters_option_BoldRegionROI_hrf_kernelMixtureOfGammas
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_equation
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_parameters
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_gamma_a_2
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_gamma_a_1
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_c
+//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_l
+//monitors_parameters_option_BoldRegionROI_period
+//monitors_parameters_option_SEEG_sensors
+//data_monitorsSEEGmonitors_parameters_option_SEEG_sensorsdata_select
+//monitors_parameters_option_SEEG_sigma
+//monitors_parameters_option_SEEG_period
+
   
+  content += "LOG.info("Starting simulation...")\n" +
+             "raw_data = []\n" +
+             "raw_time = []\n" +
+             "tavg_data = []\n" +
+             "tavg_time = []\n\n"
+
+  content += "for raw, tavg in sim(simulation_length=" + dataHash.getItem(simulation_length) + "):\n" +
+"    if not raw is None:\n" +
+"        raw_time.append(raw[0])\n" +
+"        raw_data.append(raw[1])\n\n" +
+"    if not tavg is None:\n" +
+"        tavg_time.append(tavg[0])\n" +
+"        tavg_data.append(tavg[1])\n\n" +
+"LOG.info(\"Finished simulation.\")\n\n"
+
+  content +="print 'It run for %d sec.' % (datetime.datetime.now() - START_TIME).seconds"
+
   return content;
 }
 
@@ -564,7 +692,7 @@ function getDateAndTime(){
     mm = '0' + mm;
   } 
   
-  //generate string for filnemae
+  //generate string for file name
   today = yyyy+'-'+ mm + '-'+dd + '-'+hours + 'h-'+minutes + 'm-'+seconds+'s';
   
   return today;
