@@ -543,131 +543,183 @@ function addModelToScript(dataHash){
 
   content += "oscilator.configure()\n";
 
-// TODO INTEGRATORS
-//data_integratorHeunDeterministic
-//integrator_parameters_option_HeunDeterministic_dt
-
-//data_integratorHeunStochastic
-//integrator_parameters_option_HeunStochastic_noise
-//integrator_parameters_option_HeunStochastic_noise_parameters_option_Additive_ntau
-//integrator_parameters_option_HeunStochastic_noise_parameters_option_Additive_random_stream_RandomStream
-//integrator_parameters_option_HeunStochastic_noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed
-//integrator_parameters_option_HeunStochastic_noise_parameters_option_Additive_nsig
-
-
-//data_integratorEulerDeterministic
-//data_integratorEulerStochastic
-
-// TODO MONITORS
-//monitors_parameters_option_SubSample_period
-//monitors_parameters_option_SpatialAverage_spatial_mask
-//monitors_parameters_option_SpatialAverage_period
-//monitors_parameters_option_GlobalAverage_period
-//monitors_parameters_option_TemporalAverage_period
-//monitors_parameters_option_EEG_projection_matrix_data
-//monitors_parameters_option_EEG_period
-//monitors_parameters_option_SphericalEEG_sensors
-//monitors_parameters_option_SphericalEEG_sigma
-//monitors_parameters_option_SphericalEEG_period
-//data_monitorsSphericalMEG
-//monitors_parameters_option_SphericalMEG_sensors
-//monitors_parameters_option_SphericalMEG_period
-//monitors_parameters_option_Bold_hrf_kernel
-//several kernels...
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_equation
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_parameters
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_parameters_parameters_factorial
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_parameters_parameters_tau
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_parameters_parameters_a
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_parameters_parameters_n
-//data_monitors_parameters_option_Bold_hrf_kernelDoubleExponential
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_equation
-//dict_monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_a
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_amp_2
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_amp_1
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_f_1
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_f_1
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_f_2
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_pi
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_tau_2
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_tau_1
-//data_monitors_parameters_option_Bold_hrf_kernelFirstOrderVolterra
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_equation
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_parameters
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_tau_f
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_k_1
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_V_0
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_tau_s
-//data_monitors_parameters_option_Bold_hrf_kernelMixtureOfGammas
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_equation
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_gamma_a_2
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_gamma_a_1
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_a_2
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_a_1
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_c
-//monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_l
-//monitors_parameters_option_Bold_period
-//data_monitorsBoldRegionROI
-//monitors_parameters_option_BoldRegionROI_hrf_kernel
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_DoubleExponential
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_FirstOrderVolterra
-//monitors_parameters_option_BoldRegionROI_hrf_kernel
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_MixtureOfGammas
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_equation
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_parameters
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_parameters_parameters_factorial
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_parameters_parameters_tau
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_parameters_parameters_a
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_parameters_parameters_n
-//data_monitors_parameters_option_BoldRegionROI_hrf_kernelDoubleExponential
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_equation
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_a
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_amp_2
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_amp_1
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_f_1
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_f_2
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_pi
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_tau_2
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_tau_1
-//data_monitors_parameters_option_BoldRegionROI_hrf_kernelFirstOrderVolterra
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_equation
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters
-//dict_monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_tau_f
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_k_1
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_V_0
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_tau_s
-//data_monitors_parameters_option_BoldRegionROI_hrf_kernelMixtureOfGammas
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_equation
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_parameters
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_gamma_a_2
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_gamma_a_1
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_c
-//monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_l
-//monitors_parameters_option_BoldRegionROI_period
-//monitors_parameters_option_SEEG_sensors
-//data_monitorsSEEGmonitors_parameters_option_SEEG_sensorsdata_select
-//monitors_parameters_option_SEEG_sigma
-//monitors_parameters_option_SEEG_period
-
+  // TODO INTEGRATORS
+  var integratorType = dataHash.getItem('integrator');
+  var integratorParam = "integrator_parameters_option_" + integratorType + "_";
   
-  content += "LOG.info("Starting simulation...")\n" +
-             "raw_data = []\n" +
-             "raw_time = []\n" +
-             "tavg_data = []\n" +
-             "tavg_time = []\n\n"
+  if(integratorType == "HeunDeterministic"){ //data_integratorHeunDeterministic
+    //integrator_parameters_option_HeunDeterministic_dt
+    content += dataHash.getItem(integratorParam + "dt");
+  }
 
-  content += "for raw, tavg in sim(simulation_length=" + dataHash.getItem(simulation_length) + "):\n" +
-"    if not raw is None:\n" +
-"        raw_time.append(raw[0])\n" +
-"        raw_data.append(raw[1])\n\n" +
-"    if not tavg is None:\n" +
-"        tavg_time.append(tavg[0])\n" +
-"        tavg_data.append(tavg[1])\n\n" +
-"LOG.info(\"Finished simulation.\")\n\n"
+  else if(integratorType == "HeunStochastic"){ //data_integratorHeunStochastic
+    //integrator_parameters_option_HeunStochastic_noise
+    //integrator_parameters_option_HeunStochastic_noise_parameters_option_Additive_ntau
+    //integrator_parameters_option_HeunStochastic_noise_parameters_option_Additive_random_stream_RandomStream
+    //integrator_parameters_option_HeunStochastic_noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed
+    //integrator_parameters_option_HeunStochastic_noise_parameters_option_Additive_nsig
+    content += dataHash.getItem(integratorParam + "noise");
+
+    if(integratorType == "Additive"){
+      content += dataHash.getItem(integratorParam + "noise_parameters_option_Additive_ntau") +
+               dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_RandomStream") +
+               dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed") +
+               dataHash.getItem(integratorParam + "noise_parameters_option_Additive_nsig");
+    }
+    else if(integratorType == "Multiplicative"){
+      content += dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_ntau") +
+                 dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_b") +
+                 dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_a") +
+                 dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_b") +
+                 // ...weitere b aus select box...
+                 dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_random_stream_RandomStream") +
+                 dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed") +
+                 dataHash.getItem(integratorParam + "noise_parameters_option_Additive_nsig");
+    }
+  }
+
+  else if(integratorType == "EulerDeterministic"){ //data_integratorEulerDeterministic
+    content += dataHash.getItem(integratorParam + "dt");
+  }
+
+  else if(integratorType == "EulerStochastic"){ //data_integratorEulerStochastic
+    content += dataHash.getItem(integratorParam + "noise");
+
+    if(integratorType == "Additive"){
+      content += dataHash.getItem(integratorParam + "noise_parameters_option_Additive_ntau") +
+               dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_RandomStream") +
+               dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed") +
+               dataHash.getItem(integratorParam + "noise_parameters_option_Additive_nsig");
+    }
+    else if(integratorType == "Multiplicative"){
+      content += dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_ntau") +
+                 dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_b") +
+                 dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_a") +
+                 dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_b") +
+                 // ...weitere b aus select box...
+                 dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_random_stream_RandomStream") +
+                 dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed") +
+                 dataHash.getItem(integratorParam + "noise_parameters_option_Additive_nsig");
+    }
+  } // integratorType
+
+  // TODO MONITORS
+  var monitorType = dataHash.getItem('monitors');
+  var monitorParam = "monitors_parameters_option_" + monitorType + "_";
+  
+  //monitors_parameters_option_SubSample_period
+  //monitors_parameters_option_SpatialAverage_spatial_mask
+  //monitors_parameters_option_SpatialAverage_period
+  //monitors_parameters_option_GlobalAverage_period
+  //monitors_parameters_option_TemporalAverage_period
+  //monitors_parameters_option_EEG_projection_matrix_data
+  //monitors_parameters_option_EEG_period
+  //monitors_parameters_option_SphericalEEG_sensors
+  //monitors_parameters_option_SphericalEEG_sigma
+  //monitors_parameters_option_SphericalEEG_period
+  //data_monitorsSphericalMEG
+  //monitors_parameters_option_SphericalMEG_sensors
+  //monitors_parameters_option_SphericalMEG_period
+  
+  if(monitorType == "Bold_hrf_kernel"){}
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_equation
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_parameters
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_parameters_parameters_factorial
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_parameters_parameters_tau
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_parameters_parameters_a
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_parameters_parameters_n
+  //data_monitors_parameters_option_Bold_hrf_kernelDoubleExponential
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_equation
+  //dict_monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_a
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_amp_2
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_amp_1
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_f_1
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_f_1
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_f_2
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_pi
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_tau_2
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_tau_1
+  //data_monitors_parameters_option_Bold_hrf_kernelFirstOrderVolterra
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_equation
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_parameters
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_tau_f
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_k_1
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_V_0
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_tau_s
+  //data_monitors_parameters_option_Bold_hrf_kernelMixtureOfGammas
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_equation
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_gamma_a_2
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_gamma_a_1
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_a_2
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_a_1
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_c
+  //monitors_parameters_option_Bold_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_l
+  
+  //monitors_parameters_option_Bold_period
+  
+  if(monitorType == "BoldRegionROI"){}
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_DoubleExponential
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_FirstOrderVolterra
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_MixtureOfGammas
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_equation
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_parameters
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_parameters_parameters_factorial
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_parameters_parameters_tau
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_parameters_parameters_a
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_Gamma_parameters_parameters_n
+  //data_monitors_parameters_option_BoldRegionROI_hrf_kernelDoubleExponential
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_equation
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_a
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_amp_2
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_amp_1
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_f_1
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_f_2
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_pi
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_tau_2
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_DoubleExponential_parameters_parameters_tau_1
+  //data_monitors_parameters_option_BoldRegionROI_hrf_kernelFirstOrderVolterra
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_equation
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters
+  //dict_monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_tau_f
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_k_1
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_V_0
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_FirstOrderVolterra_parameters_parameters_tau_s
+  //data_monitors_parameters_option_BoldRegionROI_hrf_kernelMixtureOfGammas
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_equation
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_parameters
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_gamma_a_2
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_gamma_a_1
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_c
+  //monitors_parameters_option_BoldRegionROI_hrf_kernel_parameters_option_MixtureOfGammas_parameters_parameters_l
+  //monitors_parameters_option_BoldRegionROI_period
+  
+  if(monitorType == "SEEG_sensors"){}
+  //monitors_parameters_option_SEEG_sensors
+  //data_monitorsSEEGmonitors_parameters_option_SEEG_sensorsdata_select
+  //monitors_parameters_option_SEEG_sigma
+  //monitors_parameters_option_SEEG_period
+  
+    
+    content += "LOG.info("Starting simulation...")\n" +
+               "raw_data = []\n" +
+               "raw_time = []\n" +
+               "tavg_data = []\n" +
+               "tavg_time = []\n\n"
+  
+    content += "for raw, tavg in sim(simulation_length=" + dataHash.getItem(simulation_length) + "):\n" +
+  "    if not raw is None:\n" +
+  "        raw_time.append(raw[0])\n" +
+  "        raw_data.append(raw[1])\n\n" +
+  "    if not tavg is None:\n" +
+  "        tavg_time.append(tavg[0])\n" +
+  "        tavg_data.append(tavg[1])\n\n" +
+  "LOG.info(\"Finished simulation.\")\n\n"
 
   content +="print 'It run for %d sec.' % (datetime.datetime.now() - START_TIME).seconds"
 
