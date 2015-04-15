@@ -559,7 +559,7 @@ function addModelToScript(dataHash){
   
   if(integratorType == "HeunDeterministic"){ //data_integratorHeunDeterministic
     //integrator_parameters_option_HeunDeterministic_dt
-    content += "" +dataHash.getItem(integratorParam + "dt");
+    content += " " + dataHash.getItem(integratorParam + "dt");
   }
 
   else if(integratorType == "HeunStochastic"){ //data_integratorHeunStochastic
@@ -568,48 +568,48 @@ function addModelToScript(dataHash){
     //integrator_parameters_option_HeunStochastic_noise_parameters_option_Additive_random_stream_RandomStream
     //integrator_parameters_option_HeunStochastic_noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed
     //integrator_parameters_option_HeunStochastic_noise_parameters_option_Additive_nsig
-    content += "" +dataHash.getItem(integratorParam + "noise");
+    content += "noise=" + dataHash.getItem(integratorParam + "noise");
 
     if(integratorType == "Additive"){
-      content += "ntau=" + dataHash.getItem(integratorParam + "noise_parameters_option_Additive_ntau") +
-               "" + dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_RandomStream") +
-               "" +dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed") +
-               "" +dataHash.getItem(integratorParam + "noise_parameters_option_Additive_nsig");
+      content += "ntau=" + dataHash.getItem(integratorParam + "noise_parameters_option_Additive_ntau") + ", " +
+               "noise_parameters_option_Additive_random_stream_RandomStream=" + dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_RandomStream") + ", " +
+               "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed=" + dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed") +
+               "noise_parameters_option_Additive_nsig=" + dataHash.getItem(integratorParam + "noise_parameters_option_Additive_nsig");
     }
     else if(integratorType == "Multiplicative"){
-      content += "" +dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_ntau") +
-                 "" +dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_b") +
-                 "" +dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_a") +
-                 "" +dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_b") +
+      content += "noise_parameters_option_Multiplicative_ntau=" + dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_ntau") + ", " +
+                 "noise_parameters_option_Multiplicative_b=" + dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_b") + ", " +
+                 "noise_parameters_option_Multiplicative_a=" + dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_a") + ", " +
+                 "noise_parameters_option_Multiplicative_b=" + dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_b") + ", " +
                  // ...weitere b aus select box...
-                 "" +dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_random_stream_RandomStream") +
-                 "" +dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed") +
-                 "" +dataHash.getItem(integratorParam + "noise_parameters_option_Additive_nsig");
+                 "noise_parameters_option_Multiplicative_random_stream_RandomStream=" + dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_random_stream_RandomStream") + ", " +
+                 "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed=" + dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed") + ", " +
+                 "noise_parameters_option_Additive_nsig=" + dataHash.getItem(integratorParam + "noise_parameters_option_Additive_nsig");
     }
   }
 
   else if(integratorType == "EulerDeterministic"){ //data_integratorEulerDeterministic
-    content += "" +dataHash.getItem(integratorParam + "dt");
+    content += "dt=" + dataHash.getItem(integratorParam + "dt");
   }
 
   else if(integratorType == "EulerStochastic"){ //data_integratorEulerStochastic
-    content += "" +dataHash.getItem(integratorParam + "noise");
+    content += "noise=" + dataHash.getItem(integratorParam + "noise");
 
     if(integratorType == "Additive"){
-      content += "" +dataHash.getItem(integratorParam + "noise_parameters_option_Additive_ntau") +
-               "" +dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_RandomStream") +
-               "" +dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed") +
-               "" +dataHash.getItem(integratorParam + "noise_parameters_option_Additive_nsig");
+      content += "noise_parameters_option_Additive_ntau=" +dataHash.getItem(integratorParam + "noise_parameters_option_Additive_ntau") + ", " +
+               "noise_parameters_option_Additive_random_stream_RandomStream=" + dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_RandomStream") + ", " +
+               "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed=" + dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed") + ", " +
+               "noise_parameters_option_Additive_nsig=" + dataHash.getItem(integratorParam + "noise_parameters_option_Additive_nsig");
     }
     else if(integratorType == "Multiplicative"){
-      content += "" +dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_ntau") +
-                 "" +dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_b") +
-                 "" +dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_a") +
-                 "" +dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_b") +
+      content += "noise_parameters_option_Multiplicative_ntau=" + dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_ntau") + ", " +
+                 "noise_parameters_option_Multiplicative_b=" + dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_b") + ", " +
+                 "noise_parameters_option_Multiplicative_a=" + dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_a") + ", " +
+                 "noise_parameters_option_Multiplicative_b=" + dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_b") + ", " +
                  // ...weitere b aus select box...
-                 "" +dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_random_stream_RandomStream") +
-                 "" +dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed") +
-                 "" +dataHash.getItem(integratorParam + "noise_parameters_option_Additive_nsig");
+                 "noise_parameters_option_Multiplicative_random_stream_RandomStream=" + dataHash.getItem(integratorParam + "noise_parameters_option_Multiplicative_random_stream_RandomStream") + ", " +
+                 "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed=" + dataHash.getItem(integratorParam + "noise_parameters_option_Additive_random_stream_parameters_option_RandomStream_init_seed") + ", " +
+                 "noise_parameters_option_Additive_nsig=" + dataHash.getItem(integratorParam + "noise_parameters_option_Additive_nsig");
     }
   } // integratorType
 
