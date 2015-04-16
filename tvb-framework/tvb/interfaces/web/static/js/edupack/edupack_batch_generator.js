@@ -50,9 +50,10 @@ function runBatchGeneratorSimulator() {
 function batch(modelParam, batchVars) {
   // generate JavaScript code for content-var "batch"
   var batch="";
-  for (var in $batchVars) {
+  for(i = 0; i< $batchVars.length; i++){
     //batch += "\"" + var + "=\"" + var + ", "
-    batch += "\"" + var + "=\"" + dataHash.getItem(modelParam + var) + ", ";
+    batch += "\"" + batchVars[i]] + "=\"" + dataHash.getItem(modelParam + batchVars[i]) + "\", ";
+    }
   }
   return batch;
 }
@@ -553,13 +554,13 @@ function addModelToScript(dataHash){
 
   content += "oscilator.configure()\n";
 
-  // TODO INTEGRATORS
+  // INTEGRATORS
   var integratorType = dataHash.getItem('integrator');
   var integratorParam = "integrator_parameters_option_" + integratorType + "_";
   
   if(integratorType == "HeunDeterministic"){ //data_integratorHeunDeterministic
     //integrator_parameters_option_HeunDeterministic_dt
-    content += " " + dataHash.getItem(integratorParam + "dt");
+    content += "dt=" + dataHash.getItem(integratorParam + "dt");
   }
 
   else if(integratorType == "HeunStochastic"){ //data_integratorHeunStochastic
@@ -613,7 +614,7 @@ function addModelToScript(dataHash){
     }
   } // integratorType
 
-  // TODO MONITORS
+  // MONITORS
   var monitorType = dataHash.getItem('monitors');
   var monitorParam = "monitors_parameters_option_";
   
