@@ -47,7 +47,7 @@ function runBatchGeneratorSimulator() {
 
 }
 
-function batch(modelParam, batchVars) {
+function batch(dataHash, modelParam, batchVars) {
   // generate JavaScript code for content-var "batch"
   var batch="";
   for(i=0; i<$batchVars.length; i++){
@@ -618,7 +618,7 @@ function addModelToScript(dataHash){
   var monitorParam = "monitors_parameters_option_";
   
   monitors_parameters_option = new Array(SubSample_period, SpatialAverage_spatial_mask, SpatialAverage_period, GlobalAverage_period, TemporalAverage_period, EEG_projection_matrix_data, EEG_period, SphericalEEG_sensors, SphericalEEG_sigma, SphericalEEG_period, data_monitorsSphericalMEG, SphericalMEG_sensors, SphericalMEG_period);
-  content += batch(monitorParam, monitors_parameters_option);
+  content += batch(dataHash, monitorParam, monitors_parameters_option);
 
   //monitors_parameters_option_SubSample_period
   //monitors_parameters_option_SpatialAverage_spatial_mask
@@ -638,7 +638,7 @@ function addModelToScript(dataHash){
 
   if(monitorType == "Bold_hrf_kernel"){
     monitors_parameters_option_monitorType = new Array(Gamma_equation, Gamma_parameters, Gamma_parameters_parameters_factorial, Gamma_parameters_parameters_tau, Gamma_parameters_parameters_a, Gamma_parameters_parameters_n, data_monitors_parameters_option_Bold_hrf_kernelDoubleExponential, DoubleExponential_equation, dict_DoubleExponential_parameters, DoubleExponential_parameters_parameters_a, DoubleExponential_parameters_parameters_amp_2, DoubleExponential_parameters_parameters_amp_1, DoubleExponential_parameters_parameters_f_1, DoubleExponential_parameters_parameters_f_1, DoubleExponential_parameters_parameters_f_2, DoubleExponential_parameters_parameters_pi, DoubleExponential_parameters_parameters_tau_2, DoubleExponential_parameters_parameters_tau_1, data_monitors_parameters_option_Bold_hrf_kernelFirstOrderVolterra, FirstOrderVolterra_equation, FirstOrderVolterra_parameters, FirstOrderVolterra_parameters_parameters_tau_f, FirstOrderVolterra_parameters_parameters_k_1, FirstOrderVolterra_parameters_parameters_V_0, FirstOrderVolterra_parameters_parameters_tau_s, data_monitors_parameters_option_Bold_hrf_kernelMixtureOfGammas, MixtureOfGammas_equation, MixtureOfGammas_parameters, MixtureOfGammas_parameters_parameters_gamma_a_2, MixtureOfGammas_parameters_parameters_gamma_a_1, MixtureOfGammas_parameters_parameters_a_2, MixtureOfGammas_parameters_parameters_a_1, MixtureOfGammas_parameters_parameters_c, MixtureOfGammas_parameters_parameters_l);
-    content += batch(monitorParam, monitors_parameters_option_monitorType);
+    content += batch(dataHash, monitorParam, monitors_parameters_option_monitorType);
     content += "monitors_parameters_option_Bold_period=" + monitors_parameters_option_Bold_period + ", ";
 
     //monitors_parameters_option_Bold_hrf_kernel_parameters_option_Gamma_equation
@@ -680,7 +680,7 @@ function addModelToScript(dataHash){
   
   else if(monitorType == "BoldRegionROI"){
     monitors_parameters_option_monitorType = new Array(hrf_kernel, hrf_kernel_DoubleExponential, hrf_kernel_FirstOrderVolterra, hrf_kernel, hrf_kernel_MixtureOfGammas);
-    content += batch(monitorParam, monitors_parameters_option_monitorType);
+    content += batch(dataHash, monitorParam, monitors_parameters_option_monitorType);
 
     monitors_parameters_option_monitorType = new Array(Gamma_equation, Gamma_parameters, Gamma_parameters_parameters_factorial, Gamma_parameters_parameters_tau, Gamma_parameters_parameters_a, Gamma_parameters_parameters_n, data_hrf_kernelDoubleExponential, DoubleExponential_equation, DoubleExponential_parameters, DoubleExponential_parameters_parameters_a, DoubleExponential_parameters_parameters_amp_2, DoubleExponential_parameters_parameters_amp_1, DoubleExponential_parameters_parameters_f_1, DoubleExponential_parameters_parameters_f_2, DoubleExponential_parameters_parameters_pi, DoubleExponential_parameters_parameters_tau_2, DoubleExponential_parameters_parameters_tau_1, data_hrf_kernelFirstOrderVolterra, FirstOrderVolterra_equation, FirstOrderVolterra_parameters, dict_FirstOrderVolterra_parameters, FirstOrderVolterra_parameters_parameters_tau_f, FirstOrderVolterra_parameters_parameters_k_1, FirstOrderVolterra_parameters_parameters_V_0, FirstOrderVolterra_parameters_parameters_tau_s, data_hrf_kernelMixtureOfGammas, MixtureOfGammas_equation, MixtureOfGammas_parameters, MixtureOfGammas_parameters_parameters_gamma_a_2, MixtureOfGammas_parameters_parameters_gamma_a_1, MixtureOfGammas_parameters_parameters_c, MixtureOfGammas_parameters_parameters_l);
     content += batch(monitorParam + "kernel_parameters_option", monitors_parameters_option_monitorType);
@@ -727,7 +727,7 @@ function addModelToScript(dataHash){
   
   else if(monitorType == "SEEG_sensors"){
     monitors_parameters_option_monitorType = new Array(SEEG_sensors, SEEG_sensorsdata_select, SEEG_sigma, SEEG_period);
-    content += batch(monitorParam, monitors_parameters_option_monitorType);
+    content += batch(dataHash, monitorParam, monitors_parameters_option_monitorType);
     //monitors_parameters_option_SEEG_sensors
     //monitors_parameters_option_SEEG_sensorsdata_select
     //monitors_parameters_option_SEEG_sigma
