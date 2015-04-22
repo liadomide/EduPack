@@ -50,11 +50,10 @@ function runBatchGeneratorSimulator() {
 function batch(modelParam, batchVars) {
   // generate JavaScript code for content-var "batch"
   var batch="";
-  for(i = 0; i< $batchVars.length; i++){
+  for(i=0; i<$batchVars.length; i++){
     //batch += "\"" + var + "=\"" + var + ", "
-    batch += "\"" + batchVars[i]] + "=\"" + dataHash.getItem(modelParam + batchVars[i]) + "\", ";
+    batch += "\"" + batchVars[i] + "=\"" + dataHash.getItem(modelParam + batchVars[i]) + "\", ";
     }
-  }
   return batch;
 }
 
@@ -679,7 +678,7 @@ function addModelToScript(dataHash){
     //monitors_parameters_option_Bold_period
   }
   
-  else if(monitorType == "BoldRegionROI"){}
+  else if(monitorType == "BoldRegionROI"){
     monitors_parameters_option_monitorType = new Array(hrf_kernel, hrf_kernel_DoubleExponential, hrf_kernel_FirstOrderVolterra, hrf_kernel, hrf_kernel_MixtureOfGammas);
     content += batch(monitorParam, monitors_parameters_option_monitorType);
 
@@ -735,7 +734,7 @@ function addModelToScript(dataHash){
     //monitors_parameters_option_SEEG_period
   }
 
-    content += "LOG.info("Starting simulation...")\n" +
+    content += "LOG.info(\"Starting simulation...\")\n" +
                "raw_data = []\n" +
                "raw_time = []\n" +
                "tavg_data = []\n" +
